@@ -1,5 +1,7 @@
 # legos.memes
 
+[![Travis](https://travis-ci.org/drewpearce/legos.memes.svg)]()
+
 Automatically create memes based on phrasing in this memes lego. Built using the [memecaptain API](https://github.com/mmb/meme_captain_web/tree/master/doc/api), with inspiration derived from the [Hubot memecaptain API implementation](https://www.npmjs.com/package/hubot-meme)
 
 The Lego module system and Legobot are a FOSS project lovingly crafted by [Bren Briggs](https://github.com/bbriggs) and friends. All code borrowed from Legobot is his (C).
