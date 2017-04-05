@@ -11,7 +11,9 @@ class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.triggers = ['y u no', 'yo dawg', 'what if i told you',
-                         'success kid', 'aliens guy']
+                         'all the', 'one does not simply', 'brace yourselves',
+                         'i don\'t always', 'not sure if', 'success kid',
+                         'aliens guy']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -120,7 +122,10 @@ class Memes(Lego):
         return matched
 
     def _build_meme_text(self, message_text):
-        messages_no_change = ['y u no', 'yo dawg', 'what if i told you']
+        messages_no_change = ['y u no', 'yo dawg', 'what if i told you',
+                              'all the', 'one does not simply',
+                              'brace yourselves', 'i don\'t always',
+                              'not sure if']
         messages_trigger = ['success kid', 'aliens guy']
         if self.matched_phrase['meme'] in messages_no_change:
             return message_text
