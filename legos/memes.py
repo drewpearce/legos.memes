@@ -11,7 +11,7 @@ class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.triggers = ['y u no', 'yo dawg', 'what if i told you',
-                        'success kid', 'aliens guy']
+                         'success kid', 'aliens guy']
         self.matched_phrase = ''
 
     def listening_for(self, message):
