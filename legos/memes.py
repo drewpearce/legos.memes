@@ -10,7 +10,8 @@ logger = logging.getLogger(__name__)
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = ['y u no', 'yo dawg', 'what if i told you', 'success kid', 'aliens guy']
+        self.triggers = ['y u no', 'yo dawg', 'what if i told you',
+                        'success kid', 'aliens guy']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -124,8 +125,7 @@ class Memes(Lego):
         if self.matched_phrase['meme'] in messages_no_change:
             return message_text
         elif self.matched_phrase['meme'] in messages_trigger:
-            return message_text.replace(self.matched_phrase['meme'],'')
-
+            return message_text.replace(self.matched_phrase['meme'], '')
 
     def get_name(self):
         return 'memes'
