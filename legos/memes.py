@@ -82,7 +82,7 @@ class Memes(Lego):
         payload = json.dumps(payload)
         # You can have memecaptain save your generated images.
         # Register with them ang get a token. In sert it below after token=.
-        # Then uncomment lines 80-81 and comment out line 82.
+        # Then uncomment lines 86-87 and comment out line 88.
         # auth = 'Token token='
         # headers = {"Content-Type": "application/json", "Authorization":auth}
         headers = {"Content-Type": "application/json"}
