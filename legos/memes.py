@@ -53,11 +53,12 @@ class Memes(Lego):
         return opts
 
     def _get_image_id(self, matched_phrase):
-        url = '''https://memecaptain.com/api/v3/src_images/?q={}'''.format(
-                matched_phrase)
-        if matched_phrase == 'aliens guy':
-            image_id = 'sO-Hng'
+        special_cases = {'aliens guy': 'sO-Hng', 'all the': 'Dv99KQ'}
+        if matched_phrase in special_cases:
+            image_id = special_cases[matched_phrase]
         else:
+            url = '''https://memecaptain.com/api/v3/src_images/?q={}'''.format(
+                matched_phrase)
             api_response = requests.get(url)
             if api_response.status_code == requests.codes.ok:
                 api_response = json.loads(api_response.text)
@@ -82,9 +83,9 @@ class Memes(Lego):
         payload = json.dumps(payload)
         # You can have memecaptain save your generated images.
         # Register with them ang get a token. In sert it below after token=.
-        # Then uncomment lines 86-87 and comment out line 88.
+        # Then uncomment lines 87-88 and comment out line 89.
         # auth = 'Token token='
-        # headers = {"Content-Type": "application/json", "Authorization":auth}
+        # headers = {"Content-Type": "application/json", "Authorization": auth}
         headers = {"Content-Type": "application/json"}
         image_response = requests.post(url, data=payload, headers=headers)
         logger.debug(payload)
