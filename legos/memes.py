@@ -53,18 +53,16 @@ class Memes(Lego):
         return opts
 
     def _get_image_id(self, matched_phrase):
-        special_cases = {'aliens guy': 'sO-Hng', 'all the': 'Dv99KQ'}
+        special_cases = {'y u no': 'NryNmg', 'yo dawg': 'Yqk_kg',
+                         'what if i told you': 'fWle1w', 'all the': 'Dv99KQ',
+                         'one does not simply': 'da2i4A', 'brace yourselves':
+                         '_I74XA', 'i don\'t always': 'V8QnRQ', 'not sure if':
+                         'CsNF8w', 'success kid': 'AbNPRQ', 'aliens guy':
+                         'sO-Hng'}
         if matched_phrase in special_cases:
             image_id = special_cases[matched_phrase]
         else:
-            url = '''https://memecaptain.com/api/v3/src_images/?q={}'''.format(
-                matched_phrase)
-            api_response = requests.get(url)
-            if api_response.status_code == requests.codes.ok:
-                api_response = json.loads(api_response.text)
-                image_id = api_response[0]['id_hash']
-            else:
-                image_id = None
+            image_id = None
         return image_id
 
     def _make_image(self, image_id, message):
@@ -99,7 +97,7 @@ class Memes(Lego):
         status = status_json['status_url']
         image = None
         while image is None:
-            time.sleep(1)
+            time.sleep(.5)
             get_image = requests.get(status)
             if get_image.status_code == requests.codes.ok:
                 logger.debug('get_image = {}'.format(get_image.text))
