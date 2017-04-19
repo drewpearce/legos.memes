@@ -13,7 +13,7 @@ class Memes(Lego):
         self.triggers = ['y u no', 'yo dawg', 'what if i told you',
                          'all the', 'one does not simply', 'brace yourselves',
                          'i don\'t always', 'not sure if', 'success kid',
-                         'aliens guy']
+                         'aliens guy', 'dat ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -58,7 +58,7 @@ class Memes(Lego):
                          'one does not simply': 'da2i4A', 'brace yourselves':
                          '_I74XA', 'i don\'t always': 'V8QnRQ', 'not sure if':
                          'CsNF8w', 'success kid': 'AbNPRQ', 'aliens guy':
-                         'sO-Hng'}
+                         'sO-Hng', 'dat ': 'CnRs9g'}
         if matched_phrase in special_cases:
             image_id = special_cases[matched_phrase]
         else:
@@ -81,7 +81,7 @@ class Memes(Lego):
         payload = json.dumps(payload)
         # You can have memecaptain save your generated images.
         # Register with them ang get a token. In sert it below after token=.
-        # Then uncomment lines 87-88 and comment out line 89.
+        # Then uncomment lines 85-86 and comment out line 89.
         # auth = 'Token token='
         # headers = {"Content-Type": "application/json", "Authorization": auth}
         headers = {"Content-Type": "application/json"}
@@ -124,7 +124,7 @@ class Memes(Lego):
         messages_no_change = ['y u no', 'yo dawg', 'what if i told you',
                               'all the', 'one does not simply',
                               'brace yourselves', 'i don\'t always',
-                              'not sure if']
+                              'not sure if', 'dat ']
         messages_trigger = ['success kid', 'aliens guy']
         if self.matched_phrase['meme'] in messages_no_change:
             return message_text
