@@ -38,7 +38,7 @@ class Memes(Lego):
             make_image_status = self._make_image(image_id, meme_text)
             if make_image_status:
                 image = self._get_image(make_image_status)
-                if image:
+                if image is not None:
                     return_val = image
         self.reply(message, return_val, opts)
 
@@ -80,7 +80,7 @@ class Memes(Lego):
         }
         payload = json.dumps(payload)
         # You can have memecaptain save your generated images.
-        # Register with them ang get a token. In sert it below after token=.
+        # Register with them and get a token. Insert it below after token=.
         # Then uncomment lines 85-86 and comment out line 89.
         # auth = 'Token token='
         # headers = {"Content-Type": "application/json", "Authorization": auth}

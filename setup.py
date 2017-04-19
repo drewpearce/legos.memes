@@ -19,7 +19,7 @@ description = 'Meme generator using the memecaptain api'
 name = 'legos.memes'
 setup(
     name=name,
-    version='0.0.1',
+    version='0.1.0',
     namespace_packages=name.split('.')[:-1],
     license='GPLv3',
     description=description or name,
