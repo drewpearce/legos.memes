@@ -12,13 +12,28 @@ This lego is invoked simply by speaking in meme phrases. Currently the following
  - Generates a Y U No guy meme with your text on it.
 - `yo dawg...`
  - Generates an Xzibit Yo Dawg meme with your message text on it.
+- `what if I told you...`
+ - Generates a Morpheus What if I told you meme with your message text on it.
+- `all the...`
+ - Generates a Hyperbole and a Half X all the Y meme with your message text on it.
+- `one does not simply...`
+ - Generates a Boromir One does not simply meme with your message text on it.
+- `brace yourselves...`
+ - Generates a Ned Stark brace yourselves meme with your message text on it.
+- `I don't always...`
+ - Generates a Most Interesting Man in the World meme with your message text on it.
+- `not sure if...`
+ - Generates a Fry not sure if meme with your message text on it.
+- `success kid [message]`
+ - Generates a success kid meme with your message text that follows 'success kid' on it.
+- `aliens guy [message]`
+ - Generates an Ancient Aliens with your message text that follows 'aliens guy' on it.
+- `dat ...`
+ - Generates a Chris Brown Dat ____ meme with your message text on it.
 
 ## Installation
 
-**Not yet published on pypi**
-- Clone the repo
-- cd into the directory
-- `pip3 install .`
+`pip3 install legos.memes`
 
 This is a Lego designed for use with [Legobot](https://github.com/bbriggs/Legobot), so you'll get Legobot along with this. To deploy it, import the package and add it to the active legos like so:
 
