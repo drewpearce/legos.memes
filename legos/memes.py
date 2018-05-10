@@ -11,7 +11,8 @@ class Memes(Lego):
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
                          'yo dawg ', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
-                         'no!', 'i have no idea what i\'m doing']
+                         'no!', 'i have no idea what i\'m doing',
+                         'it\'s a trap']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -99,6 +100,9 @@ class Memes(Lego):
         elif self.matched_phrase['meme'] == 'i have no idea what i\'m doing':
             meme['template'] = 'noidea'
             meme['text'] = ['i have no idea', 'what i\'m doing']
+        elif self.matched_phrase['meme'] == 'it\'s a trap':
+            meme['template'] = 'ackbar'
+            meme['text'] = [' ', 'it\'s a trap!']
         else:
             meme['template'] = None
 
