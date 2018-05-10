@@ -127,4 +127,5 @@ class Memes(Lego):
         return 'memes'
 
     def get_help(self):
-        return 'make memes'
+        return ('Create memes through natural text. See https://github.com/'
+                'drewpearce/legos.memes/blob/master/README.md for reference.')
