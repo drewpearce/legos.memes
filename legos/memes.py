@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = [' all the ']
+        self.triggers = [' all the ', ' y u no ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -47,6 +47,7 @@ class Memes(Lego):
         return opts
 
     def _match_phrases(self, text_in):
+        text_in = text_in.lower()
         matched = {}
         matched['status'] = any(phrase in text_in for phrase in self.triggers)
         for meme in self.triggers:
@@ -61,6 +62,10 @@ class Memes(Lego):
             meme['template'] = 'xy'
             meme['text'] = message.split(' all the ')
             meme['text'][1] = 'all the ' + meme['text'][1]
+        elif self.matched_phrase['meme'] == ' y u no ':
+            meme['template'] = 'yuno'
+            meme['text'] = message.split(' y u no ')
+            meme['text'][1] = 'y u no ' + meme['text'][1]
         else:
             meme['template'] = None
 
