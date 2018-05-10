@@ -9,19 +9,29 @@ The Lego module system and Legobot are a FOSS project lovingly crafted by [Bren 
 ## Usage
 This lego is invoked simply by speaking in meme phrases. Currently the following memes are supported (case insensitive.)
 - `y u know...`
- - Generates a Y U No guy meme with your text on it.
+  - Generates a Y U No guy meme with your text on it.
 - `yo dawg...`
- - Generates an Xzibit Yo Dawg meme with your message text on it.
+  - Generates an Xzibit Yo Dawg meme with your message text on it.
 - `what if I told you...`
- - Generates a Morpheus What if I told you meme with your message text on it.
+  - Generates a Morpheus What if I told you meme with your message text on it.
 - `memexy ...all the...`
- - Generates a Hyperbole and a Half X all the Y meme with your message text on it.
+  - Generates a Hyperbole and a Half X all the Y meme with your message text on it.
 - `one does not simply...`
- - Generates a Boromir One does not simply meme with your message text on it.
+  - Generates a Boromir One does not simply meme with your message text on it.
 - `brace yourselves...`
- - Generates a Ned Stark brace yourselves meme with your message text on it.
+  - Generates a Ned Stark brace yourselves meme with your message text on it.
 - `why not both`
- - Generates a Why don't we have both girl meme.
+  - Generates a Why don't we have both girl meme.
+- `ermahgerd...`
+  - Generates a Ermahgerd! girl meme with your message text on it.
+- `NO!`
+  - Generates a Grumpy Cat meme.
+- `i have no idea what i'm doing`
+  - Generates a Computer Dog meme.
+- `it's a trap`
+  - Generates an Admiral Ackbar meme.
+- `can't... if you don't ...`
+  - Generates a Roll Safe meme with your message on it.
 
 ## Installation
 
