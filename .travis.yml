@@ -21,3 +21,5 @@ deploy:
     distributions: "sdist bdist_wheel"
     branch: master
     repo: drewpearce/legos.memes
+    python:
+      - "3.6"
