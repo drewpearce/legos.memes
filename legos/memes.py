@@ -94,8 +94,11 @@ class Memes(Lego):
             meme['template'] = 'ermg'
             meme['text'] = ['ermahgerd!', re.split('ermahgerd.* ', message)[1]]
         elif self.matched_phrase['meme'] == 'no!':
-            meme['template'] = 'grumpycat'
-            meme['text'] = [' ', 'NO!']
+            if re.search('^no!.*', message):
+                meme['template'] = 'grumpycat'
+                meme['text'] = [' ', 'NO!']
+            else:
+                meme['template'] = None
         elif self.matched_phrase['meme'] == 'i have no idea what i\'m doing':
             meme['template'] = 'noidea'
             meme['text'] = ['i have no idea', 'what i\'m doing']
