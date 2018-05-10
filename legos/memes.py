@@ -31,7 +31,7 @@ class Memes(Lego):
 
         if meme is not None:
             meme = self._string_replace(meme)
-            if meme['string_replaced'] == True and len(meme['text']) == 2:
+            if meme['string_replaced'] is True and len(meme['text']) == 2:
                 return_val = self._construct_url(meme)
 
         self.reply(message, return_val, opts)
@@ -81,7 +81,8 @@ class Memes(Lego):
         for index, text in enumerate(meme['text']):
             substrs = sorted(replacements, key=len, reverse=True)
             regexp = re.compile('|'.join(map(re.escape, substrs)))
-            meme['text'][index] = regexp.sub(lambda match: replacements[match.group(0)], text)
+            meme['text'][index] = \
+                regexp.sub(lambda match: replacements[match.group(0)], text)
 
         meme['string_replaced'] = True
         logger.debug(meme)
@@ -89,7 +90,9 @@ class Memes(Lego):
 
     def _construct_url(self, meme):
         base_url = 'https://memegen.link/'
-        return base_url + meme['template'] + '/' + meme['text'][0] + '/' + meme['text'][1] + '.jpg'
+        return (base_url + meme['template'] +
+                '/' + meme['text'][0] +
+                '/' + meme['text'][1] + '.jpg')
 
     def get_name(self):
         return 'memes'
