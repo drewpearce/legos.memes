@@ -15,11 +15,11 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from setuptools import setup, find_packages
-description = 'Meme generator using the memecaptain api'
+description = 'Meme generator using the memegen api'
 name = 'legos.memes'
 setup(
     name=name,
-    version='0.1.0',
+    version='0.2.0',
     namespace_packages=name.split('.')[:-1],
     license='GPLv3',
     description=description or name,

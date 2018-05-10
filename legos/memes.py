@@ -1,8 +1,6 @@
 from Legobot.Lego import Lego
-import requests
 import logging
-import json
-import time
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -10,10 +8,9 @@ logger = logging.getLogger(__name__)
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = ['y u no', 'yo dawg', 'what if i told you',
-                         'all the', 'one does not simply', 'brace yourselves',
-                         'i don\'t always', 'not sure if', 'success kid',
-                         'aliens guy', 'dat ']
+        self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
+                         'yo dawg ', 'one does not simply ',
+                         'brace yourselves ', 'why not both']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -32,14 +29,13 @@ class Memes(Lego):
         opts = self._handle_opts(message)
         # Set a default return_val in case we can't handle our crap
         return_val = '¯\_(ツ)_/¯'
-        image_id = self._get_image_id(self.matched_phrase['meme'])
-        if image_id is not None:
-            meme_text = self._build_meme_text(message['text'].lower())
-            make_image_status = self._make_image(image_id, meme_text)
-            if make_image_status:
-                image = self._get_image(make_image_status)
-                if image is not None:
-                    return_val = image
+        meme = self._split_text(message['text'].lower())
+
+        if meme is not None:
+            meme = self._string_replace(meme)
+            if meme['string_replaced'] is True and len(meme['text']) == 2:
+                return_val = self._construct_url(meme)
+
         self.reply(message, return_val, opts)
 
     def _handle_opts(self, message):
@@ -52,67 +48,8 @@ class Memes(Lego):
                         {}'''.format(str(message)))
         return opts
 
-    def _get_image_id(self, matched_phrase):
-        special_cases = {'y u no': 'NryNmg', 'yo dawg': 'Yqk_kg',
-                         'what if i told you': 'fWle1w', 'all the': 'Dv99KQ',
-                         'one does not simply': 'da2i4A', 'brace yourselves':
-                         '_I74XA', 'i don\'t always': 'V8QnRQ', 'not sure if':
-                         'CsNF8w', 'success kid': 'AbNPRQ', 'aliens guy':
-                         'sO-Hng', 'dat ': 'CnRs9g'}
-        if matched_phrase in special_cases:
-            image_id = special_cases[matched_phrase]
-        else:
-            image_id = None
-        return image_id
-
-    def _make_image(self, image_id, message):
-        url = 'https://memecaptain.com/api/v3/gend_images'
-        payload = {
-            "src_image_id": image_id,
-            "private": False,
-            "captions_attributes": [{
-                "text": message,
-                "top_left_x_pct": 0.05,
-                "top_left_y_pct": 0,
-                "width_pct": 0.9,
-                "height_pct": 0.25
-            }]
-        }
-        payload = json.dumps(payload)
-        # You can have memecaptain save your generated images.
-        # Register with them and get a token. Insert it below after token=.
-        # Then uncomment lines 85-86 and comment out line 89.
-        # auth = 'Token token='
-        # headers = {"Content-Type": "application/json", "Authorization": auth}
-        headers = {"Content-Type": "application/json"}
-        image_response = requests.post(url, data=payload, headers=headers)
-        logger.debug(payload)
-        print(image_response)
-        make_image_status = image_response.text
-        logger.debug('Make Image response: {}'.format(make_image_status))
-        return make_image_status
-
-    def _get_image(self, make_image_status):
-        status_json = json.loads(make_image_status)
-        status = status_json['status_url']
-        image = None
-        while image is None:
-            time.sleep(.5)
-            get_image = requests.get(status)
-            if get_image.status_code == requests.codes.ok:
-                logger.debug('get_image = {}'.format(get_image.text))
-                image_json = json.loads(get_image.text)
-                logger.debug('image_json = {}'.format(image_json))
-                if image_json['url']:
-                    image = image_json['url']
-                else:
-                    image = None
-            else:
-                image = None
-
-        return image
-
     def _match_phrases(self, text_in):
+        text_in = text_in.lower()
         matched = {}
         matched['status'] = any(phrase in text_in for phrase in self.triggers)
         for meme in self.triggers:
@@ -120,19 +57,75 @@ class Memes(Lego):
                 matched['meme'] = meme
         return matched
 
-    def _build_meme_text(self, message_text):
-        messages_no_change = ['y u no', 'yo dawg', 'what if i told you',
-                              'all the', 'one does not simply',
-                              'brace yourselves', 'i don\'t always',
-                              'not sure if', 'dat ']
-        messages_trigger = ['success kid', 'aliens guy']
-        if self.matched_phrase['meme'] in messages_no_change:
-            return message_text
-        elif self.matched_phrase['meme'] in messages_trigger:
-            return message_text.replace(self.matched_phrase['meme'], '')
+    def _split_text(self, message):
+        meme = {}
+
+        if self.matched_phrase['meme'] == 'memexy ':
+            meme['template'] = 'xy'
+            message = message.replace('memexy ', '')
+            meme['text'] = message.split(' all the ')
+            meme['text'][1] = 'all the ' + meme['text'][1]
+        elif self.matched_phrase['meme'] == ' y u no ':
+            meme['template'] = 'yuno'
+            meme['text'] = message.split(' y u no ')
+            meme['text'][1] = 'y u no ' + meme['text'][1]
+        elif self.matched_phrase['meme'] == 'what if i told you ':
+            meme['template'] = 'morpheus'
+            meme['text'] = ['what if i told you']
+            meme['text'].append(message.split('what if i told you ')[1])
+        elif self.matched_phrase['meme'] == 'yo dawg ':
+            meme['template'] = 'yodawg'
+            meme['text'] = re.split(' so (i|we) put ', message)
+            meme['text'][2] = ('so ' + meme['text'][1] +
+                               ' put ' + meme['text'][2])
+            meme['text'].pop(1)
+        elif self.matched_phrase['meme'] == 'one does not simply ':
+            meme['template'] = 'mordor'
+            meme['text'] = ['one does not simply']
+            meme['text'].append(message.split('one does not simply ')[1])
+        elif self.matched_phrase['meme'] == 'brace yourselves ':
+            meme['template'] = 'winter'
+            meme['text'] = ['brace yourselves']
+            meme['text'].append(message.split('brace yourselves ')[1])
+        elif self.matched_phrase['meme'] == 'why not both':
+            meme['template'] = 'both'
+            meme['text'] = [' ', 'why not both?']
+        else:
+            meme['template'] = None
+
+        return meme
+
+    def _string_replace(self, meme):
+        replacements = {
+            '_': '__',
+            '-': '--',
+            ' ': '_',
+            '?': '~q',
+            '%': '~p',
+            '#': '~h',
+            '/': '~s',
+            '"': "''",
+        }
+
+        for index, text in enumerate(meme['text']):
+            substrs = sorted(replacements, key=len, reverse=True)
+            regexp = re.compile('|'.join(map(re.escape, substrs)))
+            meme['text'][index] = \
+                regexp.sub(lambda match: replacements[match.group(0)], text)
+
+        meme['string_replaced'] = True
+        logger.debug(meme)
+        return meme
+
+    def _construct_url(self, meme):
+        base_url = 'https://memegen.link/'
+        return (base_url + meme['template'] +
+                '/' + meme['text'][0] +
+                '/' + meme['text'][1] + '.jpg')
 
     def get_name(self):
         return 'memes'
 
     def get_help(self):
-        return 'make memes'
+        return ('Create memes through natural text. See https://github.com/'
+                'drewpearce/legos.memes/blob/master/README.md for reference.')
