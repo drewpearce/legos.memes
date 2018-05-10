@@ -90,7 +90,7 @@ class Memes(Lego):
         elif self.matched_phrase['meme'] == 'why not both':
             meme['template'] = 'both'
             meme['text'] = [' ', 'why not both?']
-        elif self.matched_phrase['meme'] =='ermahgerd':
+        elif self.matched_phrase['meme'] == 'ermahgerd':
             meme['template'] = 'ermg'
             meme['text'] = ['ermahgerd!', re.split('ermahgerd.* ', message)[1]]
         elif self.matched_phrase['meme'] == 'no!':
