@@ -9,7 +9,8 @@ class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
-                         'yo dawg ', 'one does not simply ']
+                         'yo dawg ', 'one does not simply ',
+                         'brace yourselves ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -82,6 +83,10 @@ class Memes(Lego):
             meme['template'] = 'mordor'
             meme['text'] = ['one does not simply']
             meme['text'].append(message.split('one does not simply ')[1])
+        elif self.matched_phrase['meme'] == 'brace yourselves ':
+            meme['template'] = 'winter'
+            meme['text'] = ['brace yourselves']
+            meme['text'].append(message.split('brace yourselves ')[1])
         else:
             meme['template'] = None
 
