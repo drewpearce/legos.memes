@@ -8,7 +8,8 @@ logger = logging.getLogger(__name__)
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = [' all the ', ' y u no ', 'what if i told you ', 'yo dawg ']
+        self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
+                         'yo dawg ', 'one does not simply ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -58,8 +59,9 @@ class Memes(Lego):
     def _split_text(self, message):
         meme = {}
 
-        if self.matched_phrase['meme'] == ' all the ':
+        if self.matched_phrase['meme'] == 'memexy ':
             meme['template'] = 'xy'
+            message = message.replace('memexy ', '')
             meme['text'] = message.split(' all the ')
             meme['text'][1] = 'all the ' + meme['text'][1]
         elif self.matched_phrase['meme'] == ' y u no ':
@@ -73,8 +75,13 @@ class Memes(Lego):
         elif self.matched_phrase['meme'] == 'yo dawg ':
             meme['template'] = 'yodawg'
             meme['text'] = re.split(' so (i|we) put ', message)
-            meme['text'][2] = 'so ' + meme['text'][1] + ' put ' + meme['text'][2]
+            meme['text'][2] = ('so ' + meme['text'][1] +
+                               ' put ' + meme['text'][2])
             meme['text'].pop(1)
+        elif self.matched_phrase['meme'] == 'one does not simply ':
+            meme['template'] = 'mordor'
+            meme['text'] = ['one does not simply']
+            meme['text'].append(message.split('one does not simply ')[1])
         else:
             meme['template'] = None
 
