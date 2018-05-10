@@ -10,7 +10,8 @@ class Memes(Lego):
         super().__init__(baseplate, lock)
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
                          'yo dawg ', 'one does not simply ',
-                         'brace yourselves ', 'why not both', 'ermahgerd']
+                         'brace yourselves ', 'why not both', 'ermahgerd',
+                         'no!']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -49,7 +50,6 @@ class Memes(Lego):
         return opts
 
     def _match_phrases(self, text_in):
-        text_in = text_in.lower()
         matched = {}
         matched['status'] = any(phrase in text_in for phrase in self.triggers)
         for meme in self.triggers:
@@ -93,6 +93,9 @@ class Memes(Lego):
         elif self.matched_phrase['meme'] =='ermahgerd':
             meme['template'] = 'ermg'
             meme['text'] = ['ermahgerd!', re.split('ermahgerd.* ', message)[1]]
+        elif self.matched_phrase['meme'] == 'no!':
+            meme['template'] = 'grumpycat'
+            meme['text'] = [' ', 'NO!']
         else:
             meme['template'] = None
 
