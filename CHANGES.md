@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.3] [2018-05-10]
+#### Fixed
+- Fixed an infinite loop bug
+
 ## [0.2.2] [2018-05-10]
 #### Added
 - Additional meme listeners/builders
