@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = [' all the ', ' y u no ', ' what if i told you ']
+        self.triggers = [' all the ', ' y u no ', 'what if i told you ', 'yo dawg ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -27,7 +27,7 @@ class Memes(Lego):
         opts = self._handle_opts(message)
         # Set a default return_val in case we can't handle our crap
         return_val = '¯\_(ツ)_/¯'
-        meme = self._split_text(message['text'])
+        meme = self._split_text(message['text'].lower())
 
         if meme is not None:
             meme = self._string_replace(meme)
@@ -66,10 +66,15 @@ class Memes(Lego):
             meme['template'] = 'yuno'
             meme['text'] = message.split(' y u no ')
             meme['text'][1] = 'y u no ' + meme['text'][1]
-        elif self.matched_phrase['meme'] == ' what if i told you ':
+        elif self.matched_phrase['meme'] == 'what if i told you ':
             meme['template'] = 'morpheus'
             meme['text'] = ['what if i told you']
-            meme['text'].append(message.split(' what if i told you ')[1])
+            meme['text'].append(message.split('what if i told you ')[1])
+        elif self.matched_phrase['meme'] == 'yo dawg ':
+            meme['template'] = 'yodawg'
+            meme['text'] = re.split(' so (i|we) put ', message)
+            meme['text'][2] = 'so ' + meme['text'][1] + ' put ' + meme['text'][2]
+            meme['text'].pop(1)
         else:
             meme['template'] = None
 
