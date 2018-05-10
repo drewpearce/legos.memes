@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = [' all the ', ' y u no ']
+        self.triggers = [' all the ', ' y u no ', ' what if i told you ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -66,6 +66,10 @@ class Memes(Lego):
             meme['template'] = 'yuno'
             meme['text'] = message.split(' y u no ')
             meme['text'][1] = 'y u no ' + meme['text'][1]
+        elif self.matched_phrase['meme'] == ' what if i told you ':
+            meme['template'] = 'morpheus'
+            meme['text'] = ['what if i told you']
+            meme['text'].append(message.split(' what if i told you ')[1])
         else:
             meme['template'] = None
 
