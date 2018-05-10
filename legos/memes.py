@@ -10,7 +10,7 @@ class Memes(Lego):
         super().__init__(baseplate, lock)
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
                          'yo dawg ', 'one does not simply ',
-                         'brace yourselves ']
+                         'brace yourselves ', 'why not both']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -87,6 +87,9 @@ class Memes(Lego):
             meme['template'] = 'winter'
             meme['text'] = ['brace yourselves']
             meme['text'].append(message.split('brace yourselves ')[1])
+        elif self.matched_phrase['meme'] == 'why not both':
+            meme['template'] = 'both'
+            meme['text'] = [' ', 'why not both?']
         else:
             meme['template'] = None
 
