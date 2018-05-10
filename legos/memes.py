@@ -12,7 +12,7 @@ class Memes(Lego):
                          'yo dawg ', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
-                         'it\'s a trap']
+                         'it\'s a trap', ' if you don\'t ']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -33,12 +33,11 @@ class Memes(Lego):
         return_val = '¯\_(ツ)_/¯'
         meme = self._split_text(message['text'].lower())
 
-        if meme is not None:
+        if meme is not None and meme['template'] is not None:
             meme = self._string_replace(meme)
             if meme['string_replaced'] is True and len(meme['text']) == 2:
                 return_val = self._construct_url(meme)
-
-        self.reply(message, return_val, opts)
+            self.reply(message, return_val, opts)
 
     def _handle_opts(self, message):
         try:
@@ -103,6 +102,13 @@ class Memes(Lego):
         elif self.matched_phrase['meme'] == 'it\'s a trap':
             meme['template'] = 'ackbar'
             meme['text'] = [' ', 'it\'s a trap!']
+        elif self.matched_phrase['meme'] == ' if you don\'t ':
+            if re.search("^can't.*if you don't.*", message):
+                meme['template'] = 'rollsafe'
+                meme['text'] = message.split(' if you don\'t ')
+                meme['text'][1] = 'if you don\'t ' + meme['text'][1]
+            else:
+                meme['template'] = None
         else:
             meme['template'] = None
 
