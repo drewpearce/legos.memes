@@ -5,7 +5,7 @@ import re
 logger = logging.getLogger(__name__)
 
 
-class Memes():
+class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
