@@ -5,14 +5,14 @@ import re
 logger = logging.getLogger(__name__)
 
 
-class Memes(Lego):
+class Memes():
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
                          'yo dawg ', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
-                         'it\'s a trap', ' if you don\'t ']
+                         'it\'s a trap', ' if you don\'t ', 'aliens guy:']
         self.matched_phrase = ''
 
     def listening_for(self, message):
@@ -112,6 +112,10 @@ class Memes(Lego):
                 meme['text'][1] = 'if you don\'t ' + meme['text'][1]
             else:
                 meme['template'] = None
+        elif self.match_phrase['meme'] == 'aliens guy:':
+            meme['template'] = "aag"
+            message = message.replace('aliens guy: ', '')
+            meme['text'] = [ ' ', message]
         else:
             meme['template'] = None
 

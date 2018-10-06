@@ -32,6 +32,8 @@ This lego is invoked simply by speaking in meme phrases. Currently the following
   - Generates an Admiral Ackbar meme.
 - `can't... if you don't ...`
   - Generates a Roll Safe meme with your message on it.
+- `aliens guy: ...`
+  - Generates an Ancient Aliens Guy memer with your message on it.
 
 ## Installation
 
