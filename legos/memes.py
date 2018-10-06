@@ -112,10 +112,10 @@ class Memes(Lego):
                 meme['text'][1] = 'if you don\'t ' + meme['text'][1]
             else:
                 meme['template'] = None
-        elif self.match_phrase['meme'] == 'aliens guy:':
+        elif self.matched_phrase['meme'] == 'aliens guy:':
             meme['template'] = "aag"
             message = message.replace('aliens guy: ', '')
-            meme['text'] = [ ' ', message]
+            meme['text'] = [' ', message]
         else:
             meme['template'] = None
 
