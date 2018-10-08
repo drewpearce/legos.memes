@@ -1,0 +1,227 @@
+[
+    {
+        "text": "memexy Meme all the things",
+        "matched_phrase": {
+            "status": true,
+            "meme": "memexy "
+        },
+        "template": {
+            "template": "xy",
+            "text": [
+                "meme",
+                "all the things"
+            ]
+        },
+        "url": "https://memegen.link/xy/meme/all_the_things.jpg"
+    },
+    {
+        "text": "Legobot, y u no have tests?",
+        "matched_phrase": {
+            "status": true,
+            "meme": " y u no "
+        },
+        "template": {
+            "template": "yuno",
+            "text": [
+                "legobot,",
+                "y u no have tests?"
+            ]
+        },
+        "url": "https://memegen.link/yuno/legobot,/y_u_no_have_tests~q.jpg"
+    },
+    {
+        "text": "What if I told you these are unit tests?",
+        "matched_phrase": {
+            "status": true,
+            "meme": "what if i told you "
+        },
+        "template": {
+            "template": "morpheus",
+            "text": [
+                "what if i told you",
+                "these are unit tests?"
+            ]
+        },
+        "url": "https://memegen.link/morpheus/what_if_i_told_you/these_are_unit_tests~q.jpg"
+    },
+    {
+        "text": "Yo dawg, I heard you like bots so I put a bot in your bot",
+        "matched_phrase": {
+            "status": true,
+            "meme": "yo dawg "
+        },
+        "template": {
+            "template": "yodawg",
+            "text": [
+                "yo dawg, i heard you like bots",
+                "so i put a bot in your bot"
+            ]
+        },
+        "url": "https://memegen.link/yodawg/yo_dawg,_i_heard_you_like_bots/so_i_put_a_bot_in_your_bot.jpg"
+    },
+    {
+        "text": "One does not simply walk into MORDOR",
+        "matched_phrase": {
+            "status": true,
+            "meme": "one does not simply "
+        },
+        "template": {
+            "template": "mordor",
+            "text": [
+                "one does not simply",
+                "walk into mordor"
+            ]
+        },
+        "url": "https://memegen.link/mordor/one_does_not_simply/walk_into_mordor.jpg"
+    },
+    {
+        "text": "Brace yourselves winter is coming",
+        "matched_phrase": {
+            "status": true,
+            "meme": "brace yourselves "
+        },
+        "template": {
+            "template": "winter",
+            "text": [
+                "brace yourselves",
+                "winter is coming"
+            ]
+        },
+        "url": "https://memegen.link/winter/brace_yourselves/winter_is_coming.jpg"
+    },
+    {
+        "text": "why not both?!",
+        "matched_phrase": {
+            "status": true,
+            "meme": "why not both"
+        },
+        "template": {
+            "template": "both",
+            "text": [
+                " ",
+                "why not both?"
+            ]
+        },
+        "url": "https://memegen.link/both/_/why_not_both~q.jpg"
+    },
+    {
+        "text": "Ermahgerd! Gershbermps!",
+        "matched_phrase": {
+            "status": true,
+            "meme": "ermahgerd"
+        },
+        "template": {
+            "template": "ermg",
+            "text": [
+                "ermahgerd!",
+                "gershbermps!"
+            ]
+        },
+        "url": "https://memegen.link/ermg/ermahgerd!/gershbermps!.jpg"
+    },
+    {
+        "text": "NO!",
+        "matched_phrase": {
+            "status": true,
+            "meme": "no!"
+        },
+        "template": {
+            "template": "grumpycat",
+            "text": [
+                " ",
+                "NO!"
+            ]
+        },
+        "url": "https://memegen.link/grumpycat/_/NO!.jpg"
+    },
+    {
+        "text": "OHNO!",
+        "matched_phrase": {
+            "status": true,
+            "meme": "no!"
+        },
+        "template": {
+            "template": null
+        }
+    },
+    {
+        "text": "I have no idea what I'm doing!",
+        "matched_phrase": {
+            "status": true,
+            "meme": "i have no idea what i'm doing"
+        },
+        "template": {
+            "template": "noidea",
+            "text": [
+                "i have no idea",
+                "what i'm doing"
+            ]
+        },
+        "url": "https://memegen.link/noidea/i_have_no_idea/what_i'm_doing.jpg"
+    },
+    {
+        "text": "it's a trap!",
+        "matched_phrase": {
+            "status": true,
+            "meme": "it's a trap"
+        },
+        "template": {
+            "template": "ackbar",
+            "text": [
+                " ",
+                "it's a trap!"
+            ]
+        },
+        "url": "https://memegen.link/ackbar/_/it's_a_trap!.jpg"
+    },
+    {
+        "text": "Can't fail tests if you don't write any.",
+        "matched_phrase": {
+            "status": true,
+            "meme": " if you don't "
+        },
+        "template": {
+            "template": "rollsafe",
+            "text": [
+                "can't fail tests",
+                "if you don't write any."
+            ]
+        },
+        "url": "https://memegen.link/rollsafe/can't_fail_tests/if_you_don't_write_any..jpg"
+    },
+    {
+        "text": "I'll catch you if you don't do it!",
+        "matched_phrase": {
+            "status": true,
+            "meme": " if you don't "
+        },
+        "template": {
+            "template": null
+        }
+    },
+    {
+        "text": "aliens guy: node.js",
+        "matched_phrase": {
+            "status": true,
+            "meme": "aliens guy:"
+        },
+        "template": {
+            "template": "aag",
+            "text": [
+                " ",
+                "node.js"
+            ]
+        },
+        "url": "https://memegen.link/aag/_/node.js.jpg"
+    },
+    {
+        "text": "Accidental match?",
+        "matched_phrase": {
+            "status": true,
+            "meme": null
+        },
+        "template": {
+            "template": null
+        }
+    }
+]
