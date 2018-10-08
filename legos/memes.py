@@ -30,7 +30,7 @@ class Memes(Lego):
         logger.debug('Handling message...')
         opts = self._handle_opts(message)
         # Set a default return_val in case we can't handle our crap
-        return_val = '¯\_(ツ)_/¯'
+        return_val = r'¯\_(ツ)_/¯'
         meme = self._split_text(message['text'].lower())
 
         if meme is not None and meme['template'] is not None:
@@ -43,7 +43,7 @@ class Memes(Lego):
         try:
             target = message['metadata']['source_channel']
             opts = {'target': target}
-        except IndexError:
+        except LookupError:
             opts = None
             logger.error('''Could not identify message source in message:
                         {}'''.format(str(message)))
