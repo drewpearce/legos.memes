@@ -1,6 +1,8 @@
+import json
 from Legobot.Lego import Lego
 import logging
 import re
+import requests
 
 logger = logging.getLogger(__name__)
 
@@ -14,6 +16,7 @@ class Memes(Lego):
                          'no!', 'i have no idea what i\'m doing',
                          'it\'s a trap', ' if you don\'t ', 'aliens guy:']
         self.matched_phrase = ''
+        self.templates = self._get_meme_templates()
 
     def listening_for(self, message):
         if message['text'] is not None:
@@ -38,6 +41,19 @@ class Memes(Lego):
             if meme['string_replaced'] is True and len(meme['text']) == 2:
                 return_val = self._construct_url(meme)
             self.reply(message, return_val, opts)
+
+    def _get_meme_templates(self):
+        get_templates = requests.get('https://memegen.link/api/templates/')
+        if get_templates.status_code == requests.codes.ok:
+            templates = json.loads(get_templates.text)
+            templates = {v.split('/')[-1]: k for k, v in templates.items()}
+            return templates
+        else:
+            logger.error(('Error retrieving '
+                          'templates.\n{}: {}').format(
+                              get_templates.status_code,
+                              get_templates.text))
+            return {}
 
     def _handle_opts(self, message):
         try:
