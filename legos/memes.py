@@ -132,6 +132,9 @@ class Memes(Lego):
             meme['template'] = "aag"
             message = message.replace('aliens guy: ', '')
             meme['text'] = [' ', message]
+        elif self.template.get(self.matched_phrase['meme']):
+            meme['template'] = self.matched_phrase['meme']
+            meme['text'] = message.split(',')
         else:
             meme['template'] = None
 
