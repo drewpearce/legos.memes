@@ -1,6 +1,8 @@
+import json
 from Legobot.Lego import Lego
 import logging
 import re
+import requests
 
 logger = logging.getLogger(__name__)
 
@@ -12,8 +14,9 @@ class Memes(Lego):
                          'yo dawg ', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
-                         'it\'s a trap', ' if you don\'t ']
+                         'it\'s a trap', ' if you don\'t ', 'aliens guy:']
         self.matched_phrase = ''
+        self.templates = self._get_meme_templates()
 
     def listening_for(self, message):
         if message['text'] is not None:
@@ -30,7 +33,7 @@ class Memes(Lego):
         logger.debug('Handling message...')
         opts = self._handle_opts(message)
         # Set a default return_val in case we can't handle our crap
-        return_val = '¯\_(ツ)_/¯'
+        return_val = r'¯\_(ツ)_/¯'
         meme = self._split_text(message['text'].lower())
 
         if meme is not None and meme['template'] is not None:
@@ -39,11 +42,24 @@ class Memes(Lego):
                 return_val = self._construct_url(meme)
             self.reply(message, return_val, opts)
 
+    def _get_meme_templates(self):
+        get_templates = requests.get('https://memegen.link/api/templates/')
+        if get_templates.status_code == requests.codes.ok:
+            templates = json.loads(get_templates.text)
+            templates = {v.split('/')[-1]: k for k, v in templates.items()}
+            return templates
+        else:
+            logger.error(('Error retrieving '
+                          'templates.\n{}: {}').format(
+                              get_templates.status_code,
+                              get_templates.text))
+            return {}
+
     def _handle_opts(self, message):
         try:
             target = message['metadata']['source_channel']
             opts = {'target': target}
-        except IndexError:
+        except LookupError:
             opts = None
             logger.error('''Could not identify message source in message:
                         {}'''.format(str(message)))
@@ -94,8 +110,11 @@ class Memes(Lego):
             meme['template'] = 'ermg'
             meme['text'] = ['ermahgerd!', re.split('ermahgerd.* ', message)[1]]
         elif self.matched_phrase['meme'] == 'no!':
-            meme['template'] = 'grumpycat'
-            meme['text'] = [' ', 'NO!']
+            if re.search('^no!.*', message):
+                meme['template'] = 'grumpycat'
+                meme['text'] = [' ', 'NO!']
+            else:
+                meme['template'] = None
         elif self.matched_phrase['meme'] == 'i have no idea what i\'m doing':
             meme['template'] = 'noidea'
             meme['text'] = ['i have no idea', 'what i\'m doing']
@@ -109,6 +128,10 @@ class Memes(Lego):
                 meme['text'][1] = 'if you don\'t ' + meme['text'][1]
             else:
                 meme['template'] = None
+        elif self.matched_phrase['meme'] == 'aliens guy:':
+            meme['template'] = "aag"
+            message = message.replace('aliens guy: ', '')
+            meme['text'] = [' ', message]
         else:
             meme['template'] = None
 
