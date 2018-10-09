@@ -46,6 +46,13 @@ def test_get_help():
                                '/master/README.md for reference.')
 
 
+def test_get_meme_templates():
+    templates = LEGO._get_meme_templates()
+    assert templates
+    assert isinstance(templates, dict)
+    assert ' ' not in ''.join(templates.keys())
+
+
 def test_handle_opts(caplog):
     msg = EX_MSG
     opts = LEGO._handle_opts(msg)
