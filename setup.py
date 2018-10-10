@@ -1,5 +1,5 @@
 # Legos, A namespace package for distribution of Legobot plugins
-# Copyright (C) 2017  Drew Pearce
+# Copyright (C) 2018  Drew Pearce
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,24 +14,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from setuptools import setup, find_packages
-description = 'Meme generator using the memegen api'
-name = 'legos.memes'
-setup(
-    name=name,
-    version='0.2.3',
-    namespace_packages=name.split('.')[:-1],
-    license='GPLv3',
-    description=description or name,
-    author='Drew Pearce',
-    url='https://github.com/drewpearce/' + name,
-    install_requires=['legobot>=1.0.1',
-                      'requests'
-                      ],
-    classifiers=[
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Development Status :: 3 - Alpha',
-        'Programming Language :: Python :: 3'
-    ],
-    packages=find_packages()
-)
+from setuptools import setup
+
+setup()
