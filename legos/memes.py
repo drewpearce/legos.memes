@@ -17,6 +17,8 @@ class Memes(Lego):
                          'it\'s a trap', ' if you don\'t ', 'aliens guy:']
         self.matched_phrase = ''
         self.templates = self._get_meme_templates()
+        self.keywords = [keyword + ':' for keyword in [*self.templates]]
+        self.triggers += self.keywords
 
     def listening_for(self, message):
         if message['text'] is not None:
@@ -132,9 +134,18 @@ class Memes(Lego):
             meme['template'] = "aag"
             message = message.replace('aliens guy: ', '')
             meme['text'] = [' ', message]
-        elif self.template.get(self.matched_phrase['meme']):
-            meme['template'] = self.matched_phrase['meme']
+        elif self.matched_phrase['meme'] in self.keywords:
+            meme['template'] = self.matched_phrase['meme'].replace(':','')
+            message = message.replace(self.matched_phrase['meme'], '')
             meme['text'] = message.split(',')
+            if len(meme['text']) < 2:
+                meme['text'].append(meme['text'][0])
+                meme['text'][0] = ' '
+            index = 0
+            for line in meme['text']:
+                if line != ' ':
+                    meme['text'][index] = line.strip()
+                index += 1
         else:
             meme['template'] = None
 
@@ -171,6 +182,18 @@ class Memes(Lego):
     def get_name(self):
         return 'memes'
 
-    def get_help(self):
-        return ('Create memes through natural text. See https://github.com/'
+    def get_help(self, **kwargs):
+        subcommands = {
+                'keywords': '''In addition to natural language, lego.memes \
+                            supports keywords to create memes. To use this \
+                            feature, use this pattern: \
+                            `keyword: top line, bottom line`\n'''
+                            'Try `!help memes list` for a list of keywords',
+                'list': ', '.join([*self.templates])
+                }
+
+        if ('sub' in kwargs):
+            return subcommands[kwargs['sub']]
+        else:
+            return ('Create memes through natural text. See https://github.com/'
                 'drewpearce/legos.memes/blob/master/README.md for reference.')
