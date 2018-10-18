@@ -135,7 +135,7 @@ class Memes(Lego):
             message = message.replace('aliens guy: ', '')
             meme['text'] = [' ', message]
         elif self.matched_phrase['meme'] in self.keywords:
-            meme['template'] = self.matched_phrase['meme'].replace(':','')
+            meme['template'] = self.matched_phrase['meme'].replace(':', '')
             message = message.replace(self.matched_phrase['meme'], '')
             meme['text'] = message.split(',')
             if len(meme['text']) < 2:
@@ -184,10 +184,8 @@ class Memes(Lego):
 
     def get_help(self, **kwargs):
         subcommands = {
-                'keywords': '''In addition to natural language, lego.memes \
-                            supports keywords to create memes. To use this \
-                            feature, use this pattern: \
-                            `keyword: top line, bottom line`\n'''
+                'keywords': 'Keyword usage:'
+                            '`<keyword>: <top line>, <bottom line>`'
                             'Try `!help memes list` for a list of keywords',
                 'list': ', '.join([*self.templates])
                 }
@@ -195,5 +193,10 @@ class Memes(Lego):
         if ('sub' in kwargs):
             return subcommands[kwargs['sub']]
         else:
-            return ('Create memes through natural text. See https://github.com/'
-                'drewpearce/legos.memes/blob/master/README.md for reference.')
+            return ('Create memes through natural text.'
+                    'See https://github.com/'
+                    'drewpearce/legos.memes/blob/master/README.md'
+                    'for reference.'
+                    'In addition to natural language, lego.memes'
+                    'supports keywords to create memes.'
+                    'Use `!help memes keywords` for help using this feature')
