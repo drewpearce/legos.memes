@@ -78,15 +78,25 @@ class Memes(Lego):
     def _split_text(self, message):
         meme = {}
 
-        if self.matched_phrase['meme'] == 'memexy ':
-            meme['template'] = 'xy'
-            message = message.replace('memexy ', '')
-            meme['text'] = message.split('all the ')
-            meme['text'][1] = 'all the ' + meme['text'][1]
-        elif self.matched_phrase['meme'] == ' y u no ':
-            meme['template'] = 'yuno'
-            meme['text'] = message.split(' y u no ')
-            meme['text'][1] = 'y u no ' + meme['text'][1]
+        center_matches = {
+            'memexy ': {
+                'template': 'xy',
+                'match_text': 'all the ',
+                'strip_trigger': True
+            },
+            ' y u no ': {
+                'template': 'yuno'
+            }
+        }
+
+        if self.matched_phrase['meme'] in center_matches.keys():
+            trigger = self.matched_phrase['meme']
+            meme['template'] = center_matches[trigger].get('template')
+            meme['text'] = self._split_text_center_match(
+                trigger,
+                message,
+                match_text=center_matches[trigger].get('match_text'),
+                strip_trigger=center_matches[trigger].get('strip_trigger'))
         elif self.matched_phrase['meme'] == 'what if i told you ':
             meme['template'] = 'morpheus'
             meme['text'] = ['what if i told you']
@@ -151,16 +161,27 @@ class Memes(Lego):
 
         if meme.get('text'):
             for i, text in enumerate(meme['text']):
-                logger.debug('FOR LOOP: {}, {}'.format(i, text))
                 if text == '':
                     meme['text'][i] = ' '
-                    logger.debug('MEME TEXT {}: {}'.format(i, meme['text'][i]))
 
                 if meme['text'][i] != ' ':
                     meme['text'][i] = meme['text'][i].strip()
-                    logger.debug('MEME TEXT {}: {}'.format(i, meme['text'][i]))
 
+        logger.debug('MEME PROCESSED: {}'.format(meme))
         return meme
+
+    def _split_text_center_match(self, trigger, text, match_text=None,
+                                 strip_trigger=False):
+        if not match_text:
+            match_text = trigger
+
+        if strip_trigger:
+            text = text.replace(trigger, '')
+
+        response = text.split(match_text)
+        response[1] = match_text + response[1]
+        logger.debug('SPLIT RESPONSE: {}'.format(response))
+        return response
 
     def _string_replace(self, meme):
         replacements = {
