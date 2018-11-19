@@ -89,6 +89,22 @@ class Memes(Lego):
             }
         }
 
+        front_matches = {
+            'what if i told you ': {
+                'template': 'morpheus'
+            },
+            'one does not simply ': {
+                'template': 'mordor'
+            },
+            'brace yourselves ': {
+                'template': 'winter'
+            },
+            'aliens guy:': {
+                'template': 'aag',
+                'strip_trigger': True
+            }
+        }
+
         if self.matched_phrase['meme'] in center_matches.keys():
             trigger = self.matched_phrase['meme']
             meme['template'] = center_matches[trigger].get('template')
@@ -97,24 +113,19 @@ class Memes(Lego):
                 message,
                 match_text=center_matches[trigger].get('match_text'),
                 strip_trigger=center_matches[trigger].get('strip_trigger'))
-        elif self.matched_phrase['meme'] == 'what if i told you ':
-            meme['template'] = 'morpheus'
-            meme['text'] = ['what if i told you']
-            meme['text'].append(message.split('what if i told you ')[1])
+        elif self.matched_phrase['meme'] in front_matches.keys():
+            trigger = self.matched_phrase['meme']
+            meme['template'] = front_matches[trigger].get('template')
+            meme['text'] = self._split_text_front_match(
+                trigger,
+                message,
+                strip_trigger=front_matches[trigger].get('strip_trigger'))
         elif self.matched_phrase['meme'] == 'yo dawg ':
             meme['template'] = 'yodawg'
             meme['text'] = re.split(' so (i|we) put ', message)
             meme['text'][2] = ('so ' + meme['text'][1] +
                                ' put ' + meme['text'][2])
             meme['text'].pop(1)
-        elif self.matched_phrase['meme'] == 'one does not simply ':
-            meme['template'] = 'mordor'
-            meme['text'] = ['one does not simply']
-            meme['text'].append(message.split('one does not simply ')[1])
-        elif self.matched_phrase['meme'] == 'brace yourselves ':
-            meme['template'] = 'winter'
-            meme['text'] = ['brace yourselves']
-            meme['text'].append(message.split('brace yourselves ')[1])
         elif self.matched_phrase['meme'] == 'why not both':
             meme['template'] = 'both'
             meme['text'] = [' ', 'why not both?']
@@ -140,10 +151,6 @@ class Memes(Lego):
                 meme['text'][1] = 'if you don\'t ' + meme['text'][1]
             else:
                 meme['template'] = None
-        elif self.matched_phrase['meme'] == 'aliens guy:':
-            meme['template'] = "aag"
-            message = message.replace('aliens guy: ', '')
-            meme['text'] = [' ', message]
         elif self.matched_phrase['meme'] in self.keywords:
             meme['template'] = self.matched_phrase['meme'].replace(':', '')
             message = message.replace(self.matched_phrase['meme'], '')
@@ -167,8 +174,15 @@ class Memes(Lego):
                 if meme['text'][i] != ' ':
                     meme['text'][i] = meme['text'][i].strip()
 
-        logger.debug('MEME PROCESSED: {}'.format(meme))
         return meme
+
+    def _split_text_front_match(self, trigger, text, strip_trigger=False):
+        if strip_trigger:
+            response = [' ']
+        else:
+            response = [trigger]
+        response.append(text.split(trigger)[1])
+        return response
 
     def _split_text_center_match(self, trigger, text, match_text=None,
                                  strip_trigger=False):
@@ -180,7 +194,6 @@ class Memes(Lego):
 
         response = text.split(match_text)
         response[1] = match_text + response[1]
-        logger.debug('SPLIT RESPONSE: {}'.format(response))
         return response
 
     def _string_replace(self, meme):
