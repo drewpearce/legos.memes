@@ -92,3 +92,5 @@ Contact GitHub API Training Shop Blog About
 
 # Other
 .DS_Store
+.vscode/
+chatbot/
