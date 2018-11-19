@@ -193,10 +193,10 @@ class Memes(Lego):
         if ('sub' in kwargs):
             return subcommands[kwargs['sub']]
         else:
-            return ('Create memes through natural text.'
+            return ('Create memes through natural text. '
                     'See https://github.com/'
-                    'drewpearce/legos.memes/blob/master/README.md'
-                    'for reference.'
-                    'In addition to natural language, lego.memes'
-                    'supports keywords to create memes.'
-                    'Use `!help memes keywords` for help using this feature')
+                    'drewpearce/legos.memes/blob/master/README.md '
+                    'for reference.\n'
+                    'In addition to natural language, lego.memes '
+                    'can create memes by keywords. '
+                    'Use `!help memes keywords` for help using this feature.')
