@@ -105,6 +105,21 @@ class Memes(Lego):
             }
         }
 
+        single_phrases = {
+            'why not both': {
+                'template': 'both',
+                'text': [' ', 'why not both?']
+            },
+            'i have no idea what i\'m doing': {
+                'template': 'noidea',
+                'text': ['i have no idea', 'what i\'m doing']
+            },
+            'it\'s a trap': {
+                'template': 'ackbar',
+                'text': [' ', 'it\'s a trap!']
+            }
+        }
+
         if self.matched_phrase['meme'] in center_matches.keys():
             trigger = self.matched_phrase['meme']
             meme['template'] = center_matches[trigger].get('template')
@@ -120,15 +135,16 @@ class Memes(Lego):
                 trigger,
                 message,
                 strip_trigger=front_matches[trigger].get('strip_trigger'))
+        elif self.matched_phrase['meme'] in single_phrases.keys():
+            trigger = self.matched_phrase['meme']
+            meme['template'] = single_phrases[trigger].get('template')
+            meme['text'] = single_phrases[trigger].get('text')
         elif self.matched_phrase['meme'] == 'yo dawg ':
             meme['template'] = 'yodawg'
             meme['text'] = re.split(' so (i|we) put ', message)
             meme['text'][2] = ('so ' + meme['text'][1] +
                                ' put ' + meme['text'][2])
             meme['text'].pop(1)
-        elif self.matched_phrase['meme'] == 'why not both':
-            meme['template'] = 'both'
-            meme['text'] = [' ', 'why not both?']
         elif self.matched_phrase['meme'] == 'ermahgerd':
             meme['template'] = 'ermg'
             meme['text'] = ['ermahgerd!', re.split('ermahgerd.* ', message)[1]]
@@ -138,12 +154,6 @@ class Memes(Lego):
                 meme['text'] = [' ', 'NO!']
             else:
                 meme['template'] = None
-        elif self.matched_phrase['meme'] == 'i have no idea what i\'m doing':
-            meme['template'] = 'noidea'
-            meme['text'] = ['i have no idea', 'what i\'m doing']
-        elif self.matched_phrase['meme'] == 'it\'s a trap':
-            meme['template'] = 'ackbar'
-            meme['text'] = [' ', 'it\'s a trap!']
         elif self.matched_phrase['meme'] == ' if you don\'t ':
             if re.search("^can't.*if you don't.*", message):
                 meme['template'] = 'rollsafe'
