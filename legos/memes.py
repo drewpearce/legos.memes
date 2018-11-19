@@ -81,7 +81,7 @@ class Memes(Lego):
         if self.matched_phrase['meme'] == 'memexy ':
             meme['template'] = 'xy'
             message = message.replace('memexy ', '')
-            meme['text'] = message.split(' all the ')
+            meme['text'] = message.split('all the ')
             meme['text'][1] = 'all the ' + meme['text'][1]
         elif self.matched_phrase['meme'] == ' y u no ':
             meme['template'] = 'yuno'
@@ -148,6 +148,17 @@ class Memes(Lego):
                 index += 1
         else:
             meme['template'] = None
+
+        if meme.get('text'):
+            for i, text in enumerate(meme['text']):
+                logger.debug('FOR LOOP: {}, {}'.format(i, text))
+                if text == '':
+                    meme['text'][i] = ' '
+                    logger.debug('MEME TEXT {}: {}'.format(i, meme['text'][i]))
+
+                if meme['text'][i] != ' ':
+                    meme['text'][i] = meme['text'][i].strip()
+                    logger.debug('MEME TEXT {}: {}'.format(i, meme['text'][i]))
 
         return meme
 
