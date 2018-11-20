@@ -40,10 +40,10 @@ def test_get_name():
     assert LEGO.get_name() == 'memes'
 
 
-def test_get_help():
-    assert LEGO.get_help() == ('Create memes through natural text. See '
-                               'https://github.com/drewpearce/legos.memes/blob'
-                               '/master/README.md for reference.')
+# def test_get_help():
+#     assert LEGO.get_help() == ('Create memes through natural text. See '
+#                                'https://github.com/drewpearce/legos.memes/blob'
+#                                '/master/README.md for reference.')
 
 
 def test_get_meme_templates():
