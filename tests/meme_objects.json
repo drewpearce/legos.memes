@@ -48,7 +48,7 @@
         "text": "Yo dawg, I heard you like bots so I put a bot in your bot",
         "matched_phrase": {
             "status": true,
-            "meme": "yo dawg "
+            "meme": "yo dawg"
         },
         "template": {
             "template": "yodawg",
@@ -213,6 +213,36 @@
             ]
         },
         "url": "https://memegen.link/aag/_/node.js.jpg"
+    },
+    {
+        "text": "buzz: memes, memes everywhere",
+        "matched_phrase": {
+            "status": true,
+            "meme": "buzz:"
+        },
+        "template": {
+            "template": "buzz",
+            "text": [
+                "memes",
+                "memes everywhere"
+            ]
+        },
+        "url": "https://memegen.link/buzz/memes/memes_everywhere.jpg"
+    },
+    {
+        "text": "doge: such wow",
+        "matched_phrase": {
+            "status": true,
+            "meme": "doge:"
+        },
+        "template": {
+            "template": "doge",
+            "text": [
+                " ",
+                "such wow"
+            ]
+        },
+        "url": "https://memegen.link/doge/_/such_wow.jpg"
     },
     {
         "text": "Accidental match?",
