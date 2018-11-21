@@ -11,7 +11,7 @@ class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
-                         'yo dawg ', 'one does not simply ',
+                         'yo dawg', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
                          'it\'s a trap', ' if you don\'t ', 'aliens guy:']
@@ -139,7 +139,7 @@ class Memes(Lego):
             trigger = self.matched_phrase['meme']
             meme['template'] = single_phrases[trigger].get('template')
             meme['text'] = single_phrases[trigger].get('text')
-        elif self.matched_phrase['meme'] == 'yo dawg ':
+        elif self.matched_phrase['meme'] == 'yo dawg':
             meme['template'] = 'yodawg'
             meme['text'] = re.split(' so (i|we) put ', message)
             meme['text'][2] = ('so ' + meme['text'][1] +
@@ -252,6 +252,6 @@ class Memes(Lego):
                     'See https://github.com/'
                     'drewpearce/legos.memes/blob/master/README.md '
                     'for reference.\n'
-                    'In addition to natural language, lego.memes '
+                    'In addition to natural language, legos.memes '
                     'can create memes by keywords. '
                     'Use `!help memes keywords` for help using this feature.')

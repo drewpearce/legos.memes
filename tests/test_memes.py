@@ -5,16 +5,21 @@ import sys
 import threading
 
 
-LEGO_PATH = os.path.abspath(
-    os.path.join(
-        os.path.dirname(__file__),
-        '..',
-        'legos'
-    )
+LEGO_PATH = os.path.join(
+    os.path.abspath(os.path.dirname(__file__)),
+    '..',
+    'legos'
 )
 sys.path.append(LEGO_PATH)
 from memes import Memes  # noqa: E402
 
+TEST_PATH = os.path.abspath(os.path.dirname(__file__))
+CASE_FILE = os.path.join(
+    TEST_PATH,
+    'meme_objects.json'
+)
+with open(CASE_FILE, 'r') as f:
+    CASES = json.load(f)
 LOCK = threading.Lock()
 BASEPLATE = Lego.start(None, LOCK)
 LEGO = Memes(BASEPLATE, LOCK)
@@ -40,10 +45,8 @@ def test_get_name():
     assert LEGO.get_name() == 'memes'
 
 
-# def test_get_help():
-#     assert LEGO.get_help() == ('Create memes through natural text. See '
-#                                'https://github.com/drewpearce/legos.memes/blob'
-#                                '/master/README.md for reference.')
+def test_get_help():
+    assert 'Create memes through natural text.' in LEGO.get_help()
 
 
 def test_get_meme_templates():
@@ -64,24 +67,12 @@ def test_handle_opts(caplog):
 
 
 def test_match_phrases():
-    # TODO: Add more test cases.
-    cases = [
-        {
-            'case': 'Legobot, y u no have tests?!',
-            'meme': ' y u no ',
-            'status': True
-        },
-        {
-            'case': 'This text does not trigger.',
-            'status': False
-        }
-    ]
-
-    for case in cases:
-        matched = LEGO._match_phrases(case['case'])
-        assert matched['status'] == case['status']
-        if case['status'] is True:
-            assert matched['meme'] == case['meme']
+    for case in CASES:
+        if case['matched_phrase']['meme'] is not None:
+            matched = LEGO._match_phrases(case['text'].lower())
+            assert matched['status'] == case['matched_phrase']['status']
+            if case['matched_phrase']['status'] is True:
+                assert matched['meme'] == case['matched_phrase']['meme']
 
 
 def test_listening_for(caplog):
@@ -89,13 +80,13 @@ def test_listening_for(caplog):
     assert LEGO.listening_for(msg) is False
     msg['text'] = 'One does not simply walk into MORDOR'
     assert LEGO.listening_for(msg) is True
+    msg['text'] = True
+    assert LEGO.listening_for(msg) is False
+    assert 'failed to check message' in caplog.messages[0]
 
 
 def test_split_text():
-    case_file = os.path.dirname(__file__) + '/meme_objects.json'
-    with open(case_file, 'r') as f:
-        cases = json.load(f)
-    for case in cases:
+    for case in CASES:
         LEGO.matched_phrase = case['matched_phrase']
         template = LEGO._split_text(case['text'].lower())
         assert template == case['template']
