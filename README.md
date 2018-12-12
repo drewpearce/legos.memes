@@ -10,7 +10,7 @@ The Lego module system and Legobot are a FOSS project lovingly crafted by [Bren 
 
 ## Usage
 This lego is invoked simply by speaking in meme phrases. Currently the following memes are supported (case insensitive.)
-- `y u know...`
+- `y u no...`
   - Generates a Y U No guy meme with your text on it.
 - `yo dawg...`
   - Generates an Xzibit Yo Dawg meme with your message text on it.
