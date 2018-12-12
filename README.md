@@ -9,6 +9,7 @@ Automatically create memes based on phrasing in this memes lego. Built using the
 The Lego module system and Legobot are a FOSS project lovingly crafted by [Bren Briggs](https://github.com/bbriggs) and friends. All code borrowed from Legobot is his (C).
 
 ## Usage
+### Autodetect
 This lego is invoked simply by speaking in meme phrases. Currently the following memes are supported (case insensitive.)
 - `y u no...`
   - Generates a Y U No guy meme with your text on it.
@@ -36,6 +37,15 @@ This lego is invoked simply by speaking in meme phrases. Currently the following
   - Generates a Roll Safe meme with your message on it.
 - `aliens guy: ...`
   - Generates an Ancient Aliens Guy memer with your message on it.
+
+### Manual Invocation
+You can also generate memes manuall through the syntax `<keyword>: <top line text>, <bottom line text>`
+
+If you only want one line of text, simply don't include the comma.
+
+Example: `fry: not sure if ai, or really fast coder` would generate this meme: ![Fry Meme](https://memegen.link/fry/not_sure_if_ai/or_really_fast_coder.jpg)
+
+You can get a list of keywords in chat via `!help memes list` or you can visit [Meme Keyword List](https://memegen.link/api/templates/)
 
 ## Installation
 
