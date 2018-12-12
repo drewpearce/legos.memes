@@ -1,20 +1,20 @@
 language: python
 python:
-  - '3.6'
+- '3.6'
 install:
-  - pip install -r requirements.txt
-  - pip install --upgrade bandit flake8 pep8-naming pytest
+- pip install -r requirements.txt
+- pip install --upgrade bandit flake8 pep8-naming pytest
 script:
-  - bandit -r .
-  - flake8 .
-  - pytest
+- bandit -r .
+- flake8 .
+- pytest
 deploy:
   provider: pypi
   user: drewpearce
-  password:
-    secure: abe2HPMLVB2SL5cF+itBtN4kHAsQnU9OkBwoeQTWCWM50uBCRNDPfKuxsKOEinoyO+BkNzDhb/6gnL2FM3x4xCvGdvae2oA38rhIRDRzuBCW8ivIq8lwHGNLpdcfmKHkbGU9qKR9XwSn/AwhSNgyilf9BxGpqUFExKu+8Nk89j8X2l30FwYfen3POAg/97Fa0VR2FCwucTrX3WwpO3whJ9NaPOK2T512iCzjzOgCux74I7CtRFav+EzOQqhke4TkyAJvX2imZJYnSiedtZC7xY2ColAlhcldmHJNutTKylRrQ0Qt1WA9O6sN+K7FEnf6jrC1jSsHkCGft2AIHZ/WuzAZ9E6cvfvWhF/tONih93pCGZrOQ90l87efKEdFcwdtn0HVKsCAQ5pvFXmnGAJopMMUgO5yWApsQwu9qd2E0bNUgNAojKq7HBoGUJe7LPhS95K60s6n0yal+odCOFro9kIFKNBY4r98cLI6Ta9oKNnyJOHXEjhKYRZPRGQ+0NjcIV+rWjp3UTIgd7dApJdJ9463Neos+Sqf7nt9mfTKScHnEfP6z3bBAiAXxjo3MLgM3CJCzwWR7ckKXqXJx5HOb6+gk7AtPo8UNBfRU9br0R9oxZ3P3vvDVyk5FaGqtykmWEpeWrLUKK++N5Ae2yEccenETc962GUtFCXYgcVbWFU=
   on:
     tags: true
     distributions: sdist bdist_wheel
     branch: master
     repo: drewpearce/legos.memes
+  password:
+    secure: cGfDw7Da6Cp2oZE8f9K13fOEg8wdjjVEOLL8d+WSbvyH9tiVReWl+XIp12lq7kxcEyxU50Gtxtd7Xae9Gv9ftVHuISlDIf2JSw2Lht3OTJtEv9/x6H2YdaLecpZIO5moh6D4HLEWj7WJOtWSr9V6UFmw7c4Qak+FxQtgjvj9Xii2zNQqcffFBbjDDNIm+2Jq7qXzw5oLtpdUeyuWaP11oDGL9nUajNB01cjwtK0TlAQy0gOrcQxApEl2XnKB71hMQdWxFUF5xYOAeJg8ykYHkhoa2VGA1xfwtWBSJThIoTrd+Mh63Itp4rUK4XAv4lleBcfo9xacNCP0cGC/OvfFWzaffZ1x0MklQ/NuEatrRt1yqggUUciBZyUbIdWyKUvhbIqdqC4AQU5EVOwqISXa8P4QtjNOJBcFqG+KJQCVaXE1Fex/8MfD14q/ub3s11TmNQA0rln+HIiYHfD677w3RCmHkGNr1V3XR+uCZ1kEUT3+u7Q4UvwOdPRHwpeFjxtNO5LhF5w5/YP5yS0xTc5RtHxxmNLkJ6xvFfBzhwpeibypbFeY9Ux+D8mbLiuYee86pSTv6KYLM6jtxz1ZhRHF7ZEylxY8XEvtoM0xHexb00wMj+53pt24JB5wmEYLXyN+udoOXAKTeicH4vuI8IykRS83/zHeitcsT2AshLw2W3k=
