@@ -242,7 +242,7 @@ class Memes(Lego):
                 'keywords': 'Keyword usage:'
                             '`<keyword>: <top line>, <bottom line>`'
                             'Try `!help memes list` for a list of keywords',
-                'list': ', '.join([*self.templates])
+                'list': ', '.join(sorted([*self.templates]))
                 }
 
         if ('sub' in kwargs):
