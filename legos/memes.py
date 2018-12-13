@@ -161,7 +161,8 @@ class Memes(Lego):
                 meme['text'][1] = 'if you don\'t ' + meme['text'][1]
             else:
                 meme['template'] = None
-        elif self.matched_phrase['meme'] in self.keywords:
+        elif (self.matched_phrase['meme'] in self.keywords
+                and message.startswith(self.matched_phrase['meme'])):
             meme['template'] = self.matched_phrase['meme'].replace(':', '')
             message = message.replace(self.matched_phrase['meme'], '')
             meme['text'] = message.split(',')
