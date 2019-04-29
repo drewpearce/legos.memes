@@ -33,7 +33,7 @@ class Memes(Lego):
 
     def handle(self, message):
         logger.debug('Handling message...')
-        opts = self._handle_opts(message)
+        opts = self.build_reply_opts(message)
         # Set a default return_val in case we can't handle our crap
         return_val = r'¯\_(ツ)_/¯'
         meme = self._split_text(message['text'].lower())
@@ -56,16 +56,6 @@ class Memes(Lego):
                               get_templates.status_code,
                               get_templates.text))
             return {}
-
-    def _handle_opts(self, message):
-        try:
-            target = message['metadata']['source_channel']
-            opts = {'target': target}
-        except LookupError:
-            opts = None
-            logger.error('''Could not identify message source in message:
-                        {}'''.format(str(message)))
-        return opts
 
     def _match_phrases(self, text_in):
         matched = {}
