@@ -56,16 +56,6 @@ def test_get_meme_templates():
     assert ' ' not in ''.join(templates.keys())
 
 
-def test_handle_opts(caplog):
-    msg = EX_MSG
-    opts = LEGO._handle_opts(msg)
-    assert isinstance(opts, dict)
-    assert opts.get('target') == msg['metadata']['source_channel']
-
-    LEGO._handle_opts({'metadata': {}})
-    assert 'Could not identify message source in message' in caplog.text
-
-
 def test_match_phrases():
     for case in CASES:
         if case['matched_phrase']['meme'] is not None:
