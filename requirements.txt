@@ -1,2 +1,2 @@
-legobot>=1.2.4
+legobot>=1.2.5
 requests
