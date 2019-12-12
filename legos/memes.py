@@ -209,6 +209,10 @@ class Memes(Lego):
             '#': '~h',
             '/': '~s',
             '"': "''",
+            '‘': "'",
+            '’': "'",
+            '“': "''",
+            '”': "''"
         }
 
         for index, text in enumerate(meme['text']):
