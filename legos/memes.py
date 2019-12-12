@@ -110,70 +110,72 @@ class Memes(Lego):
             }
         }
 
-        if self.matched_phrase['meme'] in center_matches.keys():
-            trigger = self.matched_phrase['meme']
-            meme['template'] = center_matches[trigger].get('template')
-            meme['text'] = self._split_text_center_match(
-                trigger,
-                message,
-                match_text=center_matches[trigger].get('match_text'),
-                strip_trigger=center_matches[trigger].get('strip_trigger'))
-        elif self.matched_phrase['meme'] in front_matches.keys():
-            trigger = self.matched_phrase['meme']
-            meme['template'] = front_matches[trigger].get('template')
-            meme['text'] = self._split_text_front_match(
-                trigger,
-                message,
-                strip_trigger=front_matches[trigger].get('strip_trigger'))
-        elif self.matched_phrase['meme'] in single_phrases.keys():
-            trigger = self.matched_phrase['meme']
-            meme['template'] = single_phrases[trigger].get('template')
-            meme['text'] = single_phrases[trigger].get('text')
-        elif self.matched_phrase['meme'] == 'yo dawg':
-            meme['template'] = 'yodawg'
-            meme['text'] = re.split(' so (i|we) put ', message)
-            meme['text'][2] = ('so ' + meme['text'][1] +
-                               ' put ' + meme['text'][2])
-            meme['text'].pop(1)
-        elif self.matched_phrase['meme'] == 'ermahgerd':
-            meme['template'] = 'ermg'
-            meme['text'] = ['ermahgerd!', re.split('ermahgerd.* ', message)[1]]
-        elif self.matched_phrase['meme'] == 'no!':
-            if re.search('^no!.*', message):
-                meme['template'] = 'grumpycat'
-                meme['text'] = [' ', 'NO!']
+        if self.matched_phrase['status']:
+            if self.matched_phrase['meme'] in center_matches.keys():
+                trigger = self.matched_phrase['meme']
+                meme['template'] = center_matches[trigger].get('template')
+                meme['text'] = self._split_text_center_match(
+                    trigger,
+                    message,
+                    match_text=center_matches[trigger].get('match_text'),
+                    strip_trigger=center_matches[trigger].get('strip_trigger'))
+            elif self.matched_phrase['meme'] in front_matches.keys():
+                trigger = self.matched_phrase['meme']
+                meme['template'] = front_matches[trigger].get('template')
+                meme['text'] = self._split_text_front_match(
+                    trigger,
+                    message,
+                    strip_trigger=front_matches[trigger].get('strip_trigger'))
+            elif self.matched_phrase['meme'] in single_phrases.keys():
+                trigger = self.matched_phrase['meme']
+                meme['template'] = single_phrases[trigger].get('template')
+                meme['text'] = single_phrases[trigger].get('text')
+            elif self.matched_phrase['meme'] == 'yo dawg':
+                meme['template'] = 'yodawg'
+                meme['text'] = re.split(' so (i|we) put ', message)
+                meme['text'][2] = ('so ' + meme['text'][1] +
+                                   ' put ' + meme['text'][2])
+                meme['text'].pop(1)
+            elif self.matched_phrase['meme'] == 'ermahgerd':
+                meme['template'] = 'ermg'
+                meme['text'] = ['ermahgerd!',
+                                re.split('ermahgerd.* ', message)[1]]
+            elif self.matched_phrase['meme'] == 'no!':
+                if re.search('^no!.*', message):
+                    meme['template'] = 'grumpycat'
+                    meme['text'] = [' ', 'NO!']
+                else:
+                    meme['template'] = None
+            elif self.matched_phrase['meme'] == ' if you don\'t ':
+                if re.search("^can't.*if you don't.*", message):
+                    meme['template'] = 'rollsafe'
+                    meme['text'] = message.split(' if you don\'t ')
+                    meme['text'][1] = 'if you don\'t ' + meme['text'][1]
+                else:
+                    meme['template'] = None
+            elif (self.matched_phrase['meme'] in self.keywords
+                    and message.startswith(self.matched_phrase['meme'])):
+                meme['template'] = self.matched_phrase['meme'].replace(':', '')
+                message = message.replace(self.matched_phrase['meme'], '')
+                meme['text'] = message.split(',')
+                if len(meme['text']) < 2:
+                    meme['text'].append(meme['text'][0])
+                    meme['text'][0] = ' '
+                index = 0
+                for line in meme['text']:
+                    if line != ' ':
+                        meme['text'][index] = line.strip()
+                    index += 1
             else:
                 meme['template'] = None
-        elif self.matched_phrase['meme'] == ' if you don\'t ':
-            if re.search("^can't.*if you don't.*", message):
-                meme['template'] = 'rollsafe'
-                meme['text'] = message.split(' if you don\'t ')
-                meme['text'][1] = 'if you don\'t ' + meme['text'][1]
-            else:
-                meme['template'] = None
-        elif (self.matched_phrase['meme'] in self.keywords
-                and message.startswith(self.matched_phrase['meme'])):
-            meme['template'] = self.matched_phrase['meme'].replace(':', '')
-            message = message.replace(self.matched_phrase['meme'], '')
-            meme['text'] = message.split(',')
-            if len(meme['text']) < 2:
-                meme['text'].append(meme['text'][0])
-                meme['text'][0] = ' '
-            index = 0
-            for line in meme['text']:
-                if line != ' ':
-                    meme['text'][index] = line.strip()
-                index += 1
-        else:
-            meme['template'] = None
 
-        if meme.get('text'):
-            for i, text in enumerate(meme['text']):
-                if text == '':
-                    meme['text'][i] = ' '
+            if meme.get('text'):
+                for i, text in enumerate(meme['text']):
+                    if text == '':
+                        meme['text'][i] = ' '
 
-                if meme['text'][i] != ' ':
-                    meme['text'][i] = meme['text'][i].strip()
+                    if meme['text'][i] != ' ':
+                        meme['text'][i] = meme['text'][i].strip()
 
         return meme
 
