@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.3] [2019-12-12]
+
+#### Fixed
+
+- Convert curly quotes to regular quotes
+
+## [0.3.2] [2019-04-29]
+
+#### Changed
+
+- Removed unneccessary test
+- Use new build_reply_opts method
+
 ## [0.3.1] [2018-12-13]
 
 #### Fixed
