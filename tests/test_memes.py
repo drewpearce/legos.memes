@@ -72,7 +72,6 @@ def test_listening_for(caplog):
     assert LEGO.listening_for(msg) is True
     msg['text'] = True
     assert LEGO.listening_for(msg) is False
-    assert 'failed to check message' in caplog.messages[0]
 
 
 def test_split_text():
@@ -107,6 +106,9 @@ def test_construct_url():
         if case.get('url'):
             meme = LEGO._string_replace(case['template'])
             assert LEGO._construct_url(meme) == case['url']
+            LEGO.font = 'impact'
+            assert LEGO._construct_url(meme) == case['url'] + '?font=impact'
+            LEGO.font = None
 
 
 BASEPLATE.stop()
