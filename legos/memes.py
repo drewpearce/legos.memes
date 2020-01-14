@@ -19,6 +19,7 @@ class Memes(Lego):
         self.templates = self._get_meme_templates()
         self.keywords = [keyword + ':' for keyword in [*self.templates]]
         self.triggers += self.keywords
+        self.font = kwargs.get('font')
 
     def listening_for(self, message):
         if message['text'] is not None:
@@ -227,9 +228,11 @@ class Memes(Lego):
 
     def _construct_url(self, meme):
         base_url = 'https://memegen.link/'
-        return (base_url + meme['template'] +
-                '/' + meme['text'][0] +
-                '/' + meme['text'][1] + '.jpg')
+        out = '{}{}/{}/{}.jpg'.format(base_url, meme['template'], meme['text'][0], meme['text'][1])
+        if self.font:
+            out += '?font={}'.format(self.font)
+
+        return out
 
     def get_name(self):
         return 'memes'
