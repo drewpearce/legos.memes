@@ -19,17 +19,14 @@ class Memes(Lego):
         self.templates = self._get_meme_templates()
         self.keywords = [keyword + ':' for keyword in [*self.templates]]
         self.triggers += self.keywords
+        self.font = kwargs.get('font')
 
     def listening_for(self, message):
-        if message['text'] is not None:
-            try:
-                text_in = message['text'].lower()
-                self.matched_phrase = self._match_phrases(text_in)
-                return self.matched_phrase['status']
-            except Exception as e:
-                logger.error('''Memes lego failed to check message text:
-                            {}'''.format(e))
-                return False
+        if not isinstance(message.get('text'), str):
+            return False
+
+        self.matched_phrase = self._match_phrases(message.get('text').lower())
+        return self.matched_phrase['status']
 
     def handle(self, message):
         logger.debug('Handling message...')
@@ -227,9 +224,12 @@ class Memes(Lego):
 
     def _construct_url(self, meme):
         base_url = 'https://memegen.link/'
-        return (base_url + meme['template'] +
-                '/' + meme['text'][0] +
-                '/' + meme['text'][1] + '.jpg')
+        out = '{}{}/{}/{}.jpg'.format(
+            base_url, meme['template'], meme['text'][0], meme['text'][1])
+        if self.font:
+            out += '?font={}'.format(self.font)
+
+        return out
 
     def get_name(self):
         return 'memes'
