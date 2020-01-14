@@ -65,7 +65,7 @@ baseplate = Lego.start(None, lock)
 baseplate_proxy = baseplate.proxy()
 
 # Add your lego
-baseplate_proxy.add_child(Memes)
+baseplate_proxy.add_child(Memes, font='impact')  # font adding is optional
 ```
 
 ## Tweaking
