@@ -224,7 +224,8 @@ class Memes(Lego):
 
     def _construct_url(self, meme):
         base_url = 'https://memegen.link/'
-        out = '{}{}/{}/{}.jpg'.format(base_url, meme['template'], meme['text'][0], meme['text'][1])
+        out = '{}{}/{}/{}.jpg'.format(
+            base_url, meme['template'], meme['text'][0], meme['text'][1])
         if self.font:
             out += '?font={}'.format(self.font)
 
