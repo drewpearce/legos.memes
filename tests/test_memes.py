@@ -72,7 +72,6 @@ def test_listening_for(caplog):
     assert LEGO.listening_for(msg) is True
     msg['text'] = True
     assert LEGO.listening_for(msg) is False
-    assert 'failed to check message' in caplog.messages[0]
 
 
 def test_split_text():
