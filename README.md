@@ -17,8 +17,6 @@ This lego is invoked simply by speaking in meme phrases. Currently the following
   - Generates an Xzibit Yo Dawg meme with your message text on it.
 - `what if I told you...`
   - Generates a Morpheus What if I told you meme with your message text on it.
-- `memexy ...all the...`
-  - Generates a Hyperbole and a Half X all the Y meme with your message text on it.
 - `one does not simply...`
   - Generates a Boromir One does not simply meme with your message text on it.
 - `brace yourselves...`
@@ -35,8 +33,6 @@ This lego is invoked simply by speaking in meme phrases. Currently the following
   - Generates an Admiral Ackbar meme.
 - `can't... if you don't ...`
   - Generates a Roll Safe meme with your message on it.
-- `aliens guy: ...`
-  - Generates an Ancient Aliens Guy memer with your message on it.
 
 ### Manual Invocation
 You can also generate memes manuall through the syntax `<keyword>: <top line text>, <bottom line text>`
