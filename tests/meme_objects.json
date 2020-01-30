@@ -1,20 +1,5 @@
 [
     {
-        "text": "memexy Meme all the things",
-        "matched_phrase": {
-            "status": true,
-            "meme": "memexy "
-        },
-        "template": {
-            "template": "xy",
-            "text": [
-                "meme",
-                "all the things"
-            ]
-        },
-        "url": "https://memegen.link/xy/meme/all_the_things.jpg"
-    },
-    {
         "text": "Legobot, y u no have tests?",
         "matched_phrase": {
             "status": true,
@@ -198,21 +183,6 @@
         "template": {
             "template": null
         }
-    },
-    {
-        "text": "aliens guy: node.js",
-        "matched_phrase": {
-            "status": true,
-            "meme": "aliens guy:"
-        },
-        "template": {
-            "template": "aag",
-            "text": [
-                " ",
-                "node.js"
-            ]
-        },
-        "url": "https://memegen.link/aag/_/node.js.jpg"
     },
     {
         "text": "buzz: memes, memes everywhere",

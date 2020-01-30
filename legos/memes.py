@@ -1,29 +1,37 @@
 import json
-from Legobot.Lego import Lego
 import logging
+import os
 import re
+import time
+
+from Legobot.Lego import Lego
 import requests
 
+
 logger = logging.getLogger(__name__)
+local_dir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
-        self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
+        self.user_config = kwargs.get('config', {})
+        self.triggers = [' y u no ', 'what if i told you ',
                          'yo dawg', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
-                         'it\'s a trap', ' if you don\'t ', 'aliens guy:']
+                         'it\'s a trap', ' if you don\'t ']
         self.matched_phrase = ''
-        self.templates = self._get_meme_templates()
-        self.keywords = [keyword + ':' for keyword in [*self.templates]]
-        self.triggers += self.keywords
+        self._get_meme_templates()
+        self._set_keywords_and_triggers()
         self.font = kwargs.get('font')
 
     def listening_for(self, message):
         if not isinstance(message.get('text'), str):
             return False
+
+        if message['text'].startswith('!memes'):
+            return True
 
         self.matched_phrase = self._match_phrases(message.get('text').lower())
         return self.matched_phrase['status']
@@ -31,28 +39,128 @@ class Memes(Lego):
     def handle(self, message):
         logger.debug('Handling message...')
         opts = self.build_reply_opts(message)
-        # Set a default return_val in case we can't handle our crap
-        return_val = r'¯\_(ツ)_/¯'
-        meme = self._split_text(message['text'].lower())
 
-        if meme is not None and meme['template'] is not None:
-            meme = self._string_replace(meme)
-            if meme['string_replaced'] is True and len(meme['text']) == 2:
-                return_val = self._construct_url(meme)
+        if not self.matched_phrase and message['text'].startswith('!memes'):
+            return_val = self._handle_commands(message, opts)
             self.reply(message, return_val, opts)
+        else:
+            meme = self._split_text(message['text'].lower())
 
-    def _get_meme_templates(self):
+            if meme is not None and meme['template'] is not None:
+                meme = self._string_replace(meme)
+                if meme['string_replaced'] is True and len(meme['text']) == 2:
+                    url = self._construct_url(meme)
+                    if 'custom' in meme:
+                        code = meme['custom']
+                    else:
+                        code = meme['template']
+
+                    msg = message['text'].replace(
+                        code, self.templates.get(code, {}).get('name', code))
+                    self.reply_attachment(message, msg, url, opts)
+                else:
+                    self.reply(message, r'¯\_(ツ)_/¯', opts)
+
+    def _set_keywords_and_triggers(self):
+        self.keywords = [keyword + ':' for keyword in [*self.templates]]
+        self.triggers = set(list(self.triggers) + self.keywords)
+
+    def _cache_age(self):
+        now = int(time.time())
+        diff = now - self.cache_ts
+
+        days = diff // 86400
+        if days:
+            return '{} days'.format(days)
+
+        hours = diff // 3600
+        if hours:
+            return '{} hours'.format(hours)
+
+        minutes = diff // 60
+        if minutes:
+            return '{} minutes'.format(minutes)
+
+        return '{} seconds'.format(diff)
+
+    def _handle_commands(self, message, opts):
+        text = message['text']
+        splt = text.split(' ')
+        if len(splt) <= 1:
+            return 'Invalid command `{}`'.format(text)
+        elif splt[1].lower() not in ('cache',):
+            return 'Invalid command `{}`'.format(text)
+        else:
+            if len(splt) == 2:
+                return 'Current cache age: {}.'.format(self._cache_age())
+            elif splt[2].lower() == 'refresh':
+                msg = ('Refreshing cache. '
+                       'Memes will be unavailable for minute...')
+                self.reply(message, msg, opts)
+                self._get_meme_templates(refresh=True)
+                self._set_keywords_and_triggers()
+                return 'Meme cache refreshed. Cache age: {}'.format(
+                    self._cache_age())
+            else:
+                return 'Invalid command: `{}`'.format(text)
+
+    def _load_template_file(self):
+        try:
+            with open(os.path.join(local_dir, 'templates.json')) as f:
+                data = json.load(f)
+
+            return data
+        except Exception as e:
+            msg = 'An error ocurred loading template file: {}'.format(e)
+            logger.error(msg)
+            return {}
+
+    def _write_template_file(self, data):
+        try:
+            with open(os.path.join(local_dir, 'templates.json'), 'w') as f:
+                json.dump(data, f, indent=2)
+
+        except Exception as e:
+            msg = 'An error ocurred writing template file: {}'.format(e)
+            logger.error(msg)
+
+    def _load_remote_templates(self):
         get_templates = requests.get('https://memegen.link/api/templates/')
         if get_templates.status_code == requests.codes.ok:
             templates = json.loads(get_templates.text)
-            templates = {v.split('/')[-1]: k for k, v in templates.items()}
-            return templates
+            out = {}
+            for name, url in templates.items():
+                key = url.split('/')[-1]
+                info = {}
+                get_info = requests.get(url)
+                if get_info.status_code == requests.codes.ok:
+                    info = json.loads(get_info.text)
+
+                out[key] = {
+                    'name': name,
+                    'info': info
+                }
         else:
-            logger.error(('Error retrieving '
-                          'templates.\n{}: {}').format(
-                              get_templates.status_code,
-                              get_templates.text))
-            return {}
+            logger.error(('Error retrieving ''templates.\n{}: {}').format(
+                get_templates.status_code, get_templates.text))
+
+        return out
+
+    def _get_meme_templates(self, refresh=None):
+        templates = self._load_template_file()
+        if not templates or refresh is True:
+            templates = {
+                'data': self._load_remote_templates(),
+                'timestamp': int(time.time())
+            }
+            self._write_template_file(templates)
+
+        custom = self.user_config.get('templates')
+        if custom:
+            templates['data'].update(custom)
+
+        self.templates = templates['data']
+        self.cache_ts = templates['timestamp']
 
     def _match_phrases(self, text_in):
         matched = {}
@@ -153,6 +261,12 @@ class Memes(Lego):
             elif (self.matched_phrase['meme'] in self.keywords
                     and message.startswith(self.matched_phrase['meme'])):
                 meme['template'] = self.matched_phrase['meme'].replace(':', '')
+                if 'custom' in self.templates[meme['template']]:
+                    code = meme['template']
+                    meme['alt'] = self.templates[code]['custom']
+                    meme['template'] = 'custom'
+                    meme['custom'] = code
+
                 message = message.replace(self.matched_phrase['meme'], '')
                 meme['text'] = message.split(',')
                 if len(meme['text']) < 2:
@@ -226,8 +340,16 @@ class Memes(Lego):
         base_url = 'https://memegen.link/'
         out = '{}{}/{}/{}.jpg'.format(
             base_url, meme['template'], meme['text'][0], meme['text'][1])
+
+        params = []
         if self.font:
-            out += '?font={}'.format(self.font)
+            params.append('font={}'.format(self.font))
+
+        if 'alt' in meme:
+            params.append('alt={}'.format(meme['alt']))
+
+        if params:
+            out += '?{}'.format('&'.join(params))
 
         return out
 
