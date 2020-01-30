@@ -51,10 +51,11 @@ def test_get_help():
 
 
 def test_get_meme_templates():
-    templates = LEGO._get_meme_templates()
-    assert templates
-    assert isinstance(templates, dict)
-    assert ' ' not in ''.join(templates.keys())
+    LEGO._get_meme_templates()
+    assert LEGO.templates
+    assert LEGO.cache_ts
+    assert isinstance(LEGO.templates, dict)
+    assert ' ' not in ''.join(LEGO.templates.keys())
 
 
 def test_match_phrases():
