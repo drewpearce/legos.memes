@@ -16,15 +16,14 @@ class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
         self.user_config = kwargs.get('config', {})
-        self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
+        self.triggers = [' y u no ', 'what if i told you ',
                          'yo dawg', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
-                         'it\'s a trap', ' if you don\'t ', 'aliens guy:']
+                         'it\'s a trap', ' if you don\'t ']
         self.matched_phrase = ''
         self._get_meme_templates()
-        self.keywords = [keyword + ':' for keyword in [*self.templates]]
-        self.triggers += self.keywords
+        self._set_keywords_and_triggers()
         self.font = kwargs.get('font')
 
     def listening_for(self, message):
@@ -50,8 +49,17 @@ class Memes(Lego):
             if meme is not None and meme['template'] is not None:
                 meme = self._string_replace(meme)
                 if meme['string_replaced'] is True and len(meme['text']) == 2:
-                    return_val = self._construct_url(meme)
-                self.reply(message, return_val, opts)
+                    url = self._construct_url(meme)
+                    code = meme['template']
+                    msg = message['text'].replace(
+                        code, self.templates.get(code, {}).get('name', code))
+                    self.reply_attachment(message, msg, url, opts)
+                else:
+                    self.reply(message, r'¯\_(ツ)_/¯', opts)
+
+    def _set_keywords_and_triggers(self):
+        self.keywords = [keyword + ':' for keyword in [*self.templates]]
+        self.triggers = set(list(self.triggers) + self.keywords)
 
     def _cache_age(self):
         now = int(time.time())
@@ -86,6 +94,7 @@ class Memes(Lego):
                        'Memes will be unavailable for minute...')
                 self.reply(message, msg, opts)
                 self._get_meme_templates(refresh=True)
+                self._set_keywords_and_triggers()
                 return 'Meme cache refreshed. Cache age: {}'.format(
                     self._cache_age())
             else:
