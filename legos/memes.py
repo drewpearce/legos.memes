@@ -22,9 +22,7 @@ class Memes(Lego):
                          'no!', 'i have no idea what i\'m doing',
                          'it\'s a trap', ' if you don\'t ', 'aliens guy:']
         self.matched_phrase = ''
-        template_data = self._get_meme_templates()
-        self.templates = template_data.get('data', {})
-        self.cache_ts = template_data.get('timestamp')
+        self._get_meme_templates()
         self.keywords = [keyword + ':' for keyword in [*self.templates]]
         self.triggers += self.keywords
         self.font = kwargs.get('font')
@@ -33,21 +31,65 @@ class Memes(Lego):
         if not isinstance(message.get('text'), str):
             return False
 
+        if message['text'].startswith('!memes'):
+            return True
+
         self.matched_phrase = self._match_phrases(message.get('text').lower())
         return self.matched_phrase['status']
 
     def handle(self, message):
         logger.debug('Handling message...')
         opts = self.build_reply_opts(message)
-        # Set a default return_val in case we can't handle our crap
-        return_val = r'¯\_(ツ)_/¯'
-        meme = self._split_text(message['text'].lower())
 
-        if meme is not None and meme['template'] is not None:
-            meme = self._string_replace(meme)
-            if meme['string_replaced'] is True and len(meme['text']) == 2:
-                return_val = self._construct_url(meme)
+        if not self.matched_phrase and message['text'].startswith('!memes'):
+            return_val = self._handle_commands(message, opts)
             self.reply(message, return_val, opts)
+        else:
+            meme = self._split_text(message['text'].lower())
+
+            if meme is not None and meme['template'] is not None:
+                meme = self._string_replace(meme)
+                if meme['string_replaced'] is True and len(meme['text']) == 2:
+                    return_val = self._construct_url(meme)
+                self.reply(message, return_val, opts)
+
+    def _cache_age(self):
+        now = int(time.time())
+        diff = now - self.cache_ts
+
+        days = diff // 86400
+        if days:
+            return '{} days'.format(days)
+
+        hours = diff // 3600
+        if hours:
+            return '{} hours'.format(hours)
+
+        minutes = diff // 60
+        if minutes:
+            return '{} minutes'.format(minutes)
+
+        return '{} seconds'.format(diff)
+
+    def _handle_commands(self, message, opts):
+        text = message['text']
+        splt = text.split(' ')
+        if len(splt) <= 1:
+            return 'Invalid command `{}`'.format(text)
+        elif splt[1].lower() not in ('cache',):
+            return 'Invalid command `{}`'.format(text)
+        else:
+            if len(splt) == 2:
+                return 'Current cache age: {}.'.format(self._cache_age())
+            elif splt[2].lower() == 'refresh':
+                msg = ('Refreshing cache. '
+                       'Memes will be unavailable for minute...')
+                self.reply(message, msg, opts)
+                self._get_meme_templates(refresh=True)
+                return 'Meme cache refreshed. Cache age: {}'.format(
+                    self._cache_age())
+            else:
+                return 'Invalid command: `{}`'.format(text)
 
     def _load_template_file(self):
         try:
@@ -91,16 +133,17 @@ class Memes(Lego):
 
         return out
 
-    def _get_meme_templates(self):
+    def _get_meme_templates(self, refresh=None):
         templates = self._load_template_file()
-        if not templates:
+        if not templates or refresh is True:
             templates = {
                 'data': self._load_remote_templates(),
                 'timestamp': int(time.time())
             }
             self._write_template_file(templates)
 
-        return templates
+        self.templates = templates['data']
+        self.cache_ts = templates['timestamp']
 
     def _match_phrases(self, text_in):
         matched = {}
