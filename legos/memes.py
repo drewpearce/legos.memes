@@ -50,7 +50,11 @@ class Memes(Lego):
                 meme = self._string_replace(meme)
                 if meme['string_replaced'] is True and len(meme['text']) == 2:
                     url = self._construct_url(meme)
-                    code = meme['template']
+                    if 'custom' in meme:
+                        code = meme['custom']
+                    else:
+                        code = meme['template']
+
                     msg = message['text'].replace(
                         code, self.templates.get(code, {}).get('name', code))
                     self.reply_attachment(message, msg, url, opts)
@@ -150,6 +154,10 @@ class Memes(Lego):
                 'timestamp': int(time.time())
             }
             self._write_template_file(templates)
+
+        custom = self.user_config.get('templates')
+        if custom:
+            templates['data'].update(custom)
 
         self.templates = templates['data']
         self.cache_ts = templates['timestamp']
@@ -253,6 +261,12 @@ class Memes(Lego):
             elif (self.matched_phrase['meme'] in self.keywords
                     and message.startswith(self.matched_phrase['meme'])):
                 meme['template'] = self.matched_phrase['meme'].replace(':', '')
+                if 'custom' in self.templates[meme['template']]:
+                    code = meme['template']
+                    meme['alt'] = self.templates[code]['custom']
+                    meme['template'] = 'custom'
+                    meme['custom'] = code
+
                 message = message.replace(self.matched_phrase['meme'], '')
                 meme['text'] = message.split(',')
                 if len(meme['text']) < 2:
@@ -326,8 +340,16 @@ class Memes(Lego):
         base_url = 'https://memegen.link/'
         out = '{}{}/{}/{}.jpg'.format(
             base_url, meme['template'], meme['text'][0], meme['text'][1])
+
+        params = []
         if self.font:
-            out += '?font={}'.format(self.font)
+            params.append('font={}'.format(self.font))
+
+        if 'alt' in meme:
+            params.append('alt={}'.format(meme['alt']))
+
+        if params:
+            out += '?{}'.format('&'.join(params))
 
         return out
 
