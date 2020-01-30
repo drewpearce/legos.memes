@@ -1,22 +1,30 @@
 import json
-from Legobot.Lego import Lego
 import logging
+import os
 import re
+import time
+
+from Legobot.Lego import Lego
 import requests
 
+
 logger = logging.getLogger(__name__)
+local_dir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
         super().__init__(baseplate, lock)
+        self.user_config = kwargs.get('config', {})
         self.triggers = ['memexy ', ' y u no ', 'what if i told you ',
                          'yo dawg', 'one does not simply ',
                          'brace yourselves ', 'why not both', 'ermahgerd',
                          'no!', 'i have no idea what i\'m doing',
                          'it\'s a trap', ' if you don\'t ', 'aliens guy:']
         self.matched_phrase = ''
-        self.templates = self._get_meme_templates()
+        template_data = self._get_meme_templates()
+        self.templates = template_data.get('data', {})
+        self.cache_ts = template_data.get('timestamp')
         self.keywords = [keyword + ':' for keyword in [*self.templates]]
         self.triggers += self.keywords
         self.font = kwargs.get('font')
@@ -41,18 +49,58 @@ class Memes(Lego):
                 return_val = self._construct_url(meme)
             self.reply(message, return_val, opts)
 
-    def _get_meme_templates(self):
+    def _load_template_file(self):
+        try:
+            with open(os.path.join(local_dir, 'templates.json')) as f:
+                data = json.load(f)
+
+            return data
+        except Exception as e:
+            msg = 'An error ocurred loading template file: {}'.format(e)
+            logger.error(msg)
+            return {}
+
+    def _write_template_file(self, data):
+        try:
+            with open(os.path.join(local_dir, 'templates.json'), 'w') as f:
+                json.dump(data, f, indent=2)
+
+        except Exception as e:
+            msg = 'An error ocurred writing template file: {}'.format(e)
+            logger.error(msg)
+
+    def _load_remote_templates(self):
         get_templates = requests.get('https://memegen.link/api/templates/')
         if get_templates.status_code == requests.codes.ok:
             templates = json.loads(get_templates.text)
-            templates = {v.split('/')[-1]: k for k, v in templates.items()}
-            return templates
+            out = {}
+            for name, url in templates.items():
+                key = url.split('/')[-1]
+                info = {}
+                get_info = requests.get(url)
+                if get_info.status_code == requests.codes.ok:
+                    info = json.loads(get_info.text)
+
+                out[key] = {
+                    'name': name,
+                    'info': info
+                }
         else:
-            logger.error(('Error retrieving '
-                          'templates.\n{}: {}').format(
-                              get_templates.status_code,
-                              get_templates.text))
-            return {}
+            logger.error(('Error retrieving ''templates.\n{}: {}').format(
+                get_templates.status_code, get_templates.text))
+
+        return out
+
+    def _get_meme_templates(self):
+        templates = self._load_template_file()
+        if not templates:
+            templates = {
+                'data': self._load_remote_templates(),
+                'timestamp': int(time.time())
+            }
+            self._write_template_file(templates)
+
+        return templates
 
     def _match_phrases(self, text_in):
         matched = {}
