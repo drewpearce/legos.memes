@@ -3,6 +3,7 @@ from Legobot.Lego import Lego
 import os
 import sys
 import threading
+import time
 
 
 LEGO_PATH = os.path.join(
@@ -50,10 +51,11 @@ def test_get_help():
 
 
 def test_get_meme_templates():
-    templates = LEGO._get_meme_templates()
-    assert templates
-    assert isinstance(templates, dict)
-    assert ' ' not in ''.join(templates.keys())
+    LEGO._get_meme_templates()
+    assert LEGO.templates
+    assert LEGO.cache_ts
+    assert isinstance(LEGO.templates, dict)
+    assert ' ' not in ''.join(LEGO.templates.keys())
 
 
 def test_match_phrases():
@@ -109,6 +111,20 @@ def test_construct_url():
             LEGO.font = 'impact'
             assert LEGO._construct_url(meme) == case['url'] + '?font=impact'
             LEGO.font = None
+
+
+def test_cache_age():
+    LEGO.cache_ts = int(time.time()) - 4
+    assert 'seconds' in LEGO._cache_age()
+
+    LEGO.cache_ts = int(time.time()) - 125
+    assert LEGO._cache_age() == '2 minutes'
+
+    LEGO.cache_ts = int(time.time()) - 54500
+    assert LEGO._cache_age() == '15 hours'
+
+    LEGO.cache_ts = int(time.time()) - 260000
+    assert LEGO._cache_age() == '3 days'
 
 
 BASEPLATE.stop()
