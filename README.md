@@ -43,6 +43,24 @@ Example: `fry: not sure if ai, or really fast coder` would generate this meme: !
 
 You can get a list of keywords in chat via `!help memes list` or you can visit [Meme Keyword List](https://memegen.link/api/templates/)
 
+### Custom Templates
+You can generate memes with a custom image as well. Simply pass in a dictionary to the keyword `config` when adding the lego to the baseplate.
+
+```python
+baseplate_proxy.add_child(Memes, font='impact', config={
+    'templates': {
+        'code': {
+            'name': 'My Custom Template',
+            'custom': 'http://...'
+        }
+    }
+})
+```
+
+- code is the code you want to use to trigger the custom template
+- name is whatever name you want to use
+- custom is the url to the custom background template
+
 ## Installation
 
 `pip3 install legos.memes`
