@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.6] [2020-02-13]
+
+#### Fixed
+
+- Fixed a bug introduced in the last release where certain memes would trigger each other due to the title text sent with them.
+
 ## [0.3.5] [2020-01-30]
 
 #### Added

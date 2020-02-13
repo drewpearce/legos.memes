@@ -50,14 +50,14 @@ class Memes(Lego):
                 meme = self._string_replace(meme)
                 if meme['string_replaced'] is True and len(meme['text']) == 2:
                     url = self._construct_url(meme)
-                    if 'custom' in meme:
-                        code = meme['custom']
-                    else:
-                        code = meme['template']
+                    # if 'custom' in meme:
+                    #     code = meme['custom']
+                    # else:
+                    #     code = meme['template']
 
-                    msg = message['text'].replace(
-                        code, self.templates.get(code, {}).get('name', code))
-                    self.reply_attachment(message, msg, url, opts)
+                    # msg = message['text'].replace(
+                    #     code, self.templates.get(code, {}).get('name', code))
+                    self.reply_attachment(message, '', url, opts)
                 else:
                     self.reply(message, r'¯\_(ツ)_/¯', opts)
 
