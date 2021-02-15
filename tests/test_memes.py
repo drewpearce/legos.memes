@@ -14,32 +14,33 @@ LEGO_PATH = os.path.join(
 sys.path.append(LEGO_PATH)
 from memes import Memes  # noqa: E402
 
-TEST_PATH = os.path.abspath(os.path.dirname(__file__))
-CASE_FILE = os.path.join(
-    TEST_PATH,
-    'meme_objects.json'
-)
-with open(CASE_FILE, 'r') as f:
-    CASES = json.load(f)
+
 LOCK = threading.Lock()
 BASEPLATE = Lego.start(None, LOCK)
+
+
+def _get_cases():
+    case_file = os.path.join(
+        os.path.abspath(os.path.dirname(__file__)),
+        'meme_objects.json'
+    )
+    with open(case_file, 'r') as f:
+        cases = json.load(f)
+
+    return cases
+
+
+CASES = _get_cases()
+
+
+def test_init():
+    lego = Memes(BASEPLATE, LOCK)
+    assert lego
+    lego._get_meme_templates(True)
+    assert lego.templates
+
+
 LEGO = Memes(BASEPLATE, LOCK)
-EX_MSG = {
-    'text': 'i like memes',
-    'metadata': {
-        'source': 'urn:uuid:11a222b3-4d55-6666-efg7-h8i9j0a1111b',
-        'dest': None,
-        'opts': None,
-        'text': '!fact you later',
-        'source_user': 'HX99U7P36',
-        'user_id': 'HX99U7P36',
-        'display_name': 'test_user',
-        'source_channel': 'YZ366W8K2',
-        'is_private_message': True,
-        'source_connector': 'slack'
-    },
-    'should_log': False
-}
 
 
 def test_get_name():
@@ -68,7 +69,22 @@ def test_match_phrases():
 
 
 def test_listening_for(caplog):
-    msg = EX_MSG
+    msg = {
+        'text': 'i like memes',
+        'metadata': {
+            'source': 'urn:uuid:11a222b3-4d55-6666-efg7-h8i9j0a1111b',
+            'dest': None,
+            'opts': None,
+            'text': '!fact you later',
+            'source_user': 'HX99U7P36',
+            'user_id': 'HX99U7P36',
+            'display_name': 'test_user',
+            'source_channel': 'YZ366W8K2',
+            'is_private_message': True,
+            'source_connector': 'slack'
+        },
+        'should_log': False
+    }
     assert LEGO.listening_for(msg) is False
     msg['text'] = 'One does not simply walk into MORDOR'
     assert LEGO.listening_for(msg) is True

@@ -14,7 +14,9 @@ local_dir = os.path.abspath(os.path.dirname(__file__))
 
 class Memes(Lego):
     def __init__(self, baseplate, lock, *args, **kwargs):
-        super().__init__(baseplate, lock)
+        super().__init__(
+            baseplate, lock, log_file=kwargs.get('log_file'),
+            acl=kwargs.get('acl'), rate_config=kwargs.get('rate_config'))
         self.user_config = kwargs.get('config', {})
         self.triggers = [' y u no ', 'what if i told you ',
                          'yo dawg', 'one does not simply ',
@@ -125,21 +127,11 @@ class Memes(Lego):
             logger.error(msg)
 
     def _load_remote_templates(self):
-        get_templates = requests.get('https://memegen.link/api/templates/')
+        out = {}
+        get_templates = requests.get('https://api.memegen.link/templates')
         if get_templates.status_code == requests.codes.ok:
-            templates = json.loads(get_templates.text)
-            out = {}
-            for name, url in templates.items():
-                key = url.split('/')[-1]
-                info = {}
-                get_info = requests.get(url)
-                if get_info.status_code == requests.codes.ok:
-                    info = json.loads(get_info.text)
-
-                out[key] = {
-                    'name': name,
-                    'info': info
-                }
+            templates = get_templates.json()
+            out = {t['id']: t for t in templates}
         else:
             logger.error(('Error retrieving ''templates.\n{}: {}').format(
                 get_templates.status_code, get_templates.text))
@@ -337,8 +329,8 @@ class Memes(Lego):
         return meme
 
     def _construct_url(self, meme):
-        base_url = 'https://memegen.link/'
-        out = '{}{}/{}/{}.jpg'.format(
+        base_url = 'https://api.memegen.link/images'
+        out = '{}/{}/{}/{}.jpg'.format(
             base_url, meme['template'], meme['text'][0], meme['text'][1])
 
         params = []
