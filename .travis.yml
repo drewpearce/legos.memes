@@ -1,13 +1,12 @@
 language: python
 python:
-- '3.6'
+  - "3.6"
 install:
-- pip install -r requirements.txt
-- pip install --upgrade bandit flake8 pep8-naming pytest
+  - pip install -r requirements-dev.txt
 script:
-- bandit -r .
-- flake8 .
-- pytest
+  - bandit -r legos/.
+  - flake8 .
+  - pytest
 deploy:
   provider: pypi
   user: drewpearce

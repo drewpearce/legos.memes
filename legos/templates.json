@@ -1,1919 +1,1519 @@
 {
   "data": {
-    "keanu": {
-      "name": "",
-      "info": {
-        "name": "",
-        "description": "",
-        "aliases": [
-          "keanu"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/keanu/your_text/goes_here"
-      }
-    },
-    "tenguy": {
-      "name": "10 Guy",
-      "info": {
-        "name": "10 Guy",
-        "description": "http://knowyourmeme.com/memes/10-guy",
-        "aliases": [
-          "10guy",
-          "high-guy",
-          "really-high-guy",
-          "stoner-stanely",
-          "tenguy"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/tenguy/your_text/goes_here"
-      }
-    },
-    "afraid": {
-      "name": "Afraid to Ask Andy",
-      "info": {
-        "name": "Afraid to Ask Andy",
-        "description": "http://knowyourmeme.com/memes/afraid-to-ask-andy",
-        "aliases": [
-          "afraid",
-          "afraid-to-ask",
-          "afraid-to-ask-andy",
-          "andy-dwyer"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/afraid/i_don't_know_what_this_meme_is_for/and_at_this_point_i'm_too_afraid_to_ask"
-      }
-    },
-    "apcr": {
-      "name": "Almost Politically Correct Redneck",
-      "info": {
-        "name": "Almost Politically Correct Redneck",
-        "description": "https://knowyourmeme.com/memes/almost-politically-correct-redneck",
-        "aliases": [
-          "apcr",
-          "redneck"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/apcr/your_text/goes_here"
-      }
-    },
-    "older": {
-      "name": "An Older Code Sir, But It Checks Out",
-      "info": {
-        "name": "An Older Code Sir, But It Checks Out",
-        "description": "http://knowyourmeme.com/memes/its-an-older-meme-but-it-checks-out",
-        "aliases": [
-          "older",
-          "older-code"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/older/it's_an_older_meme_sir/but_it_checks_out"
-      }
-    },
     "aag": {
+      "id": "aag",
       "name": "Ancient Aliens Guy",
-      "info": {
-        "name": "Ancient Aliens Guy",
-        "description": "http://knowyourmeme.com/memes/ancient-aliens",
-        "aliases": [
-          "aag",
-          "ag",
-          "aliens"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/aag/_/aliens"
-      }
-    },
-    "atis": {
-      "name": "And Then I Said",
-      "info": {
-        "name": "And Then I Said",
-        "description": "https://knowyourmeme.com/memes/and-then-i-said",
-        "aliases": [
-          "and-then-i-said",
-          "and-then-i-told-them",
-          "atis",
-          "men-in-suits",
-          "then-i-said",
-          "then-i-told-them"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/atis/and_then_i_said/the_exam_will_only_contain_what_we've_covered_in_lectures"
-      }
-    },
-    "tried": {
-      "name": "At Least You Tried",
-      "info": {
-        "name": "At Least You Tried",
-        "description": "http://knowyourmeme.com/memes/you-tried",
-        "aliases": [
-          "at-least-you-tried",
-          "tried",
-          "you-tried"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/tried/at_least/you_tried"
-      }
-    },
-    "biw": {
-      "name": "Baby Insanity Wolf",
-      "info": {
-        "name": "Baby Insanity Wolf",
-        "description": "http://knowyourmeme.com/memes/baby-insanity-wolf",
-        "aliases": [
-          "baby-insanity",
-          "baby-insanity-wolf",
-          "biw"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/biw/gets_iced_coffee/in_the_winter"
-      }
-    },
-    "stew": {
-      "name": "Baby, You've Got a Stew Going",
-      "info": {
-        "name": "Baby, You've Got a Stew Going",
-        "description": "https://www.youtube.com/watch?v=Sr2PlqXw03Y",
-        "aliases": [
-          "carl-weathers",
-          "stew"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/stew/_/baby,_you've_got_a_stew_going!"
-      }
-    },
-    "blb": {
-      "name": "Bad Luck Brian",
-      "info": {
-        "name": "Bad Luck Brian",
-        "description": "http://knowyourmeme.com/memes/bad-luck-brian",
-        "aliases": [
-          "bad-luck",
-          "bad-luck-brian",
-          "blb",
-          "brian"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/blb/your_text/goes_here"
-      }
-    },
-    "bihw": {
-      "name": "But It's Honest Work",
-      "info": {
-        "name": "But It's Honest Work",
-        "description": "https://knowyourmeme.com/memes/but-its-honest-work",
-        "aliases": [
-          "bihw",
-          "farmer",
-          "honest",
-          "honest-work",
-          "it-aint-much"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/bihw/it_ain't_much/but_it's_honest_work"
-      }
-    },
-    "kermit": {
-      "name": "But That's None of My Business",
-      "info": {
-        "name": "But That's None of My Business",
-        "description": "http://knowyourmeme.com/memes/but-thats-none-of-my-business",
-        "aliases": [
-          "business",
-          "kermit",
-          "none-of-my-business",
-          "not-my-business"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/kermit/_/but_that's_none_of_my_business"
-      }
-    },
-    "bd": {
-      "name": "Butthurt Dweller",
-      "info": {
-        "name": "Butthurt Dweller",
-        "description": "http://knowyourmeme.com/memes/butthurt-dweller-gordo-granudo",
-        "aliases": [
-          "basement-dweller",
-          "bd",
-          "gordo-granudo"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/bd/can't_workout/don't_want_to_get_too_buff"
-      }
-    },
-    "ch": {
-      "name": "Captain Hindsight",
-      "info": {
-        "name": "Captain Hindsight",
-        "description": "http://knowyourmeme.com/memes/captain-hindsight",
-        "aliases": [
-          "captain-hindsight",
-          "ch",
-          "hindsight"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ch/if_you_wanted_to_avoid_the_friend_zone/you_should_have_made_your_intentions_known_from_the_start"
-      }
-    },
-    "cbg": {
-      "name": "Comic Book Guy",
-      "info": {
-        "name": "Comic Book Guy",
-        "description": "http://simpsons.wikia.com/wiki/Jeffrey_Albertson",
-        "aliases": [
-          "cbg",
-          "comic-book-guy",
-          "worst-ever"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/cbg/_/worst_thing_ever!"
-      }
-    },
-    "wonka": {
-      "name": "Condescending Wonka",
-      "info": {
-        "name": "Condescending Wonka",
-        "description": "http://knowyourmeme.com/memes/condescending-wonka-creepy-wonka",
-        "aliases": [
-          "condescending-wonka",
-          "creepy-wonka",
-          "wonka"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/wonka/your_text/goes_here"
-      }
-    },
-    "cb": {
-      "name": "Confession Bear",
-      "info": {
-        "name": "Confession Bear",
-        "description": "http://knowyourmeme.com/memes/confession-bear",
-        "aliases": [
-          "cb",
-          "confession-bear"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/cb/i_stole/the_pic_i_nic_basket"
-      }
-    },
-    "gandalf": {
-      "name": "Confused Gandalf",
-      "info": {
-        "name": "Confused Gandalf",
-        "description": "http://knowyourmeme.com/memes/confused-gandalf",
-        "aliases": [
-          "gandalf",
-          "lord-of-the-rings"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/gandalf/_/what_did_i_just_say~q"
-      }
-    },
-    "cryingfloor": {
-      "name": "Crying on Floor",
-      "info": {
-        "name": "Crying on Floor",
-        "description": "http://knowyourmeme.com/photos/1125083-hold-the-door",
-        "aliases": [
-          "cry",
-          "cryin-floor",
-          "cryingfloor",
-          "lying-on-the-floor-crying",
-          "sad"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/cryingfloor/it's_okay/lets_just_reschedule_drinking"
-      }
-    },
-    "dsm": {
-      "name": "Dating Site Murderer",
-      "info": {
-        "name": "Dating Site Murderer",
-        "description": "http://knowyourmeme.com/memes/dating-site-murderer",
-        "aliases": [
-          "dating-site-murderer",
-          "dsm"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/dsm/they_will_never_find_your_body/as_attractive_as_i_do"
-      }
-    },
-    "disastergirl": {
-      "name": "Disaster Girl",
-      "info": {
-        "name": "Disaster Girl",
-        "description": "http://knowyourmeme.com/memes/disaster-girl",
-        "aliases": [
-          "burn",
-          "did-it-on-purpose",
-          "disastergirl",
-          "revenge"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/disastergirl/what_did_you_say~q"
-      }
-    },
-    "live": {
-      "name": "Do It Live!",
-      "info": {
-        "name": "Do It Live!",
-        "description": "http://knowyourmeme.com/memes/bill-oreilly-rant",
-        "aliases": [
-          "bill-o'reilly-rant",
-          "do-it-live",
-          "live",
-          "o'reilly",
-          "o'reilly-rant"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/live/_/do_it_live!"
-      }
-    },
-    "ants": {
-      "name": "Do You Want Ants?",
-      "info": {
-        "name": "Do You Want Ants?",
-        "description": "http://knowyourmeme.com/memes/do-you-want-ants",
-        "aliases": [
-          "ants",
-          "archer",
-          "do-you-want"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ants/do_you_want_ants~q/because_that's_how_you_get_ants"
-      }
-    },
-    "doge": {
-      "name": "Doge",
-      "info": {
-        "name": "Doge",
-        "description": "http://knowyourmeme.com/memes/doge",
-        "aliases": [
-          "dog",
-          "doge"
-        ],
-        "styles": [
-          "bark",
-          "bite",
-          "full",
-          "growl",
-          "pet",
-          "roll"
-        ],
-        "example": "https://memegen.link/api/templates/doge/such_meme/very_skill"
-      }
-    },
-    "trump": {
-      "name": "Donald Trump",
-      "info": {
-        "name": "Donald Trump",
-        "description": "https://knowyourmeme.com/memes/people/donald-trump",
-        "aliases": [
-          "donald",
-          "donald-trump",
-          "maybe-ever",
-          "trump"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/trump/this_is_the_best_meme_in_the_history_of_memes/maybe_ever"
-      }
-    },
-    "drake": {
-      "name": "Drakeposting",
-      "info": {
-        "name": "Drakeposting",
-        "description": "http://knowyourmeme.com/memes/drakeposting",
-        "aliases": [
-          "always-on-beat",
-          "drake",
-          "drakeposting"
-        ],
-        "styles": [
-          "beat",
-          "no",
-          "padding",
-          "yes"
-        ],
-        "example": "https://memegen.link/api/templates/drake/your_text/goes_here"
-      }
-    },
-    "ermg": {
-      "name": "Ermahgerd",
-      "info": {
-        "name": "Ermahgerd",
-        "description": "http://knowyourmeme.com/memes/ermahgerd",
-        "aliases": [
-          "ermagerd",
-          "ermahgerd",
-          "ermg"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ermg/ermahgerd/memes"
-      }
-    },
-    "facepalm": {
-      "name": "Facepalm",
-      "info": {
-        "name": "Facepalm",
-        "description": "http://knowyourmeme.com/memes/facepalm",
-        "aliases": [
-          "facepalm",
-          "picard"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/facepalm/your_text/goes_here"
-      }
-    },
-    "feelsgood": {
-      "name": "Feels Good",
-      "info": {
-        "name": "Feels Good",
-        "description": "https://knowyourmeme.com/memes/feels-good",
-        "aliases": [
-          "feels-good-man",
-          "feelsgood",
-          "fgm"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/feelsgood/your_text/goes_here"
-      }
-    },
-    "firsttry": {
-      "name": "First Try!",
-      "info": {
-        "name": "First Try!",
-        "description": "https://www.youtube.com/watch?v=44-RsrF_V_w",
-        "aliases": [
-          "batman",
-          "firsttry"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/firsttry/_/first_try!"
-      }
-    },
-    "fwp": {
-      "name": "First World Problems",
-      "info": {
-        "name": "First World Problems",
-        "description": "http://knowyourmeme.com/memes/first-world-problems",
-        "aliases": [
-          "first-world-problems",
-          "fwp",
-          "whine",
-          "white-whine"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fwp/your_text/goes_here"
-      }
-    },
-    "fa": {
-      "name": "Forever Alone",
-      "info": {
-        "name": "Forever Alone",
-        "description": "http://knowyourmeme.com/memes/forever-alone",
-        "aliases": [
-          "alone",
-          "fa",
-          "forever-alone"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fa/forever/alone"
-      }
-    },
-    "fbf": {
-      "name": "Foul Bachelor Frog",
-      "info": {
-        "name": "Foul Bachelor Frog",
-        "description": "http://knowyourmeme.com/memes/foul-bachelor-frog",
-        "aliases": [
-          "bachelor-frog",
-          "fbf",
-          "foul-bachelor-frog"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fbf/paper_towel/the_plate_that_cleans_up_after_itself"
-      }
-    },
-    "fmr": {
-      "name": "Fuck Me, Right?",
-      "info": {
-        "name": "Fuck Me, Right?",
-        "description": "http://knowyourmeme.com/memes/fuck-me-right",
-        "aliases": [
-          "fmr",
-          "fuck-me",
-          "fuck-me-right"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fmr/_/fuck_me,_right~q"
-      }
-    },
-    "fry": {
-      "name": "Futurama Fry",
-      "info": {
-        "name": "Futurama Fry",
-        "description": "http://knowyourmeme.com/memes/futurama-fry-not-sure-if",
-        "aliases": [
-          "fry",
-          "futurama-fry",
-          "not-sure-if"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fry/not_sure_if_trolling/or_just_stupid"
-      }
-    },
-    "ggg": {
-      "name": "Good Guy Greg",
-      "info": {
-        "name": "Good Guy Greg",
-        "description": "http://knowyourmeme.com/memes/good-guy-greg",
-        "aliases": [
-          "ggg",
-          "good-guy-greg",
-          "greg"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ggg/your_text/goes_here"
-      }
-    },
-    "grumpycat": {
-      "name": "Grumpy Cat",
-      "info": {
-        "name": "Grumpy Cat",
-        "description": "https://imgflip.com/memegenerator/Grumpy-Cat",
-        "aliases": [
-          "angry",
-          "grumpy-cat",
-          "grumpycat"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/grumpycat/i_hope_that_what_does_not_kill_you/tries_again"
-      }
-    },
-    "harold": {
-      "name": "Hide the Pain Harold",
-      "info": {
-        "name": "Hide the Pain Harold",
-        "description": "https://knowyourmeme.com/memes/hide-the-pain-harold",
-        "aliases": [
-          "harold",
-          "hide-the-pain",
-          "hide-the-pain-harold",
-          "htph",
-          "maurice",
-          "pain"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/harold/when_the_boss_sees/your_meme_tab"
-      }
-    },
-    "hipster": {
-      "name": "Hipster Barista",
-      "info": {
-        "name": "Hipster Barista",
-        "description": "http://knowyourmeme.com/memes/hipster-barista",
-        "aliases": [
-          "barista",
-          "hipster",
-          "hipster-barista"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/hipster/your_text/goes_here"
-      }
-    },
-    "icanhas": {
-      "name": "I Can Has Cheezburger?",
-      "info": {
-        "name": "I Can Has Cheezburger?",
-        "description": "http://knowyourmeme.com/memes/happy-cat",
-        "aliases": [
-          "happy-cat",
-          "i-can-has-cheezburger",
-          "i-can-haz",
-          "icanhas"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/icanhas/i_can_has/this_meme~q"
-      }
-    },
-    "crazypills": {
-      "name": "I Feel Like I'm Taking Crazy Pills",
-      "info": {
-        "name": "I Feel Like I'm Taking Crazy Pills",
-        "description": "http://knowyourmeme.com/memes/i-feel-like-im-taking-crazy-pills",
-        "aliases": [
-          "crazypills",
-          "i'm-taking-crazy-pills"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/crazypills/_/i_feel_like_i'm_taking_crazy_pills"
-      }
-    },
-    "mw": {
-      "name": "I Guarantee It",
-      "info": {
-        "name": "I Guarantee It",
-        "description": "http://knowyourmeme.com/memes/george-zimmer-i-guarantee-it",
-        "aliases": [
-          "george-zimmer",
-          "guarantee",
-          "guarantee-it",
-          "i-guarantee-it",
-          "mens-wearhouse",
-          "mw"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/mw/you're_gonna_like_the_way_you_look/i_guarantee_it"
-      }
-    },
-    "noidea": {
-      "name": "I Have No Idea What I'm Doing",
-      "info": {
-        "name": "I Have No Idea What I'm Doing",
-        "description": "http://knowyourmeme.com/memes/i-have-no-idea-what-i-m-doing",
-        "aliases": [
-          "no-idea",
-          "noidea",
-          "pc-dog"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/noidea/i_have_no_idea/what_i'm_doing"
-      }
-    },
-    "regret": {
-      "name": "I Immediately Regret This Decision!",
-      "info": {
-        "name": "I Immediately Regret This Decision!",
-        "description": "https://www.youtube.com/watch?v=gd9ltJGykYc",
-        "aliases": [
-          "anchorman-regret",
-          "immediate-regret",
-          "regret",
-          "regret-this",
-          "regret-this-decision"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/regret/_/i_immediately_regret_this_decision"
-      }
-    },
-    "boat": {
-      "name": "I Should Buy a Boat Cat",
-      "info": {
-        "name": "I Should Buy a Boat Cat",
-        "description": "http://knowyourmeme.com/memes/i-should-buy-a-boat-cat",
-        "aliases": [
-          "boat",
-          "boat-cat",
-          "buy-a-boat",
-          "newspaper-cat",
-          "newspaper-realization-cat",
-          "realization-cat"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/boat/_/i_should_buy_a_boat"
-      }
-    },
-    "hagrid": {
-      "name": "I Should Not Have Said That",
-      "info": {
-        "name": "I Should Not Have Said That",
-        "description": "https://www.youtube.com/watch?v=498HkRM77gg",
-        "aliases": [
-          "hagrid",
-          "said-that",
-          "should-not"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/hagrid/_/i_should_not_have_said_that"
-      }
-    },
-    "sohappy": {
-      "name": "I Would Be So Happy",
-      "info": {
-        "name": "I Would Be So Happy",
-        "description": "https://www.youtube.com/watch?v=z_17RHGKNTY",
-        "aliases": [
-          "i-would-be-so-happy",
-          "sohappy",
-          "south-park-so-happy"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sohappy/if_i_could_use_this_meme/i_would_be_so_happy"
-      }
-    },
-    "captain": {
-      "name": "I am the Captain Now",
-      "info": {
-        "name": "I am the Captain Now",
-        "description": "https://www.youtube.com/watch?v=dvA-mimf2yg",
-        "aliases": [
-          "captain",
-          "captain-now",
-          "im-the-captain"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/captain/look_at_me/i_am_the_captain_now"
-      }
-    },
-    "bender": {
-      "name": "I'm Going to Build My Own Theme Park",
-      "info": {
-        "name": "I'm Going to Build My Own Theme Park",
-        "description": "http://knowyourmeme.com/memes/im-going-to-build-my-own-theme-park-with-blackjack-and-hookers",
-        "aliases": [
-          "bender",
-          "theme-park"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/bender/i'm_going_to_build_my_own_theme_park/with_blackjack_and_hookers"
-      }
-    },
-    "inigo": {
-      "name": "Inigo Montoya",
-      "info": {
-        "name": "Inigo Montoya",
-        "description": "http://knowyourmeme.com/memes/you-keep-using-that-word-i-do-not-think-it-means-what-you-think-it-means",
-        "aliases": [
-          "inigo",
-          "inigomontoya",
-          "montoya",
-          "that-word",
-          "word"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/inigo/you_keep_using_that_word/i_do_not_think_it_means_what_you_think_it_means"
-      }
-    },
-    "iw": {
-      "name": "Insanity Wolf",
-      "info": {
-        "name": "Insanity Wolf",
-        "description": "http://knowyourmeme.com/memes/insanity-wolf",
-        "aliases": [
-          "insanity",
-          "insanity-wolf",
-          "iw"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/iw/does_testing/in_production"
-      }
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/aag.png",
+      "example": "https://api.memegen.link/images/aag/_/aliens.png",
+      "source": "http://knowyourmeme.com/memes/ancient-aliens",
+      "_self": "https://api.memegen.link/templates/aag"
     },
     "ackbar": {
+      "id": "ackbar",
       "name": "It's A Trap!",
-      "info": {
-        "name": "It's A Trap!",
-        "description": "http://knowyourmeme.com/memes/its-a-trap",
-        "aliases": [
-          "ackbar",
-          "its-a-trap",
-          "trap"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ackbar/_/it's_a_trap!"
-      }
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ackbar.png",
+      "example": "https://api.memegen.link/images/ackbar/_/it's_a_trap!.png",
+      "source": "http://knowyourmeme.com/memes/its-a-trap",
+      "_self": "https://api.memegen.link/templates/ackbar"
     },
-    "happening": {
-      "name": "It's Happening",
-      "info": {
-        "name": "It's Happening",
-        "description": "http://knowyourmeme.com/memes/doom-paul-its-happening",
-        "aliases": [
-          "doom-paul",
-          "happening",
-          "its-happening",
-          "ron-paul"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/happening/_/it's_happening"
-      }
-    },
-    "joker": {
-      "name": "It's Simple, Kill the Batman",
-      "info": {
-        "name": "It's Simple, Kill the Batman",
-        "description": "https://www.youtube.com/watch?v=f_XHjqABQQA",
-        "aliases": [
-          "it's-simple",
-          "joker",
-          "kill-the-batman",
-          "simple"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/joker/it's_simple/kill_the_batman"
-      }
-    },
-    "ive": {
-      "name": "Jony Ive Redesigns Things",
-      "info": {
-        "name": "Jony Ive Redesigns Things",
-        "description": "https://www.apple.com/pr/bios/jonathan-ive.html",
-        "aliases": [
-          "best-thing-ever",
-          "ive",
-          "jony"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ive/we_think/you'll_love_it"
-      }
-    },
-    "jd": {
-      "name": "Joseph Ducreux / Archaic Rap",
-      "info": {
-        "name": "Joseph Ducreux / Archaic Rap",
-        "description": "https://knowyourmeme.com/memes/joseph-ducreux-archaic-rap",
-        "aliases": [
-          "archaic-rap",
-          "jd",
-          "joseph-ducreux"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/jd/disregard_females/acquire_currency"
-      }
-    },
-    "ll": {
-      "name": "Laughing Lizard",
-      "info": {
-        "name": "Laughing Lizard",
-        "description": "http://knowyourmeme.com/memes/laughing-lizard-hhhehehe",
-        "aliases": [
-          "hhhehehe",
-          "laughing-lizard",
-          "ll"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ll/_/hhhehehe"
-      }
-    },
-    "lrv": {
-      "name": "Laundry Room Viking",
-      "info": {
-        "name": "Laundry Room Viking",
-        "description": "http://knowyourmeme.com/memes/laundry-room-viking",
-        "aliases": [
-          "fun",
-          "laundry",
-          "laundry-room-viking",
-          "lrv",
-          "they-said"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/lrv/do_the_laundry_they_said/it_will_be_fun_they_said"
-      }
-    },
-    "leo": {
-      "name": "Leo Strutting",
-      "info": {
-        "name": "Leo Strutting",
-        "description": "https://knowyourmeme.com/memes/strutting-leo",
-        "aliases": [
-          "leo"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/leo/your_text/goes_here"
-      }
-    },
-    "away": {
-      "name": "Life... Finds a Way",
-      "info": {
-        "name": "Life... Finds a Way",
-        "description": "https://www.youtube.com/watch?v=dMjQ3hA9mEA",
-        "aliases": [
-          "away",
-          "finds-a-way",
-          "ian-malcolm",
-          "life",
-          "malcolm"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/away/life.../finds_a_way"
-      }
-    },
-    "morpheus": {
-      "name": "Matrix Morpheus",
-      "info": {
-        "name": "Matrix Morpheus",
-        "description": "http://knowyourmeme.com/memes/matrix-morpheus",
-        "aliases": [
-          "matrix-morpheus",
-          "morpheus",
-          "what-if"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/morpheus/your_text/goes_here"
-      }
-    },
-    "mb": {
-      "name": "Member Berries",
-      "info": {
-        "name": "Member Berries",
-        "description": "http://knowyourmeme.com/memes/member-berries",
-        "aliases": [
-          "mb",
-          "member",
-          "member-berries"
-        ],
-        "styles": [
-          "box",
-          "flood"
-        ],
-        "example": "https://memegen.link/api/templates/mb/'member/star_wars~q"
-      }
-    },
-    "badchoice": {
-      "name": "Milk Was a Bad Choice",
-      "info": {
-        "name": "Milk Was a Bad Choice",
-        "description": "https://www.youtube.com/watch?v=DeY0yPqibb0",
-        "aliases": [
-          "badchoice",
-          "milk-was-a-bad-choice",
-          "so-damn-hot"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/badchoice/milk/was_a_bad_choice"
-      }
-    },
-    "mini-keanu": {
-      "name": "Mini Keanu Reeves",
-      "info": {
-        "name": "Mini Keanu Reeves",
-        "description": "https://knowyourmeme.com/memes/mini-keanu-reeves",
-        "aliases": [
-          "little-keanu",
-          "mini-keanu",
-          "short-keanu"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/mini-keanu/your_text/goes_here"
-      }
-    },
-    "mmm": {
-      "name": "Minor Mistake Marvin",
-      "info": {
-        "name": "Minor Mistake Marvin",
-        "description": "http://knowyourmeme.com/memes/minor-mistake-marvin",
-        "aliases": [
-          "mistake-marvin",
-          "mm",
-          "mmm"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/mmm/your_text/goes_here"
-      }
-    },
-    "spongebob": {
-      "name": "Mocking Spongebob",
-      "info": {
-        "name": "Mocking Spongebob",
-        "description": "http://knowyourmeme.com/memes/mocking-spongebob",
-        "aliases": [
-          "bob",
-          "mock",
-          "sponge",
-          "spongebob"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/spongebob/your_text/goes_here"
-      }
-    },
-    "soup-nazi": {
-      "name": "No Soup for You / Soup Nazi",
-      "info": {
-        "name": "No Soup for You / Soup Nazi",
-        "description": "https://knowyourmeme.com/memes/no-soup-for-you-soup-nazi",
-        "aliases": [
-          "no-soup-for-you",
-          "soup-nazi"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/soup-nazi/no_soup_for_you!"
-      }
-    },
-    "jetpack": {
-      "name": "Nothing To Do Here",
-      "info": {
-        "name": "Nothing To Do Here",
-        "description": "http://knowyourmeme.com/memes/nothing-to-do-here-jet-pack-guy",
-        "aliases": [
-          "jet-pack-guy",
-          "jetpack",
-          "nothing-to-do-here"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/jetpack/nothing_to_do_here"
-      }
-    },
-    "imsorry": {
-      "name": "Oh, I'm Sorry, I Thought This Was America",
-      "info": {
-        "name": "Oh, I'm Sorry, I Thought This Was America",
-        "description": "http://knowyourmeme.com/memes/oh-im-sorry-i-thought-this-was-america",
-        "aliases": [
-          "imsorry",
-          "randy-marsh"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/imsorry/oh,_i'm_sorry/i_thought_this_was_america"
-      }
-    },
-    "red": {
-      "name": "Oh, Is That What We're Going to Do Today?",
-      "info": {
-        "name": "Oh, Is That What We're Going to Do Today?",
-        "description": "https://www.imdb.com/title/tt0720046/",
-        "aliases": [
-          "going-to-do-today",
-          "going-to-fight",
-          "red",
-          "red-forman"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/red/oh,_is_that_what_we're_going_to_do_today~q/we're_going_to_fight~q"
-      }
-    },
-    "mordor": {
-      "name": "One Does Not Simply Walk into Mordor",
-      "info": {
-        "name": "One Does Not Simply Walk into Mordor",
-        "description": "http://knowyourmeme.com/memes/one-does-not-simply-walk-into-mordor",
-        "aliases": [
-          "boromir",
-          "mordor",
-          "one-does-not",
-          "one-does-not-simply"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/mordor/one_does_not_simply/walk_into_mordor"
-      }
-    },
-    "oprah": {
-      "name": "Oprah You Get a Car",
-      "info": {
-        "name": "Oprah You Get a Car",
-        "description": "http://knowyourmeme.com/memes/oprah-you-get-a-car",
-        "aliases": [
-          "oprah",
-          "you-get-a-car"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/oprah/you_get_a_meme/and_you_get_a_meme"
-      }
-    },
-    "oag": {
-      "name": "Overly Attached Girlfriend",
-      "info": {
-        "name": "Overly Attached Girlfriend",
-        "description": "http://knowyourmeme.com/memes/overly-attached-girlfriend",
-        "aliases": [
-          "oag",
-          "overly-attached-girlfriend"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/oag/i_know_you_received_my_email/because_i_checked_your_inbox"
-      }
-    },
-    "remembers": {
-      "name": "Pepperidge Farm Remembers",
-      "info": {
-        "name": "Pepperidge Farm Remembers",
-        "description": "http://knowyourmeme.com/memes/pepperidge-farm-remembers",
-        "aliases": [
-          "farm",
-          "pepperidge-farm",
-          "pepperidge-farm-remembers",
-          "remembers"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/remembers/remember_this_meme~q/pepperidge_farm_remembers"
-      }
-    },
-    "persian": {
-      "name": "Persian Cat Room Guardian",
-      "info": {
-        "name": "Persian Cat Room Guardian",
-        "description": "https://knowyourmeme.com/memes/persian-cat-room-guardian",
-        "aliases": [
-          "persian"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/persian/your_text/goes_here"
-      }
-    },
-    "philosoraptor": {
-      "name": "Philosoraptor",
-      "info": {
-        "name": "Philosoraptor",
-        "description": "http://knowyourmeme.com/memes/philosoraptor",
-        "aliases": [
-          "philosoraptor",
-          "raptor"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/philosoraptor/your_text/goes_here"
-      }
-    },
-    "jw": {
-      "name": "Probably Not a Good Idea",
-      "info": {
-        "name": "Probably Not a Good Idea",
-        "description": "https://www.youtube.com/watch?v=RFinNxS5KN4&t=86",
-        "aliases": [
-          "jurrasic-world",
-          "jw",
-          "not-a-good-idea"
-        ],
-        "styles": [
-          "alternate"
-        ],
-        "example": "https://memegen.link/api/templates/jw/you_just_went_and_made_a_new_dinosaur~q/probably_not_a_good_idea"
-      }
-    },
-    "patrick": {
-      "name": "Push it somewhere else Patrick",
-      "info": {
-        "name": "Push it somewhere else Patrick",
-        "description": "http://knowyourmeme.com/memes/push-it-somewhere-else-patrick",
-        "aliases": [
-          "patrick",
-          "push-it-somewhere-else-patrick",
-          "somewhere-else"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/patrick/why_dont_we_take_all_the_memes/and_put_them_on_memegen"
-      }
-    },
-    "rollsafe": {
-      "name": "Roll Safe",
-      "info": {
-        "name": "Roll Safe",
-        "description": "http://knowyourmeme.com/memes/roll-safe",
-        "aliases": [
-          "cant-get",
-          "roll-safe",
-          "rollsafe",
-          "rs"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/rollsafe/can't_get_fired/if_you_don't_have_a_job"
-      }
-    },
-    "sad-obama": {
-      "name": "Sad Barack Obama",
-      "info": {
-        "name": "Sad Barack Obama",
-        "description": "http://knowyourmeme.com/memes/sad-joe-biden",
-        "aliases": [
-          "barack-obama",
-          "sad-barack",
-          "sad-obama",
-          "votestakes-barack-obama"
-        ],
-        "styles": [
-          "bow",
-          "down",
-          "frown",
-          "mad",
-          "really"
-        ],
-        "example": "https://memegen.link/api/templates/sad-obama/sad_barack_obama/doesn't_think_you'll_vote"
-      }
-    },
-    "sad-clinton": {
-      "name": "Sad Bill Clinton",
-      "info": {
-        "name": "Sad Bill Clinton",
-        "description": "https://en.wikipedia.org/wiki/Bill_Clinton",
-        "aliases": [
-          "bill-clinton",
-          "sad-bill",
-          "sad-clinton",
-          "votestakes-bill-clinton"
-        ],
-        "styles": [
-          "ashamed",
-          "frown",
-          "nervous",
-          "sad"
-        ],
-        "example": "https://memegen.link/api/templates/sad-clinton/sad_bill_clinton/doesn't_think_you'll_vote"
-      }
-    },
-    "sadfrog": {
-      "name": "Sad Frog / Feels Bad Man",
-      "info": {
-        "name": "Sad Frog / Feels Bad Man",
-        "description": "http://knowyourmeme.com/memes/feels-bad-man-sad-frog",
-        "aliases": [
-          "feels-bad-man",
-          "feelsbadman",
-          "sad-frog",
-          "sadfrog"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sadfrog/_/feels_bad_man"
-      }
-    },
-    "sad-bush": {
-      "name": "Sad George Bush",
-      "info": {
-        "name": "Sad George Bush",
-        "description": "http://knowyourmeme.com/memes/sad-joe-biden",
-        "aliases": [
-          "george-bush",
-          "sad-bush",
-          "sad-george",
-          "votestakes-george-bush"
-        ],
-        "styles": [
-          "facebook",
-          "nervous",
-          "unsure",
-          "upset"
-        ],
-        "example": "https://memegen.link/api/templates/sad-bush/sad_george_bush/doesn't_think_you'll_vote"
-      }
-    },
-    "sad-biden": {
-      "name": "Sad Joe Biden",
-      "info": {
-        "name": "Sad Joe Biden",
-        "description": "http://knowyourmeme.com/memes/sad-joe-biden",
-        "aliases": [
-          "joe-biden",
-          "sad-biden",
-          "sad-joe",
-          "votestakes-joe-biden"
-        ],
-        "styles": [
-          "down",
-          "scowl",
-          "window"
-        ],
-        "example": "https://memegen.link/api/templates/sad-biden/sad_joe_biden/doesn't_think_you'll_vote"
-      }
-    },
-    "sad-boehner": {
-      "name": "Sad John Boehner",
-      "info": {
-        "name": "Sad John Boehner",
-        "description": "https://en.wikipedia.org/wiki/John_Boehner",
-        "aliases": [
-          "boehner",
-          "john-boehner",
-          "sad-boehner",
-          "votestakes-john-boehner"
-        ],
-        "styles": [
-          "frown",
-          "really",
-          "sad",
-          "what"
-        ],
-        "example": "https://memegen.link/api/templates/sad-boehner/sad_john_boehner/doesn't_think_you'll_vote"
-      }
-    },
-    "saltbae": {
-      "name": "Salt Bae",
-      "info": {
-        "name": "Salt Bae",
-        "description": "http://knowyourmeme.com/memes/saltbae",
-        "aliases": [
-          "salt",
-          "salt-bae",
-          "salt-guy",
-          "salt-man",
-          "saltbae"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/saltbae/your_text/goes_here"
-      }
-    },
-    "sarcasticbear": {
-      "name": "Sarcastic Bear",
-      "info": {
-        "name": "Sarcastic Bear",
-        "description": "http://knowyourmeme.com/memes/sarcastic-bear",
-        "aliases": [
-          "sarcasticbear",
-          "sarcbear"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sarcasticbear/i'm_so_sorry/i_haven't_memorized_the_internet"
-      }
-    },
-    "dwight": {
-      "name": "Schrute Facts",
-      "info": {
-        "name": "Schrute Facts",
-        "description": "http://knowyourmeme.com/memes/schrute-facts",
-        "aliases": [
-          "dwight",
-          "false",
-          "false-dwight"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/dwight/love_is_all_you_need~q/false._you_need_water_and_rations."
-      }
-    },
-    "sb": {
-      "name": "Scumbag Brain",
-      "info": {
-        "name": "Scumbag Brain",
-        "description": "http://knowyourmeme.com/memes/scumbag-brain",
-        "aliases": [
-          "sb",
-          "scumbag-brain"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sb/remembers_the_face/but_not_the_name"
-      }
-    },
-    "ss": {
-      "name": "Scumbag Steve",
-      "info": {
-        "name": "Scumbag Steve",
-        "description": "http://knowyourmeme.com/memes/scumbag-steve",
-        "aliases": [
-          "scumbag",
-          "scumbag-steve",
-          "ss"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ss/needs_a_place_to_crash/never_leaves"
-      }
-    },
-    "soa": {
-      "name": "Seal of Approval",
-      "info": {
-        "name": "Seal of Approval",
-        "description": "http://knowyourmeme.com/memes/seal-of-approval",
-        "aliases": [
-          "satisfied",
-          "satisfied-seal",
-          "seal-of-approval",
-          "soa"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/soa/first_wipe/clean_toiletpaper"
-      }
-    },
-    "sf": {
-      "name": "Sealed Fate",
-      "info": {
-        "name": "Sealed Fate",
-        "description": "https://www.reddit.com/r/AdviceAnimals/comments/3fenos/i_like_the_idea_of_the_impending_doom_seal_i_hope/ctnxw3k",
-        "aliases": [
-          "sealed-fate",
-          "sf"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sf/i_accidentally_used_a_swear_word/and_i_know_my_mom_heard_it_from_the_other_room"
-      }
-    },
-    "dodgson": {
-      "name": "See? Nobody Cares",
-      "info": {
-        "name": "See? Nobody Cares",
-        "description": "http://knowyourmeme.com/memes/see-nobody-cares",
-        "aliases": [
-          "dennis-nedry",
-          "dodgson",
-          "dodson",
-          "nedry",
-          "nobody-cares"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/dodgson/we\u00e2\u20ac\u2122ve_got_dodgson_here!/see~q_nobody_cares"
-      }
-    },
-    "money": {
-      "name": "Shut Up and Take My Money!",
-      "info": {
-        "name": "Shut Up and Take My Money!",
-        "description": "http://knowyourmeme.com/memes/shut-up-and-take-my-money",
-        "aliases": [
-          "fry-money",
-          "money",
-          "take-my-money"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/money/shut_up_and/take_my_money!"
-      }
-    },
-    "snek": {
-      "name": "Skeptical Snake",
-      "info": {
-        "name": "Skeptical Snake",
-        "description": "https://www.reddit.com/r/JoeRogan/comments/5kga5k/skeptical_snake/",
-        "aliases": [
-          "skeptical-snek",
-          "sneaky-snake",
-          "sneaky-snek",
-          "snek",
-          "suspicious-snake",
-          "suspicious-snek"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/snek/when_you_already_checked_that_one_leaf/and_it_starts_moving"
-      }
-    },
-    "sk": {
-      "name": "Skeptical Third World Kid",
-      "info": {
-        "name": "Skeptical Third World Kid",
-        "description": "http://knowyourmeme.com/memes/third-world-success",
-        "aliases": [
-          "sk",
-          "skeptical-3rd-world",
-          "skeptical-kid",
-          "skeptical-third-world"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sk/you_finished_your_plate/because_i_was_starving~q"
-      }
-    },
-    "sohot": {
-      "name": "So Hot Right Now",
-      "info": {
-        "name": "So Hot Right Now",
-        "description": "https://www.youtube.com/watch?v=QizsJQNIKhc",
-        "aliases": [
-          "hot",
-          "mugatu",
-          "sohot",
-          "sohotrightnow"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sohot/this_meme_is/so_hot_right_now"
-      }
-    },
-    "nice": {
-      "name": "So I Got That Goin' For Me, Which is Nice",
-      "info": {
-        "name": "So I Got That Goin' For Me, Which is Nice",
-        "description": "http://knowyourmeme.com/memes/so-i-got-that-goin-for-me-which-is-nice",
-        "aliases": [
-          "bill-murray",
-          "caddy-shack",
-          "going-for-me",
-          "is-nice",
-          "nice",
-          "which-is-nice"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/nice/_/so_i_got_that_goin'_for_me,_which_is_nice"
-      }
-    },
-    "awesome-awkward": {
-      "name": "Socially Awesome Awkward Penguin",
-      "info": {
-        "name": "Socially Awesome Awkward Penguin",
-        "description": "http://knowyourmeme.com/memes/socially-awkward-penguin",
-        "aliases": [
-          "awesome-awkward",
-          "awesome-awkward-penguin",
-          "penguin-awesome-awkward"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/awesome-awkward/first_day_at_new_job/spill_coffee_on_bossman"
-      }
-    },
-    "awesome": {
-      "name": "Socially Awesome Penguin",
-      "info": {
-        "name": "Socially Awesome Penguin",
-        "description": "http://knowyourmeme.com/memes/socially-awesome-penguin",
-        "aliases": [
-          "awesome",
-          "awesome-penguin",
-          "penguin-awesome"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/awesome/say_a_word_wrong/create_hilarious_inside_joke"
-      }
-    },
-    "awkward-awesome": {
-      "name": "Socially Awkward Awesome Penguin",
-      "info": {
-        "name": "Socially Awkward Awesome Penguin",
-        "description": "http://knowyourmeme.com/memes/socially-awkward-penguin",
-        "aliases": [
-          "awkward-awesome",
-          "awkward-awesome-penguin",
-          "penuin-awesome-awkward"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/awkward-awesome/trip_guy_on_the_street/he_was_running_with_a_stolen_purse"
-      }
-    },
-    "awkward": {
-      "name": "Socially Awkward Penguin",
-      "info": {
-        "name": "Socially Awkward Penguin",
-        "description": "http://knowyourmeme.com/memes/socially-awkward-penguin",
-        "aliases": [
-          "awkward",
-          "awkward-penguin",
-          "penguin",
-          "penguin-awkward"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/awkward/start_telling_joke/forget_punchline"
-      }
-    },
-    "stop-it": {
-      "name": "Stop It, Get Some Help",
-      "info": {
-        "name": "Stop It, Get Some Help",
-        "description": "https://knowyourmeme.com/memes/stop-it-get-some-help",
-        "aliases": [
-          "get-some-help",
-          "michael-jordan",
-          "stop-it"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/stop-it/stop_it/get_some_help"
-      }
-    },
-    "fetch": {
-      "name": "Stop Trying to Make Fetch Happen",
-      "info": {
-        "name": "Stop Trying to Make Fetch Happen",
-        "description": "http://knowyourmeme.com/memes/stop-trying-to-make-fetch-happen",
-        "aliases": [
-          "fetch",
-          "make-fetch-happen",
-          "sttmfh"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fetch/stop_trying_to_make_fetch_happen/it's_not_going_to_happen"
-      }
-    },
-    "success": {
-      "name": "Success Kid",
-      "info": {
-        "name": "Success Kid",
-        "description": "http://knowyourmeme.com/memes/success-kid-i-hate-sandcastles",
-        "aliases": [
-          "i-hate-sandcastles",
-          "success",
-          "success-kid"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/success/don't_know_a_question_on_the_test/answer_is_in_another_question"
-      }
-    },
-    "scc": {
-      "name": "Sudden Clarity Clarence",
-      "info": {
-        "name": "Sudden Clarity Clarence",
-        "description": "http://knowyourmeme.com/memes/sudden-clarity-clarence",
-        "aliases": [
-          "clarence",
-          "clarity-clarence",
-          "scc",
-          "sudden-clarity"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/scc/your_text/goes_here"
-      }
-    },
-    "ski": {
-      "name": "Super Cool Ski Instructor",
-      "info": {
-        "name": "Super Cool Ski Instructor",
-        "description": "http://knowyourmeme.com/memes/super-cool-ski-instructor",
-        "aliases": [
-          "bad-time",
-          "ski",
-          "ski-instructor"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ski/_/you're_gonna_have_a_bad_time"
-      }
+    "afraid": {
+      "id": "afraid",
+      "name": "Afraid to Ask Andy",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/afraid.png",
+      "example": "https://api.memegen.link/images/afraid/i_don't_know_what_this_meme_is_for/and_at_this_point_i'm_too_afraid_to_ask.png",
+      "source": "http://knowyourmeme.com/memes/afraid-to-ask-andy",
+      "_self": "https://api.memegen.link/templates/afraid"
     },
     "aint-got-time": {
+      "id": "aint-got-time",
       "name": "Sweet Brown / Ain't Nobody Got Time For That",
-      "info": {
-        "name": "Sweet Brown / Ain't Nobody Got Time For That",
-        "description": "https://knowyourmeme.com/memes/sweet-brown-aint-nobody-got-time-for-that",
-        "aliases": [
-          "aint-got-time",
-          "aint-nobody",
-          "got-time",
-          "sweet-brown"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/aint-got-time/memes~q/ain't_nobody_got_time_fo'_that"
-      }
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/aint-got-time.png",
+      "example": "https://api.memegen.link/images/aint-got-time/memes~q/ain't_nobody_got_time_fo'_that.png",
+      "source": "https://knowyourmeme.com/memes/sweet-brown-aint-nobody-got-time-for-that",
+      "_self": "https://api.memegen.link/templates/aint-got-time"
     },
-    "officespace": {
-      "name": "That Would Be Great",
-      "info": {
-        "name": "That Would Be Great",
-        "description": "http://knowyourmeme.com/memes/that-would-be-great",
-        "aliases": [
-          "be-great",
-          "bill-lumbergh",
-          "great",
-          "lumbergh",
-          "officespace",
-          "that'd-be-great"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/officespace/yeah.../that'd_be_great"
-      }
+    "ams": {
+      "id": "ams",
+      "name": "Awkward Moment Seal",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ams.png",
+      "example": "https://api.memegen.link/images/ams/when_you're_watching_a_movie/and_your_parents_walk_in_at_the_sex_scene.png",
+      "source": "https://knowyourmeme.com/memes/awkward-moment-seal",
+      "_self": "https://api.memegen.link/templates/ams"
     },
-    "interesting": {
-      "name": "The Most Interesting Man in the World",
-      "info": {
-        "name": "The Most Interesting Man in the World",
-        "description": "http://knowyourmeme.com/memes/the-most-interesting-man-in-the-world",
-        "aliases": [
-          "dos-xx",
-          "i-don't-always",
-          "interesting"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/interesting/your_text/goes_here"
-      }
+    "ants": {
+      "id": "ants",
+      "name": "Do You Want Ants?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ants.png",
+      "example": "https://api.memegen.link/images/ants/do_you_want_ants~q/because_that's_how_you_get_ants.png",
+      "source": "http://knowyourmeme.com/memes/do-you-want-ants",
+      "_self": "https://api.memegen.link/templates/ants"
     },
-    "toohigh": {
-      "name": "The Rent Is Too Damn High",
-      "info": {
-        "name": "The Rent Is Too Damn High",
-        "description": "http://knowyourmeme.com/memes/the-rent-is-too-damn-high-jimmy-mcmillan",
-        "aliases": [
-          "jimmy-mcmillan",
-          "too-damn-high",
-          "toohigh"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/toohigh/the_rent_is/too_damn_high"
-      }
+    "apcr": {
+      "id": "apcr",
+      "name": "Almost Politically Correct Redneck",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/apcr.png",
+      "example": "https://api.memegen.link/images/apcr.png",
+      "source": "https://knowyourmeme.com/memes/almost-politically-correct-redneck",
+      "_self": "https://api.memegen.link/templates/apcr"
     },
-    "bs": {
-      "name": "This is Bull, Shark",
-      "info": {
-        "name": "This is Bull, Shark",
-        "description": "https://www.reddit.com/r/funny/comments/3grsfs",
-        "aliases": [
-          "bs",
-          "bull-shark",
-          "disinterested-shark",
-          "shark"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/bs/what_a_surprise.../you_caught_me_again"
-      }
+    "atis": {
+      "id": "atis",
+      "name": "And Then I Said",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/atis.png",
+      "example": "https://api.memegen.link/images/atis/and_then_i_said/the_exam_will_only_contain_what_we've_covered_in_lectures.png",
+      "source": "https://knowyourmeme.com/memes/and-then-i-said",
+      "_self": "https://api.memegen.link/templates/atis"
     },
-    "fine": {
-      "name": "This is Fine",
-      "info": {
-        "name": "This is Fine",
-        "description": "http://gunshowcomic.com/648",
-        "aliases": [
-          "fine",
-          "fire",
-          "on-fire",
-          "this-is-fine"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/fine/_/this_is_fine"
-      }
+    "away": {
+      "id": "away",
+      "name": "Life... Finds a Way",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/away.png",
+      "example": "https://api.memegen.link/images/away/life.../finds_a_way.png",
+      "source": "https://www.youtube.com/watch?v=dMjQ3hA9mEA",
+      "_self": "https://api.memegen.link/templates/away"
     },
-    "sparta": {
-      "name": "This is Sparta!",
-      "info": {
-        "name": "This is Sparta!",
-        "description": "https://www.youtube.com/watch?v=QkWS9PiXekE",
-        "aliases": [
-          "300",
-          "sparta",
-          "this-is-sparta"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/sparta/this._is./sparta!"
-      }
+    "awesome": {
+      "id": "awesome",
+      "name": "Socially Awesome Penguin",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/awesome.png",
+      "example": "https://api.memegen.link/images/awesome/say_a_word_wrong/create_hilarious_inside_joke.png",
+      "source": "http://knowyourmeme.com/memes/socially-awesome-penguin",
+      "_self": "https://api.memegen.link/templates/awesome"
     },
-    "ugandanknuck": {
-      "name": "Ugandan Knuckles",
-      "info": {
-        "name": "Ugandan Knuckles",
-        "description": "http://knowyourmeme.com/memes/ugandan-knuckles",
-        "aliases": [
-          "forsen",
-          "gregzilla",
-          "sonic",
-          "ugandanknuck"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/ugandanknuck/your_text/goes_here"
-      }
+    "awesome-awkward": {
+      "id": "awesome-awkward",
+      "name": "Socially Awesome Awkward Penguin",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/awesome-awkward.png",
+      "example": "https://api.memegen.link/images/awesome-awkward/first_day_at_new_job/spill_coffee_on_bossman.png",
+      "source": "http://knowyourmeme.com/memes/socially-awkward-penguin",
+      "_self": "https://api.memegen.link/templates/awesome-awkward"
     },
-    "puffin": {
-      "name": "Unpopular opinion puffin",
-      "info": {
-        "name": "Unpopular opinion puffin",
-        "description": "http://knowyourmeme.com/memes/unpopular-opinion-puffin",
-        "aliases": [
-          "nobody-likes-it",
-          "puffin",
-          "unpopular-penguin"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/puffin/your_text/goes_here"
-      }
+    "awkward": {
+      "id": "awkward",
+      "name": "Socially Awkward Penguin",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/awkward.png",
+      "example": "https://api.memegen.link/images/awkward/start_telling_joke/forget_punchline.png",
+      "source": "http://knowyourmeme.com/memes/socially-awkward-penguin",
+      "_self": "https://api.memegen.link/templates/awkward"
     },
-    "whatyear": {
-      "name": "What Year Is It?",
-      "info": {
-        "name": "What Year Is It?",
-        "description": "http://knowyourmeme.com/memes/what-year-is-it",
-        "aliases": [
-          "jumanji",
-          "robin-williams",
-          "whatyear"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/whatyear/_/what_year_is_it~q"
-      }
-    },
-    "center": {
-      "name": "What is this, a Center for Ants?!",
-      "info": {
-        "name": "What is this, a Center for Ants?!",
-        "description": "http://knowyourmeme.com/memes/what-is-this-a-center-for-ants",
-        "aliases": [
-          "center",
-          "center-for-ants",
-          "the-derek-zoolander-center-for-kids-who-cant-read-good-and-wanna-learn-to-do-other-stuff-good-too",
-          "what-is-this"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/center/what_is_this/a_center_for_ants"
-      }
-    },
-    "both": {
-      "name": "Why Not Both?",
-      "info": {
-        "name": "Why Not Both?",
-        "description": "http://knowyourmeme.com/memes/why-not-both-why-dont-we-have-both",
-        "aliases": [
-          "both",
-          "el-paso",
-          "por-que",
-          "por-que-no-los-dos",
-          "why-don't-we-have-both"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/both/_/why_not_both~q"
-      }
-    },
-    "winter": {
-      "name": "Winter is coming",
-      "info": {
-        "name": "Winter is coming",
-        "description": "http://knowyourmeme.com/memes/imminent-ned-brace-yourselves-winter-is-coming",
-        "aliases": [
-          "imminent-ned",
-          "in",
-          "prepare",
-          "winter"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/winter/prepare_yourself/winter_is_coming"
-      }
-    },
-    "xy": {
-      "name": "X all the Y",
-      "info": {
-        "name": "X all the Y",
-        "description": "http://knowyourmeme.com/memes/x-all-the-y",
-        "aliases": [
-          "all-the-things",
-          "xy",
-          "xy-things"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/xy/all_the_things!!!"
-      }
-    },
-    "buzz": {
-      "name": "X, X Everywhere",
-      "info": {
-        "name": "X, X Everywhere",
-        "description": "https://imgflip.com/memetemplate/X-Everywhere",
-        "aliases": [
-          "buzz",
-          "buzz-lightyear",
-          "everywhere",
-          "x-everywhere"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/buzz/memes/memes_everywhere"
-      }
-    },
-    "yodawg": {
-      "name": "Xzibit Yo Dawg",
-      "info": {
-        "name": "Xzibit Yo Dawg",
-        "description": "http://knowyourmeme.com/memes/xzibit-yo-dawg",
-        "aliases": [
-          "sub-dawg",
-          "xzibit",
-          "yodawg"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/yodawg/yo_dawg/i_heard_you_like_memes"
-      }
-    },
-    "yuno": {
-      "name": "Y U NO Guy",
-      "info": {
-        "name": "Y U NO Guy",
-        "description": "http://knowyourmeme.com/memes/y-u-no-guy",
-        "aliases": [
-          "why",
-          "why-you-no",
-          "y-u-no",
-          "yuno"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/yuno/y_u_no/use_this_meme!~q"
-      }
-    },
-    "yallgot": {
-      "name": "Y'all Got Any More of Them",
-      "info": {
-        "name": "Y'all Got Any More of Them",
-        "description": "http://knowyourmeme.com/memes/yall-got-anymore-of",
-        "aliases": [
-          "anymore",
-          "anymoreofthem",
-          "jobs",
-          "yall",
-          "yallgot"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/yallgot/y'all_got_any_more_of_them/memes"
-      }
-    },
-    "gears": {
-      "name": "You Know What Really Grinds My Gears?",
-      "info": {
-        "name": "You Know What Really Grinds My Gears?",
-        "description": "http://knowyourmeme.com/memes/you-know-what-really-grinds-my-gears",
-        "aliases": [
-          "gears",
-          "grinds-my-gears"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/gears/you_know_what_really_grinds_my_gears~q/when_people_post_images_of_cogs_that_don't_mesh"
-      }
+    "awkward-awesome": {
+      "id": "awkward-awesome",
+      "name": "Socially Awkward Awesome Penguin",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/awkward-awesome.png",
+      "example": "https://api.memegen.link/images/awkward-awesome/trip_guy_on_the_street/he_was_running_with_a_stolen_purse.png",
+      "source": "http://knowyourmeme.com/memes/socially-awkward-penguin",
+      "_self": "https://api.memegen.link/templates/awkward-awesome"
     },
     "bad": {
+      "id": "bad",
       "name": "You Should Feel Bad",
-      "info": {
-        "name": "You Should Feel Bad",
-        "description": "http://knowyourmeme.com/memes/your-musics-bad-and-you-should-feel-bad",
-        "aliases": [
-          "bad",
-          "feel-bad",
-          "you-should-feel-bad"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/bad/your_meme_is_bad/and_you_should_feel_bad"
-      }
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/bad.png",
+      "example": "https://api.memegen.link/images/bad/your_meme_is_bad/and_you_should_feel_bad.png",
+      "source": "http://knowyourmeme.com/memes/your-musics-bad-and-you-should-feel-bad",
+      "_self": "https://api.memegen.link/templates/bad"
     },
-    "elf": {
-      "name": "You Sit on a Throne of Lies",
-      "info": {
-        "name": "You Sit on a Throne of Lies",
-        "description": "http://knowyourmeme.com/memes/you-sit-on-a-throne-of-lies",
-        "aliases": [
-          "elf",
-          "throne",
-          "thrown-of-lies"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/elf/_/you_sit_on_a_throne_of_lies"
-      }
+    "badchoice": {
+      "id": "badchoice",
+      "name": "Milk Was a Bad Choice",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/badchoice.png",
+      "example": "https://api.memegen.link/images/badchoice/milk/was_a_bad_choice.png",
+      "source": "https://www.youtube.com/watch?v=DeY0yPqibb0",
+      "_self": "https://api.memegen.link/templates/badchoice"
+    },
+    "bd": {
+      "id": "bd",
+      "name": "Butthurt Dweller",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/bd.png",
+      "example": "https://api.memegen.link/images/bd/can't_workout/don't_want_to_get_too_buff.png",
+      "source": "http://knowyourmeme.com/memes/butthurt-dweller-gordo-granudo",
+      "_self": "https://api.memegen.link/templates/bd"
+    },
+    "bender": {
+      "id": "bender",
+      "name": "I'm Going to Build My Own Theme Park",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/bender.png",
+      "example": "https://api.memegen.link/images/bender/i'm_going_to_build_my_own_theme_park/with_blackjack_and_hookers.png",
+      "source": "http://knowyourmeme.com/memes/im-going-to-build-my-own-theme-park-with-blackjack-and-hookers",
+      "_self": "https://api.memegen.link/templates/bender"
+    },
+    "bihw": {
+      "id": "bihw",
+      "name": "But It's Honest Work",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/bihw.png",
+      "example": "https://api.memegen.link/images/bihw/it_ain't_much/but_it's_honest_work.png",
+      "source": "https://knowyourmeme.com/memes/but-its-honest-work",
+      "_self": "https://api.memegen.link/templates/bihw"
+    },
+    "biw": {
+      "id": "biw",
+      "name": "Baby Insanity Wolf",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/biw.png",
+      "example": "https://api.memegen.link/images/biw/gets_iced_coffee/in_the_winter.png",
+      "source": "http://knowyourmeme.com/memes/baby-insanity-wolf",
+      "_self": "https://api.memegen.link/templates/biw"
+    },
+    "blb": {
+      "id": "blb",
+      "name": "Bad Luck Brian",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/blb.png",
+      "example": "https://api.memegen.link/images/blb.png",
+      "source": "http://knowyourmeme.com/memes/bad-luck-brian",
+      "_self": "https://api.memegen.link/templates/blb"
+    },
+    "boat": {
+      "id": "boat",
+      "name": "I Should Buy a Boat Cat",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/boat.png",
+      "example": "https://api.memegen.link/images/boat/_/i_should_buy_a_boat.png",
+      "source": "http://knowyourmeme.com/memes/i-should-buy-a-boat-cat",
+      "_self": "https://api.memegen.link/templates/boat"
+    },
+    "both": {
+      "id": "both",
+      "name": "Why Not Both?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/both.png",
+      "example": "https://api.memegen.link/images/both/_/why_not_both~q.png",
+      "source": "http://knowyourmeme.com/memes/why-not-both-why-dont-we-have-both",
+      "_self": "https://api.memegen.link/templates/both"
+    },
+    "bs": {
+      "id": "bs",
+      "name": "This is Bull, Shark",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/bs.png",
+      "example": "https://api.memegen.link/images/bs/what_a_surprise.../you_caught_me_again.png",
+      "source": "https://www.reddit.com/r/funny/comments/3grsfs",
+      "_self": "https://api.memegen.link/templates/bs"
+    },
+    "buzz": {
+      "id": "buzz",
+      "name": "X, X Everywhere",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/buzz.png",
+      "example": "https://api.memegen.link/images/buzz/memes/memes_everywhere.png",
+      "source": "https://imgflip.com/memetemplate/X-Everywhere",
+      "_self": "https://api.memegen.link/templates/buzz"
+    },
+    "captain": {
+      "id": "captain",
+      "name": "I am the Captain Now",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/captain.png",
+      "example": "https://api.memegen.link/images/captain/look_at_me/i_am_the_captain_now.png",
+      "source": "https://www.youtube.com/watch?v=dvA-mimf2yg",
+      "_self": "https://api.memegen.link/templates/captain"
+    },
+    "captain-america": {
+      "id": "captain-america",
+      "name": "Captain America Elevator Fight Dad Joke",
+      "lines": 3,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/captain-america.png",
+      "example": "https://api.memegen.link/images/captain-america/Have_you_ever_eaten_a_clock~q/No,_why~q/It's_time_consuming..png",
+      "source": "https://knowyourmeme.com/memes/captain-america-elevator-fight-dad-joke",
+      "_self": "https://api.memegen.link/templates/captain-america"
+    },
+    "cb": {
+      "id": "cb",
+      "name": "Confession Bear",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/cb.png",
+      "example": "https://api.memegen.link/images/cb/i_stole/the_pic--i--nic_basket.png",
+      "source": "http://knowyourmeme.com/memes/confession-bear",
+      "_self": "https://api.memegen.link/templates/cb"
+    },
+    "cbg": {
+      "id": "cbg",
+      "name": "Comic Book Guy",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/cbg.png",
+      "example": "https://api.memegen.link/images/cbg/_/worst_thing_ever!.png",
+      "source": "http://simpsons.wikia.com/wiki/Jeffrey_Albertson",
+      "_self": "https://api.memegen.link/templates/cbg"
+    },
+    "center": {
+      "id": "center",
+      "name": "What is this, a Center for Ants?!",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/center.png",
+      "example": "https://api.memegen.link/images/center/what_is_this/a_center_for_ants.png",
+      "source": "http://knowyourmeme.com/memes/what-is-this-a-center-for-ants",
+      "_self": "https://api.memegen.link/templates/center"
+    },
+    "ch": {
+      "id": "ch",
+      "name": "Captain Hindsight",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ch.png",
+      "example": "https://api.memegen.link/images/ch/if_you_wanted_to_avoid_the_friend_zone/you_should_have_made_your_intentions_known_from_the_start.png",
+      "source": "http://knowyourmeme.com/memes/captain-hindsight",
+      "_self": "https://api.memegen.link/templates/ch"
+    },
+    "cheems": {
+      "id": "cheems",
+      "name": "Cheems",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/cheems.png",
+      "example": "https://api.memegen.link/images/cheems/it's_a_good_time_to_sleep/nothing_will_go_wrong_after_this.png",
+      "source": "https://knowyourmeme.com/memes/cheems",
+      "_self": "https://api.memegen.link/templates/cheems"
     },
     "chosen": {
+      "id": "chosen",
       "name": "You Were the Chosen One!",
-      "info": {
-        "name": "You Were the Chosen One!",
-        "description": "http://knowyourmeme.com/memes/you-were-the-chosen-one",
-        "aliases": [
-          "chosen",
-          "chosen-one",
-          "you-were-the-chosen-one"
-        ],
-        "styles": [],
-        "example": "https://memegen.link/api/templates/chosen/you_were_the_chosen_one!"
-      }
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/chosen.png",
+      "example": "https://api.memegen.link/images/chosen/you_were_the_chosen_one!.png",
+      "source": "http://knowyourmeme.com/memes/you-were-the-chosen-one",
+      "_self": "https://api.memegen.link/templates/chosen"
+    },
+    "cmm": {
+      "id": "cmm",
+      "name": "Change My Mind",
+      "lines": 1,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/cmm.png",
+      "example": "https://api.memegen.link/images/cmm/pineapples_don't_belong_on_pizza.png",
+      "source": "https://knowyourmeme.com/memes/steven-crowders-change-my-mind-campus-sign",
+      "_self": "https://api.memegen.link/templates/cmm"
+    },
+    "crazypills": {
+      "id": "crazypills",
+      "name": "I Feel Like I'm Taking Crazy Pills",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/crazypills.png",
+      "example": "https://api.memegen.link/images/crazypills/_/i_feel_like_i'm_taking_crazy_pills.png",
+      "source": "http://knowyourmeme.com/memes/i-feel-like-im-taking-crazy-pills",
+      "_self": "https://api.memegen.link/templates/crazypills"
+    },
+    "cryingfloor": {
+      "id": "cryingfloor",
+      "name": "Crying on Floor",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/cryingfloor.png",
+      "example": "https://api.memegen.link/images/cryingfloor/it's_okay/lets_just_reschedule_drinking.png",
+      "source": "http://knowyourmeme.com/photos/1125083-hold-the-door",
+      "_self": "https://api.memegen.link/templates/cryingfloor"
+    },
+    "db": {
+      "id": "db",
+      "name": "Distracted Boyfriend",
+      "lines": 3,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/db.png",
+      "example": "https://api.memegen.link/images/db/Socialism/The_Youth/Capitalism.png",
+      "source": "https://knowyourmeme.com/memes/distracted-boyfriend",
+      "_self": "https://api.memegen.link/templates/db"
+    },
+    "disastergirl": {
+      "id": "disastergirl",
+      "name": "Disaster Girl",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/disastergirl.png",
+      "example": "https://api.memegen.link/images/disastergirl/what_did_you_say~q.png",
+      "source": "http://knowyourmeme.com/memes/disaster-girl",
+      "_self": "https://api.memegen.link/templates/disastergirl"
+    },
+    "dodgson": {
+      "id": "dodgson",
+      "name": "See? Nobody Cares",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/dodgson.png",
+      "example": "https://api.memegen.link/images/dodgson/we've_got_dodgson_here!/see~q_nobody_cares.png",
+      "source": "http://knowyourmeme.com/memes/see-nobody-cares",
+      "_self": "https://api.memegen.link/templates/dodgson"
+    },
+    "doge": {
+      "id": "doge",
+      "name": "Doge",
+      "lines": 2,
+      "styles": [
+        "bark",
+        "bite",
+        "full",
+        "growl",
+        "pet",
+        "roll"
+      ],
+      "blank": "https://api.memegen.link/images/doge.png",
+      "example": "https://api.memegen.link/images/doge/such_meme/very_skill.png",
+      "source": "http://knowyourmeme.com/memes/doge",
+      "_self": "https://api.memegen.link/templates/doge"
+    },
+    "drake": {
+      "id": "drake",
+      "name": "Drakeposting",
+      "lines": 2,
+      "styles": [
+        "beat",
+        "no",
+        "padding",
+        "yes"
+      ],
+      "blank": "https://api.memegen.link/images/drake.png",
+      "example": "https://api.memegen.link/images/drake.png",
+      "source": "http://knowyourmeme.com/memes/drakeposting",
+      "_self": "https://api.memegen.link/templates/drake"
+    },
+    "ds": {
+      "id": "ds",
+      "name": "Daily Struggle",
+      "lines": 3,
+      "styles": [
+        "maga"
+      ],
+      "blank": "https://api.memegen.link/images/ds.png",
+      "example": "https://api.memegen.link/images/ds/The_dress_is_black_and_blue./The_dress_is_gold_and_white..png",
+      "source": "https://knowyourmeme.com/memes/daily-struggle",
+      "_self": "https://api.memegen.link/templates/ds"
+    },
+    "dsm": {
+      "id": "dsm",
+      "name": "Dating Site Murderer",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/dsm.png",
+      "example": "https://api.memegen.link/images/dsm/they_will_never_find_your_body/as_attractive_as_i_do.png",
+      "source": "http://knowyourmeme.com/memes/dating-site-murderer",
+      "_self": "https://api.memegen.link/templates/dsm"
+    },
+    "dwight": {
+      "id": "dwight",
+      "name": "Schrute Facts",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/dwight.png",
+      "example": "https://api.memegen.link/images/dwight/love_is_all_you_need~q/false._you_need_water_and_rations..png",
+      "source": "http://knowyourmeme.com/memes/schrute-facts",
+      "_self": "https://api.memegen.link/templates/dwight"
+    },
+    "elf": {
+      "id": "elf",
+      "name": "You Sit on a Throne of Lies",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/elf.png",
+      "example": "https://api.memegen.link/images/elf/_/you_sit_on_a_throne_of_lies.png",
+      "source": "http://knowyourmeme.com/memes/you-sit-on-a-throne-of-lies",
+      "_self": "https://api.memegen.link/templates/elf"
+    },
+    "ermg": {
+      "id": "ermg",
+      "name": "Ermahgerd",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ermg.png",
+      "example": "https://api.memegen.link/images/ermg/ermahgerd/memes.png",
+      "source": "http://knowyourmeme.com/memes/ermahgerd",
+      "_self": "https://api.memegen.link/templates/ermg"
+    },
+    "fa": {
+      "id": "fa",
+      "name": "Forever Alone",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fa.png",
+      "example": "https://api.memegen.link/images/fa/forever/alone.png",
+      "source": "http://knowyourmeme.com/memes/forever-alone",
+      "_self": "https://api.memegen.link/templates/fa"
+    },
+    "facepalm": {
+      "id": "facepalm",
+      "name": "Facepalm",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/facepalm.png",
+      "example": "https://api.memegen.link/images/facepalm.png",
+      "source": "http://knowyourmeme.com/memes/facepalm",
+      "_self": "https://api.memegen.link/templates/facepalm"
+    },
+    "fbf": {
+      "id": "fbf",
+      "name": "Foul Bachelor Frog",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fbf.png",
+      "example": "https://api.memegen.link/images/fbf/paper_towel/the_plate_that_cleans_up_after_itself.png",
+      "source": "http://knowyourmeme.com/memes/foul-bachelor-frog",
+      "_self": "https://api.memegen.link/templates/fbf"
+    },
+    "feelsgood": {
+      "id": "feelsgood",
+      "name": "Feels Good",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/feelsgood.png",
+      "example": "https://api.memegen.link/images/feelsgood.png",
+      "source": "https://knowyourmeme.com/memes/feels-good",
+      "_self": "https://api.memegen.link/templates/feelsgood"
+    },
+    "fetch": {
+      "id": "fetch",
+      "name": "Stop Trying to Make Fetch Happen",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fetch.png",
+      "example": "https://api.memegen.link/images/fetch/stop_trying_to_make_fetch_happen/it's_not_going_to_happen.png",
+      "source": "http://knowyourmeme.com/memes/stop-trying-to-make-fetch-happen",
+      "_self": "https://api.memegen.link/templates/fetch"
+    },
+    "fine": {
+      "id": "fine",
+      "name": "This is Fine",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fine.png",
+      "example": "https://api.memegen.link/images/fine/_/this_is_fine.png",
+      "source": "http://gunshowcomic.com/648",
+      "_self": "https://api.memegen.link/templates/fine"
+    },
+    "firsttry": {
+      "id": "firsttry",
+      "name": "First Try!",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/firsttry.png",
+      "example": "https://api.memegen.link/images/firsttry/_/first_try!.png",
+      "source": "https://www.youtube.com/watch?v=44-RsrF_V_w",
+      "_self": "https://api.memegen.link/templates/firsttry"
+    },
+    "fmr": {
+      "id": "fmr",
+      "name": "Fuck Me, Right?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fmr.png",
+      "example": "https://api.memegen.link/images/fmr/_/fuck_me,_right~q.png",
+      "source": "http://knowyourmeme.com/memes/fuck-me-right",
+      "_self": "https://api.memegen.link/templates/fmr"
+    },
+    "fry": {
+      "id": "fry",
+      "name": "Futurama Fry",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fry.png",
+      "example": "https://api.memegen.link/images/fry/not_sure_if_trolling/or_just_stupid.png",
+      "source": "http://knowyourmeme.com/memes/futurama-fry-not-sure-if",
+      "_self": "https://api.memegen.link/templates/fry"
+    },
+    "fwp": {
+      "id": "fwp",
+      "name": "First World Problems",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/fwp.png",
+      "example": "https://api.memegen.link/images/fwp.png",
+      "source": "http://knowyourmeme.com/memes/first-world-problems",
+      "_self": "https://api.memegen.link/templates/fwp"
+    },
+    "gandalf": {
+      "id": "gandalf",
+      "name": "Confused Gandalf",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/gandalf.png",
+      "example": "https://api.memegen.link/images/gandalf/_/what_did_i_just_say~q.png",
+      "source": "http://knowyourmeme.com/memes/confused-gandalf",
+      "_self": "https://api.memegen.link/templates/gandalf"
+    },
+    "gb": {
+      "id": "gb",
+      "name": "Galaxy Brain",
+      "lines": 4,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/gb.png",
+      "example": "https://api.memegen.link/images/gb/Who/Whom/Whom'st/Whomst'd.png",
+      "source": "https://knowyourmeme.com/memes/galaxy-brain",
+      "_self": "https://api.memegen.link/templates/gb"
+    },
+    "gears": {
+      "id": "gears",
+      "name": "You Know What Really Grinds My Gears?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/gears.png",
+      "example": "https://api.memegen.link/images/gears/you_know_what_really_grinds_my_gears~q/when_people_post_images_of_cogs_that_don't_mesh.png",
+      "source": "http://knowyourmeme.com/memes/you-know-what-really-grinds-my-gears",
+      "_self": "https://api.memegen.link/templates/gears"
+    },
+    "ggg": {
+      "id": "ggg",
+      "name": "Good Guy Greg",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ggg.png",
+      "example": "https://api.memegen.link/images/ggg.png",
+      "source": "http://knowyourmeme.com/memes/good-guy-greg",
+      "_self": "https://api.memegen.link/templates/ggg"
+    },
+    "gru": {
+      "id": "gru",
+      "name": "Gru's Plan",
+      "lines": 4,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/gru.png",
+      "example": "https://api.memegen.link/images/gru/Learn_how_to_make_memes/Make_a_meme/No_one_likes_it/No_one_likes_it.png",
+      "source": "https://knowyourmeme.com/memes/grus-plan",
+      "_self": "https://api.memegen.link/templates/gru"
+    },
+    "grumpycat": {
+      "id": "grumpycat",
+      "name": "Grumpy Cat",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/grumpycat.png",
+      "example": "https://api.memegen.link/images/grumpycat/i_hope_that_what_does_not_kill_you/tries_again.png",
+      "source": "https://imgflip.com/memegenerator/Grumpy-Cat",
+      "_self": "https://api.memegen.link/templates/grumpycat"
+    },
+    "hagrid": {
+      "id": "hagrid",
+      "name": "I Should Not Have Said That",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/hagrid.png",
+      "example": "https://api.memegen.link/images/hagrid/_/i_should_not_have_said_that.png",
+      "source": "https://www.youtube.com/watch?v=498HkRM77gg",
+      "_self": "https://api.memegen.link/templates/hagrid"
+    },
+    "happening": {
+      "id": "happening",
+      "name": "It's Happening",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/happening.png",
+      "example": "https://api.memegen.link/images/happening/_/it's_happening.png",
+      "source": "http://knowyourmeme.com/memes/doom-paul-its-happening",
+      "_self": "https://api.memegen.link/templates/happening"
+    },
+    "harold": {
+      "id": "harold",
+      "name": "Hide the Pain Harold",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/harold.png",
+      "example": "https://api.memegen.link/images/harold/when_the_boss_sees/your_meme_tab.png",
+      "source": "https://knowyourmeme.com/memes/hide-the-pain-harold",
+      "_self": "https://api.memegen.link/templates/harold"
+    },
+    "hipster": {
+      "id": "hipster",
+      "name": "Hipster Barista",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/hipster.png",
+      "example": "https://api.memegen.link/images/hipster.png",
+      "source": "http://knowyourmeme.com/memes/hipster-barista",
+      "_self": "https://api.memegen.link/templates/hipster"
+    },
+    "icanhas": {
+      "id": "icanhas",
+      "name": "I Can Has Cheezburger?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/icanhas.png",
+      "example": "https://api.memegen.link/images/icanhas/i_can_has/this_meme~q.png",
+      "source": "http://knowyourmeme.com/memes/happy-cat",
+      "_self": "https://api.memegen.link/templates/icanhas"
+    },
+    "imsorry": {
+      "id": "imsorry",
+      "name": "Oh, I'm Sorry, I Thought This Was America",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/imsorry.png",
+      "example": "https://api.memegen.link/images/imsorry/oh,_i'm_sorry/i_thought_this_was_america.png",
+      "source": "http://knowyourmeme.com/memes/oh-im-sorry-i-thought-this-was-america",
+      "_self": "https://api.memegen.link/templates/imsorry"
+    },
+    "inigo": {
+      "id": "inigo",
+      "name": "Inigo Montoya",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/inigo.png",
+      "example": "https://api.memegen.link/images/inigo/you_keep_using_that_word/i_do_not_think_it_means_what_you_think_it_means.png",
+      "source": "http://knowyourmeme.com/memes/you-keep-using-that-word-i-do-not-think-it-means-what-you-think-it-means",
+      "_self": "https://api.memegen.link/templates/inigo"
+    },
+    "interesting": {
+      "id": "interesting",
+      "name": "The Most Interesting Man in the World",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/interesting.png",
+      "example": "https://api.memegen.link/images/interesting.png",
+      "source": "http://knowyourmeme.com/memes/the-most-interesting-man-in-the-world",
+      "_self": "https://api.memegen.link/templates/interesting"
+    },
+    "ive": {
+      "id": "ive",
+      "name": "Jony Ive Redesigns Things",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ive.png",
+      "example": "https://api.memegen.link/images/ive/we_think/you'll_love_it.png",
+      "source": "https://www.apple.com/pr/bios/jonathan-ive.html",
+      "_self": "https://api.memegen.link/templates/ive"
+    },
+    "iw": {
+      "id": "iw",
+      "name": "Insanity Wolf",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/iw.png",
+      "example": "https://api.memegen.link/images/iw/does_testing/in_production.png",
+      "source": "http://knowyourmeme.com/memes/insanity-wolf",
+      "_self": "https://api.memegen.link/templates/iw"
+    },
+    "jd": {
+      "id": "jd",
+      "name": "Joseph Ducreux / Archaic Rap",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/jd.png",
+      "example": "https://api.memegen.link/images/jd/disregard_females/acquire_currency.png",
+      "source": "https://knowyourmeme.com/memes/joseph-ducreux-archaic-rap",
+      "_self": "https://api.memegen.link/templates/jd"
+    },
+    "jetpack": {
+      "id": "jetpack",
+      "name": "Nothing To Do Here",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/jetpack.png",
+      "example": "https://api.memegen.link/images/jetpack/nothing_to_do_here.png",
+      "source": "http://knowyourmeme.com/memes/nothing-to-do-here-jet-pack-guy",
+      "_self": "https://api.memegen.link/templates/jetpack"
+    },
+    "joker": {
+      "id": "joker",
+      "name": "It's Simple, Kill the Batman",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/joker.png",
+      "example": "https://api.memegen.link/images/joker/it's_simple/kill_the_batman.png",
+      "source": "https://www.youtube.com/watch?v=f_XHjqABQQA",
+      "_self": "https://api.memegen.link/templates/joker"
+    },
+    "jw": {
+      "id": "jw",
+      "name": "Probably Not a Good Idea",
+      "lines": 2,
+      "styles": [
+        "alternate"
+      ],
+      "blank": "https://api.memegen.link/images/jw.png",
+      "example": "https://api.memegen.link/images/jw/you_just_went_and_made_a_new_dinosaur~q/probably_not_a_good_idea.png",
+      "source": "https://www.youtube.com/watch?v=RFinNxS5KN4&t=86",
+      "_self": "https://api.memegen.link/templates/jw"
+    },
+    "keanu": {
+      "id": "keanu",
+      "name": "Conspiracy Keanu",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/keanu.png",
+      "example": "https://api.memegen.link/images/keanu.png",
+      "source": "http://knowyourmeme.com/memes/conspiracy-keanu",
+      "_self": "https://api.memegen.link/templates/keanu"
+    },
+    "kermit": {
+      "id": "kermit",
+      "name": "But That's None of My Business",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/kermit.png",
+      "example": "https://api.memegen.link/images/kermit/_/but_that's_none_of_my_business.png",
+      "source": "http://knowyourmeme.com/memes/but-thats-none-of-my-business",
+      "_self": "https://api.memegen.link/templates/kermit"
+    },
+    "kombucha": {
+      "id": "kombucha",
+      "name": "Kombucha Girl",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/kombucha.png",
+      "example": "https://api.memegen.link/images/kombucha/Trying_a_thing./Trying_a_thing_again..png",
+      "source": "https://www.buzzfeed.com/daniellaemanuel/woman-trying-kombucha-meme",
+      "_self": "https://api.memegen.link/templates/kombucha"
+    },
+    "leo": {
+      "id": "leo",
+      "name": "Leo Strutting",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/leo.png",
+      "example": "https://api.memegen.link/images/leo.png",
+      "source": "https://knowyourmeme.com/memes/strutting-leo",
+      "_self": "https://api.memegen.link/templates/leo"
+    },
+    "live": {
+      "id": "live",
+      "name": "Do It Live!",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/live.png",
+      "example": "https://api.memegen.link/images/live/_/do_it_live!.png",
+      "source": "http://knowyourmeme.com/memes/bill-oreilly-rant",
+      "_self": "https://api.memegen.link/templates/live"
+    },
+    "ll": {
+      "id": "ll",
+      "name": "Laughing Lizard",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ll.png",
+      "example": "https://api.memegen.link/images/ll/_/hhhehehe.png",
+      "source": "http://knowyourmeme.com/memes/laughing-lizard-hhhehehe",
+      "_self": "https://api.memegen.link/templates/ll"
+    },
+    "lrv": {
+      "id": "lrv",
+      "name": "Laundry Room Viking",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/lrv.png",
+      "example": "https://api.memegen.link/images/lrv/do_the_laundry_they_said/it_will_be_fun_they_said.png",
+      "source": "http://knowyourmeme.com/memes/laundry-room-viking",
+      "_self": "https://api.memegen.link/templates/lrv"
+    },
+    "mb": {
+      "id": "mb",
+      "name": "Member Berries",
+      "lines": 2,
+      "styles": [
+        "box",
+        "flood"
+      ],
+      "blank": "https://api.memegen.link/images/mb.png",
+      "example": "https://api.memegen.link/images/mb/'member/star_wars~q.png",
+      "source": "http://knowyourmeme.com/memes/member-berries",
+      "_self": "https://api.memegen.link/templates/mb"
+    },
+    "michael-scott": {
+      "id": "michael-scott",
+      "name": "Michael Scott No God No",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/michael-scott.png",
+      "example": "https://api.memegen.link/images/michael-scott/no,_god!_no_god_please_no!/noooooooooooooooo!.png",
+      "source": "https://www.youtube.com/watch?v=31g0YE61PLQ",
+      "_self": "https://api.memegen.link/templates/michael-scott"
+    },
+    "millers": {
+      "id": "millers",
+      "name": "You Guys Are Getting Paid?",
+      "lines": 4,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/millers.png",
+      "example": "https://api.memegen.link/images/millers/_/You_are_making_500_thousand_dollars_and_you_were_only_gonna_pay_me_30~q/You're_getting_30_grand~q_I'm_getting_a_thousand!/You_guys_are_getting_paid~q.png",
+      "source": "https://knowyourmeme.com/photos/1712302-you-guys-are-getting-paid",
+      "_self": "https://api.memegen.link/templates/millers"
+    },
+    "mini-keanu": {
+      "id": "mini-keanu",
+      "name": "Mini Keanu Reeves",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/mini-keanu.png",
+      "example": "https://api.memegen.link/images/mini-keanu/your_text/goes_here.png",
+      "source": "https://knowyourmeme.com/memes/mini-keanu-reeves",
+      "_self": "https://api.memegen.link/templates/mini-keanu"
+    },
+    "mmm": {
+      "id": "mmm",
+      "name": "Minor Mistake Marvin",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/mmm.png",
+      "example": "https://api.memegen.link/images/mmm.png",
+      "source": "http://knowyourmeme.com/memes/minor-mistake-marvin",
+      "_self": "https://api.memegen.link/templates/mmm"
+    },
+    "money": {
+      "id": "money",
+      "name": "Shut Up and Take My Money!",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/money.png",
+      "example": "https://api.memegen.link/images/money/shut_up_and/take_my_money!.png",
+      "source": "http://knowyourmeme.com/memes/shut-up-and-take-my-money",
+      "_self": "https://api.memegen.link/templates/money"
+    },
+    "mordor": {
+      "id": "mordor",
+      "name": "One Does Not Simply Walk into Mordor",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/mordor.png",
+      "example": "https://api.memegen.link/images/mordor/one_does_not_simply/walk_into_mordor.png",
+      "source": "http://knowyourmeme.com/memes/one-does-not-simply-walk-into-mordor",
+      "_self": "https://api.memegen.link/templates/mordor"
+    },
+    "morpheus": {
+      "id": "morpheus",
+      "name": "Matrix Morpheus",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/morpheus.png",
+      "example": "https://api.memegen.link/images/morpheus.png",
+      "source": "http://knowyourmeme.com/memes/matrix-morpheus",
+      "_self": "https://api.memegen.link/templates/morpheus"
+    },
+    "mw": {
+      "id": "mw",
+      "name": "I Guarantee It",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/mw.png",
+      "example": "https://api.memegen.link/images/mw/you're_gonna_like_the_way_you_look/i_guarantee_it.png",
+      "source": "http://knowyourmeme.com/memes/george-zimmer-i-guarantee-it",
+      "_self": "https://api.memegen.link/templates/mw"
+    },
+    "nice": {
+      "id": "nice",
+      "name": "So I Got That Goin' For Me, Which is Nice",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/nice.png",
+      "example": "https://api.memegen.link/images/nice/_/so_i_got_that_goin'_for_me,_which_is_nice.png",
+      "source": "http://knowyourmeme.com/memes/so-i-got-that-goin-for-me-which-is-nice",
+      "_self": "https://api.memegen.link/templates/nice"
+    },
+    "noidea": {
+      "id": "noidea",
+      "name": "I Have No Idea What I'm Doing",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/noidea.png",
+      "example": "https://api.memegen.link/images/noidea/i_have_no_idea/what_i'm_doing.png",
+      "source": "http://knowyourmeme.com/memes/i-have-no-idea-what-i-m-doing",
+      "_self": "https://api.memegen.link/templates/noidea"
+    },
+    "ntot": {
+      "id": "ntot",
+      "name": "No Take, Only Throw",
+      "lines": 3,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ntot.png",
+      "example": "https://api.memegen.link/images/ntot/Pls_throw~q~q/NO_TAKE!!/ONLY_THROW.png",
+      "source": "https://knowyourmeme.com/memes/no-take-only-throw",
+      "_self": "https://api.memegen.link/templates/ntot"
+    },
+    "oag": {
+      "id": "oag",
+      "name": "Overly Attached Girlfriend",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/oag.png",
+      "example": "https://api.memegen.link/images/oag/i_know_you_received_my_email/because_i_checked_your_inbox.png",
+      "source": "http://knowyourmeme.com/memes/overly-attached-girlfriend",
+      "_self": "https://api.memegen.link/templates/oag"
+    },
+    "officespace": {
+      "id": "officespace",
+      "name": "That Would Be Great",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/officespace.png",
+      "example": "https://api.memegen.link/images/officespace/yeah.../that'd_be_great.png",
+      "source": "http://knowyourmeme.com/memes/that-would-be-great",
+      "_self": "https://api.memegen.link/templates/officespace"
+    },
+    "older": {
+      "id": "older",
+      "name": "An Older Code Sir, But It Checks Out",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/older.png",
+      "example": "https://api.memegen.link/images/older/it's_an_older_meme_sir/but_it_checks_out.png",
+      "source": "http://knowyourmeme.com/memes/its-an-older-meme-but-it-checks-out",
+      "_self": "https://api.memegen.link/templates/older"
+    },
+    "oprah": {
+      "id": "oprah",
+      "name": "Oprah You Get a Car",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/oprah.png",
+      "example": "https://api.memegen.link/images/oprah/you_get_a_meme/and_you_get_a_meme.png",
+      "source": "http://knowyourmeme.com/memes/oprah-you-get-a-car",
+      "_self": "https://api.memegen.link/templates/oprah"
+    },
+    "patrick": {
+      "id": "patrick",
+      "name": "Push it somewhere else Patrick",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/patrick.png",
+      "example": "https://api.memegen.link/images/patrick/why_dont_we_take_all_the_memes/and_put_them_on_memegen.png",
+      "source": "http://knowyourmeme.com/memes/push-it-somewhere-else-patrick",
+      "_self": "https://api.memegen.link/templates/patrick"
+    },
+    "persian": {
+      "id": "persian",
+      "name": "Persian Cat Room Guardian",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/persian.png",
+      "example": "https://api.memegen.link/images/persian.png",
+      "source": "https://knowyourmeme.com/memes/persian-cat-room-guardian",
+      "_self": "https://api.memegen.link/templates/persian"
+    },
+    "philosoraptor": {
+      "id": "philosoraptor",
+      "name": "Philosoraptor",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/philosoraptor.png",
+      "example": "https://api.memegen.link/images/philosoraptor.png",
+      "source": "http://knowyourmeme.com/memes/philosoraptor",
+      "_self": "https://api.memegen.link/templates/philosoraptor"
+    },
+    "pigeon": {
+      "id": "pigeon",
+      "name": "Is This a Pigeon?",
+      "lines": 3,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/pigeon.png",
+      "example": "https://api.memegen.link/images/pigeon/Engineer/PowerPoint/Is_this_Photoshop~q.png",
+      "source": "https://knowyourmeme.com/memes/is-this-a-pigeon",
+      "_self": "https://api.memegen.link/templates/pigeon"
+    },
+    "ptj": {
+      "id": "ptj",
+      "name": "Phoebe Teaching Joey",
+      "lines": 8,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ptj.png",
+      "example": "https://api.memegen.link/images/ptj/Cast_it/Cast_it/into/into/the_fire/the_fire/Cast_it_into_the_fire./Keep_the_Ring_of_Power!.png",
+      "source": "https://knowyourmeme.com/photos/1846826-phoebe-teaching-joey",
+      "_self": "https://api.memegen.link/templates/ptj"
+    },
+    "puffin": {
+      "id": "puffin",
+      "name": "Unpopular opinion puffin",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/puffin.png",
+      "example": "https://api.memegen.link/images/puffin.png",
+      "source": "http://knowyourmeme.com/memes/unpopular-opinion-puffin",
+      "_self": "https://api.memegen.link/templates/puffin"
+    },
+    "red": {
+      "id": "red",
+      "name": "Oh, Is That What We're Going to Do Today?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/red.png",
+      "example": "https://api.memegen.link/images/red/oh,_is_that_what_we're_going_to_do_today~q/we're_going_to_fight~q.png",
+      "source": "https://www.imdb.com/title/tt0720046/",
+      "_self": "https://api.memegen.link/templates/red"
+    },
+    "regret": {
+      "id": "regret",
+      "name": "I Immediately Regret This Decision!",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/regret.png",
+      "example": "https://api.memegen.link/images/regret/_/i_immediately_regret_this_decision.png",
+      "source": "https://www.youtube.com/watch?v=gd9ltJGykYc",
+      "_self": "https://api.memegen.link/templates/regret"
+    },
+    "remembers": {
+      "id": "remembers",
+      "name": "Pepperidge Farm Remembers",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/remembers.png",
+      "example": "https://api.memegen.link/images/remembers/remember_this_meme~q/pepperidge_farm_remembers.png",
+      "source": "http://knowyourmeme.com/memes/pepperidge-farm-remembers",
+      "_self": "https://api.memegen.link/templates/remembers"
+    },
+    "rollsafe": {
+      "id": "rollsafe",
+      "name": "Roll Safe",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/rollsafe.png",
+      "example": "https://api.memegen.link/images/rollsafe/can't_get_fired/if_you_don't_have_a_job.png",
+      "source": "http://knowyourmeme.com/memes/roll-safe",
+      "_self": "https://api.memegen.link/templates/rollsafe"
+    },
+    "sad-biden": {
+      "id": "sad-biden",
+      "name": "Sad Joe Biden",
+      "lines": 2,
+      "styles": [
+        "down",
+        "scowl",
+        "window"
+      ],
+      "blank": "https://api.memegen.link/images/sad-biden.png",
+      "example": "https://api.memegen.link/images/sad-biden/sad_joe_biden/doesn't_think_you'll_vote.png",
+      "source": "http://knowyourmeme.com/memes/sad-joe-biden",
+      "_self": "https://api.memegen.link/templates/sad-biden"
+    },
+    "sad-boehner": {
+      "id": "sad-boehner",
+      "name": "Sad John Boehner",
+      "lines": 2,
+      "styles": [
+        "frown",
+        "really",
+        "sad",
+        "what"
+      ],
+      "blank": "https://api.memegen.link/images/sad-boehner.png",
+      "example": "https://api.memegen.link/images/sad-boehner/sad_john_boehner/doesn't_think_you'll_vote.png",
+      "source": "https://en.wikipedia.org/wiki/John_Boehner",
+      "_self": "https://api.memegen.link/templates/sad-boehner"
+    },
+    "sad-bush": {
+      "id": "sad-bush",
+      "name": "Sad George Bush",
+      "lines": 2,
+      "styles": [
+        "facebook",
+        "nervous",
+        "unsure",
+        "upset"
+      ],
+      "blank": "https://api.memegen.link/images/sad-bush.png",
+      "example": "https://api.memegen.link/images/sad-bush/sad_george_bush/doesn't_think_you'll_vote.png",
+      "source": "http://knowyourmeme.com/memes/sad-joe-biden",
+      "_self": "https://api.memegen.link/templates/sad-bush"
+    },
+    "sad-clinton": {
+      "id": "sad-clinton",
+      "name": "Sad Bill Clinton",
+      "lines": 2,
+      "styles": [
+        "ashamed",
+        "frown",
+        "nervous",
+        "sad"
+      ],
+      "blank": "https://api.memegen.link/images/sad-clinton.png",
+      "example": "https://api.memegen.link/images/sad-clinton/sad_bill_clinton/doesn't_think_you'll_vote.png",
+      "source": "https://en.wikipedia.org/wiki/Bill_Clinton",
+      "_self": "https://api.memegen.link/templates/sad-clinton"
+    },
+    "sad-obama": {
+      "id": "sad-obama",
+      "name": "Sad Barack Obama",
+      "lines": 2,
+      "styles": [
+        "bow",
+        "down",
+        "frown",
+        "mad",
+        "really"
+      ],
+      "blank": "https://api.memegen.link/images/sad-obama.png",
+      "example": "https://api.memegen.link/images/sad-obama/sad_barack_obama/doesn't_think_you'll_vote.png",
+      "source": "http://knowyourmeme.com/memes/sad-joe-biden",
+      "_self": "https://api.memegen.link/templates/sad-obama"
+    },
+    "sadfrog": {
+      "id": "sadfrog",
+      "name": "Sad Frog / Feels Bad Man",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sadfrog.png",
+      "example": "https://api.memegen.link/images/sadfrog/_/feels_bad_man.png",
+      "source": "http://knowyourmeme.com/memes/feels-bad-man-sad-frog",
+      "_self": "https://api.memegen.link/templates/sadfrog"
+    },
+    "saltbae": {
+      "id": "saltbae",
+      "name": "Salt Bae",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/saltbae.png",
+      "example": "https://api.memegen.link/images/saltbae.png",
+      "source": "http://knowyourmeme.com/memes/saltbae",
+      "_self": "https://api.memegen.link/templates/saltbae"
+    },
+    "sarcasticbear": {
+      "id": "sarcasticbear",
+      "name": "Sarcastic Bear",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sarcasticbear.png",
+      "example": "https://api.memegen.link/images/sarcasticbear/i'm_so_sorry/i_haven't_memorized_the_internet.png",
+      "source": "http://knowyourmeme.com/memes/sarcastic-bear",
+      "_self": "https://api.memegen.link/templates/sarcasticbear"
+    },
+    "sb": {
+      "id": "sb",
+      "name": "Scumbag Brain",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sb.png",
+      "example": "https://api.memegen.link/images/sb/remembers_the_face/but_not_the_name.png",
+      "source": "http://knowyourmeme.com/memes/scumbag-brain",
+      "_self": "https://api.memegen.link/templates/sb"
+    },
+    "scc": {
+      "id": "scc",
+      "name": "Sudden Clarity Clarence",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/scc.png",
+      "example": "https://api.memegen.link/images/scc.png",
+      "source": "http://knowyourmeme.com/memes/sudden-clarity-clarence",
+      "_self": "https://api.memegen.link/templates/scc"
+    },
+    "sf": {
+      "id": "sf",
+      "name": "Sealed Fate",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sf.png",
+      "example": "https://api.memegen.link/images/sf/i_accidentally_used_a_swear_word/and_i_know_my_mom_heard_it_from_the_other_room.png",
+      "source": "https://www.reddit.com/r/AdviceAnimals/comments/3fenos/i_like_the_idea_of_the_impending_doom_seal_i_hope/ctnxw3k",
+      "_self": "https://api.memegen.link/templates/sf"
+    },
+    "sk": {
+      "id": "sk",
+      "name": "Skeptical Third World Kid",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sk.png",
+      "example": "https://api.memegen.link/images/sk/you_finished_your_plate/because_i_was_starving~q.png",
+      "source": "http://knowyourmeme.com/memes/third-world-success",
+      "_self": "https://api.memegen.link/templates/sk"
+    },
+    "ski": {
+      "id": "ski",
+      "name": "Super Cool Ski Instructor",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ski.png",
+      "example": "https://api.memegen.link/images/ski/_/you're_gonna_have_a_bad_time.png",
+      "source": "http://knowyourmeme.com/memes/super-cool-ski-instructor",
+      "_self": "https://api.memegen.link/templates/ski"
+    },
+    "snek": {
+      "id": "snek",
+      "name": "Skeptical Snake",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/snek.png",
+      "example": "https://api.memegen.link/images/snek/when_you_already_checked_that_one_leaf/and_it_starts_moving.png",
+      "source": "https://www.reddit.com/r/JoeRogan/comments/5kga5k/skeptical_snake/",
+      "_self": "https://api.memegen.link/templates/snek"
+    },
+    "soa": {
+      "id": "soa",
+      "name": "Seal of Approval",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/soa.png",
+      "example": "https://api.memegen.link/images/soa/first_wipe/clean_toiletpaper.png",
+      "source": "http://knowyourmeme.com/memes/seal-of-approval",
+      "_self": "https://api.memegen.link/templates/soa"
+    },
+    "sohappy": {
+      "id": "sohappy",
+      "name": "I Would Be So Happy",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sohappy.png",
+      "example": "https://api.memegen.link/images/sohappy/if_i_could_use_this_meme/i_would_be_so_happy.png",
+      "source": "https://www.youtube.com/watch?v=z_17RHGKNTY",
+      "_self": "https://api.memegen.link/templates/sohappy"
+    },
+    "sohot": {
+      "id": "sohot",
+      "name": "So Hot Right Now",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sohot.png",
+      "example": "https://api.memegen.link/images/sohot/this_meme_is/so_hot_right_now.png",
+      "source": "https://www.youtube.com/watch?v=QizsJQNIKhc",
+      "_self": "https://api.memegen.link/templates/sohot"
+    },
+    "soup-nazi": {
+      "id": "soup-nazi",
+      "name": "No Soup for You / Soup Nazi",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/soup-nazi.png",
+      "example": "https://api.memegen.link/images/soup-nazi/no_soup_for_you!.png",
+      "source": "https://knowyourmeme.com/memes/no-soup-for-you-soup-nazi",
+      "_self": "https://api.memegen.link/templates/soup-nazi"
+    },
+    "sparta": {
+      "id": "sparta",
+      "name": "This is Sparta!",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/sparta.png",
+      "example": "https://api.memegen.link/images/sparta/this._is./sparta!.png",
+      "source": "https://www.youtube.com/watch?v=QkWS9PiXekE",
+      "_self": "https://api.memegen.link/templates/sparta"
+    },
+    "spiderman": {
+      "id": "spiderman",
+      "name": "Spider-Man Pointing at Spider-Man",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/spiderman.png",
+      "example": "https://api.memegen.link/images/spiderman/me_pointing_at_you/you_pointing_at_me.png",
+      "source": "https://knowyourmeme.com/memes/spider-man-pointing-at-spider-man",
+      "_self": "https://api.memegen.link/templates/spiderman"
+    },
+    "spongebob": {
+      "id": "spongebob",
+      "name": "Mocking Spongebob",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/spongebob.png",
+      "example": "https://api.memegen.link/images/spongebob/BF:_I_don't_even_know_her_like_that/Me:_i_DoN'T_eVeN_KnOw_HeR_lIkE_tHaT.png",
+      "source": "http://knowyourmeme.com/memes/mocking-spongebob",
+      "_self": "https://api.memegen.link/templates/spongebob"
+    },
+    "ss": {
+      "id": "ss",
+      "name": "Scumbag Steve",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ss.png",
+      "example": "https://api.memegen.link/images/ss/needs_a_place_to_crash/never_leaves.png",
+      "source": "http://knowyourmeme.com/memes/scumbag-steve",
+      "_self": "https://api.memegen.link/templates/ss"
+    },
+    "stew": {
+      "id": "stew",
+      "name": "Baby, You've Got a Stew Going",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/stew.png",
+      "example": "https://api.memegen.link/images/stew/_/baby,_you've_got_a_stew_going!.png",
+      "source": "https://www.youtube.com/watch?v=Sr2PlqXw03Y",
+      "_self": "https://api.memegen.link/templates/stew"
+    },
+    "stonks": {
+      "id": "stonks",
+      "name": "Stonks",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/stonks.png",
+      "example": "https://api.memegen.link/images/stonks/_/stonks.png",
+      "source": "https://knowyourmeme.com/memes/stonks",
+      "_self": "https://api.memegen.link/templates/stonks"
+    },
+    "stop-it": {
+      "id": "stop-it",
+      "name": "Stop It, Get Some Help",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/stop-it.png",
+      "example": "https://api.memegen.link/images/stop-it/stop_it/get_some_help.png",
+      "source": "https://knowyourmeme.com/memes/stop-it-get-some-help",
+      "_self": "https://api.memegen.link/templates/stop-it"
+    },
+    "success": {
+      "id": "success",
+      "name": "Success Kid",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/success.png",
+      "example": "https://api.memegen.link/images/success/don't_know_a_question_on_the_test/answer_is_in_another_question.png",
+      "source": "http://knowyourmeme.com/memes/success-kid-i-hate-sandcastles",
+      "_self": "https://api.memegen.link/templates/success"
+    },
+    "tenguy": {
+      "id": "tenguy",
+      "name": "10 Guy",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/tenguy.png",
+      "example": "https://api.memegen.link/images/tenguy.png",
+      "source": "http://knowyourmeme.com/memes/10-guy",
+      "_self": "https://api.memegen.link/templates/tenguy"
+    },
+    "toohigh": {
+      "id": "toohigh",
+      "name": "The Rent Is Too Damn High",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/toohigh.png",
+      "example": "https://api.memegen.link/images/toohigh/the_rent_is/too_damn_high.png",
+      "source": "http://knowyourmeme.com/memes/the-rent-is-too-damn-high-jimmy-mcmillan",
+      "_self": "https://api.memegen.link/templates/toohigh"
+    },
+    "tried": {
+      "id": "tried",
+      "name": "At Least You Tried",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/tried.png",
+      "example": "https://api.memegen.link/images/tried/at_least/you_tried.png",
+      "source": "http://knowyourmeme.com/memes/you-tried",
+      "_self": "https://api.memegen.link/templates/tried"
+    },
+    "trump": {
+      "id": "trump",
+      "name": "Donald Trump",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/trump.png",
+      "example": "https://api.memegen.link/images/trump/this_is_the_best_meme_in_the_history_of_memes/maybe_ever.png",
+      "source": "https://knowyourmeme.com/memes/people/donald-trump",
+      "_self": "https://api.memegen.link/templates/trump"
+    },
+    "ugandanknuck": {
+      "id": "ugandanknuck",
+      "name": "Ugandan Knuckles",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/ugandanknuck.png",
+      "example": "https://api.memegen.link/images/ugandanknuck.png",
+      "source": "http://knowyourmeme.com/memes/ugandan-knuckles",
+      "_self": "https://api.memegen.link/templates/ugandanknuck"
+    },
+    "whatyear": {
+      "id": "whatyear",
+      "name": "What Year Is It?",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/whatyear.png",
+      "example": "https://api.memegen.link/images/whatyear/_/what_year_is_it~q.png",
+      "source": "http://knowyourmeme.com/memes/what-year-is-it",
+      "_self": "https://api.memegen.link/templates/whatyear"
+    },
+    "winter": {
+      "id": "winter",
+      "name": "Winter is coming",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/winter.png",
+      "example": "https://api.memegen.link/images/winter/prepare_yourself/winter_is_coming.png",
+      "source": "http://knowyourmeme.com/memes/imminent-ned-brace-yourselves-winter-is-coming",
+      "_self": "https://api.memegen.link/templates/winter"
+    },
+    "wkh": {
+      "id": "wkh",
+      "name": "Who Killed Hannibal?",
+      "lines": 3,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/wkh.png",
+      "example": "https://api.memegen.link/images/wkh/Twin_Towers/George_Bush/Why_would_Al--Qaeda_do_this~q.png",
+      "source": "https://knowyourmeme.com/memes/who-killed-hannibal",
+      "_self": "https://api.memegen.link/templates/wkh"
+    },
+    "wonka": {
+      "id": "wonka",
+      "name": "Condescending Wonka",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/wonka.png",
+      "example": "https://api.memegen.link/images/wonka.png",
+      "source": "http://knowyourmeme.com/memes/condescending-wonka-creepy-wonka",
+      "_self": "https://api.memegen.link/templates/wonka"
+    },
+    "xy": {
+      "id": "xy",
+      "name": "X all the Y",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/xy.png",
+      "example": "https://api.memegen.link/images/xy/all_the_things!!!.png",
+      "source": "http://knowyourmeme.com/memes/x-all-the-y",
+      "_self": "https://api.memegen.link/templates/xy"
+    },
+    "yallgot": {
+      "id": "yallgot",
+      "name": "Y'all Got Any More of Them",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/yallgot.png",
+      "example": "https://api.memegen.link/images/yallgot/y'all_got_any_more_of_them/memes.png",
+      "source": "http://knowyourmeme.com/memes/yall-got-anymore-of",
+      "_self": "https://api.memegen.link/templates/yallgot"
+    },
+    "yodawg": {
+      "id": "yodawg",
+      "name": "Xzibit Yo Dawg",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/yodawg.png",
+      "example": "https://api.memegen.link/images/yodawg/yo_dawg/i_heard_you_like_memes.png",
+      "source": "http://knowyourmeme.com/memes/xzibit-yo-dawg",
+      "_self": "https://api.memegen.link/templates/yodawg"
+    },
+    "yuno": {
+      "id": "yuno",
+      "name": "Y U NO Guy",
+      "lines": 2,
+      "styles": [],
+      "blank": "https://api.memegen.link/images/yuno.png",
+      "example": "https://api.memegen.link/images/yuno/y_u_no/use_this_meme!~q.png",
+      "source": "http://knowyourmeme.com/memes/y-u-no-guy",
+      "_self": "https://api.memegen.link/templates/yuno"
     }
   },
-  "timestamp": 1580398835
+  "timestamp": 1613422025
 }
