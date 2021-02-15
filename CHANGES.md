@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.7] [2021-02-15]
+
+#### Fixed
+
+- Fixed breaking api calls to memegen subsequent to changes in their api.
+
 ## [0.3.6] [2020-02-13]
 
 #### Fixed
