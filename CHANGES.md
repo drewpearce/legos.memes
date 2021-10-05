@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.8] [2021-10-05]
+
+## Changed
+
+- Switch from Travis to GitHub Actions for testing and deployment.
+
 ## [0.3.7] [2021-02-15]
 
 #### Fixed

@@ -1,0 +1,2 @@
+[bandit]
+targets: legos/memes.py
