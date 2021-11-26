@@ -4,7 +4,7 @@
 
 [![PyPI](https://img.shields.io/pypi/wheel/legos.memes.svg)]() [![PyPI](https://img.shields.io/pypi/l/legos.memes.svg)]() [![PyPI](https://img.shields.io/pypi/status/legos.memes.svg)]()
 
-Automatically create memes based on phrasing in this memes lego. Built using the [memegen API](https://memegen.link/api/), with inspiration derived from the [Hubot memecaptain API implementation](https://www.npmjs.com/package/hubot-meme)
+Automatically create memes based on phrasing in this memes lego. Built using the [Memegen.link API](https://api.memegen.link), with inspiration derived from the [Hubot memecaptain API implementation](https://www.npmjs.com/package/hubot-meme)
 
 The Lego module system and Legobot are a FOSS project lovingly crafted by [Bren Briggs](https://github.com/bbriggs) and friends. All code borrowed from Legobot is his (C).
 
